@@ -1,8 +1,7 @@
 @import './sider/sider.css';
 @import './content/content.css';
-@import './topbar/topBar.css';
 
-.ant-layout {
+.main {
     position: relative;
     width: 1440px;
     height: 810px;

@@ -1,13 +1,14 @@
-import React from 'react';
 import { Layout } from 'antd';
+
+import LogoComponent from '../../shared/components/logo';
+import MenuComponent from '../../shared/components/menu';
 
 const { Sider } = Layout;
 
 const SiderLayout = (): JSX.Element => (
-    <Sider theme='light'>
-        <div className='logo-alta'>Logo</div>
-        <div className='menu1'>Menu1</div>
-        <div className='menu2'>Menu2</div>
+    <Sider theme='light' className='sider'>
+        <div className='logo-sider'><LogoComponent /></div>
+        <div className='menu'><MenuComponent /></div>
         <div className='logout-button'>Log out</div>
     </Sider>
 );

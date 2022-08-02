@@ -1,4 +1,4 @@
-.ant-layout-sider {
+.sider {
     position: absolute;
     width: 200px;
     height: 100%;
@@ -7,16 +7,15 @@
     background: #FFFFFF;
     box-shadow: 0px 4px 6px rgba(219, 219, 219, 0.5);
     border-radius: 16px 0px 0px 16px;
-    box-sizing: content-box;
 }
 
-.ant-layout-sider-children {
+.sider .ant-layout-sider-children {
     position: relative;
     width: 200px;
     height: 810px;
 }
 
-.logo-alta {
+.logo-sider {
     position: absolute;
     width: 80px;
     height: 64px;
@@ -25,29 +24,20 @@
     background-color: aqua;
 }
 
+.menu {
+    position: absolute;
+    width: 200px;
+    left: 0px;
+    top: 150px;
+    bottom: 342px;
+    background-color: darksalmon;
+}
+
 .logout-button {
     position: absolute;
     width: 200px;
     height: 46px;
     left: 0px;
     top: 732px;
-    background-color: darksalmon;
-}
-
-.menu1 {
-    position: absolute;
-    width: 200px;
-    height: 48px;
-    left: 0px;
-    top: 150px;
-    background-color: darksalmon;
-}
-
-.menu2 {
-    position: absolute;
-    width: 200px;
-    height: 48px;
-    left: 0px;
-    top: 420px;
     background-color: darksalmon;
 }

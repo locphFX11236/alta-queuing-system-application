@@ -1,0 +1,10 @@
+.infor {
+    position: absolute;
+    width: 1112px;
+    height: 397px;
+    left: 24px;
+    top: 168px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px rgba(219, 219, 219, 0.5);
+    border-radius: 12px;
+}

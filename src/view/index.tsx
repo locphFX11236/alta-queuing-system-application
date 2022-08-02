@@ -1,9 +1,12 @@
 import IndexLayout from "../layout";
-import Dashboard from "./dashboard";
+// import Dashboard from "./dashboard";
+// import Login from "./login";
+import Information from "./information";
 
 function IndexView () {
     return (
-        <IndexLayout content={<Dashboard />}/>
+        // <Login />
+        <IndexLayout content={<Information />}/>
     );
 };
 

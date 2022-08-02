@@ -1,5 +1,44 @@
-.ant-layout-content {
+.content {
     position: absolute;
+    width: 1240px !important;
+    height: 100%;
     left: 200px;
     top: 0px;
+}
+
+.top-bar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1240px;
+    height: 88px;
+}
+
+.breadcrumb {
+    position: absolute;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    padding: 29px 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.right-top {
+    position: absolute;
+    width: 401px;
+    height: 100%;
+    left: 839px;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 16px 0 0;
+    z-index: 1;
 }
