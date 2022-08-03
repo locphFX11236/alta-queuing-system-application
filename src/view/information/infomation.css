@@ -8,3 +8,58 @@
     box-shadow: 0px 2px 6px rgba(219, 219, 219, 0.5);
     border-radius: 12px;
 }
+
+.left-infor {
+    position: absolute;
+    width: 248px;
+    height: 303px;
+    left: 24px;
+    top: 40px;
+    background-color: aqua;
+}
+
+.avatar-infor {
+    position: absolute;
+    width: 248px;
+    height: 248px;
+    border-radius: 318px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(219, 219, 219, 0.5);
+}
+
+.change-avatar {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 171px;
+    top: 206px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    background: #FF7506;
+}
+
+.name-infor {
+    position: absolute;
+    width: 186px;
+    height: 36px;
+    left: 55px;
+    top: 267px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 36px !important;
+    display: flex;
+    align-items: center;
+    color: #282739 !important;
+}
+
+.right-infor {
+    position: absolute;
+    width: 792px;
+    height: 276px;
+    left: 296px;
+    top: 40px;
+    background-color: aqua;
+}

@@ -1,8 +1,15 @@
+import { Typography } from "antd";
+
+import { AvatarComponent, ChangeAvatarComponent, InforComponent, NameComponent } from "../../shared/components/account";
+
 const Information = (): JSX.Element => (
     <div className="infor">
-        <p>Avatar</p>
-        <p>Name</p>
-        <p>Form</p>
+        <div className="left-infor">
+            <div className="avatar-infor"><AvatarComponent /></div>
+            <div className="change-avatar"><ChangeAvatarComponent /></div>
+            <Typography.Title className="name-infor"><NameComponent /></Typography.Title>
+        </div>
+        <div className="right-infor"><InforComponent /></div>
     </div>
 );
 

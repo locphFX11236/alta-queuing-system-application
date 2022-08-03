@@ -14,6 +14,7 @@
     align-items: center;
     width: 1240px;
     height: 88px;
+    z-index: 1;
 }
 
 .breadcrumb {
@@ -29,16 +30,69 @@
     background-color: aquamarine;
 }
 
-.right-top {
+.noti {
     position: absolute;
-    width: 401px;
-    height: 100%;
-    left: 839px;
+    width: 32px;
+    height: 32px;
+    right: 260px;
+    top: 28px;
+    background: #FFF2E7;
+    border-radius: 32px;
+}
+
+.acc {
+    position: absolute;
+    width: 172px;
+    height: 42px;
+    right: 64px;
+    top: 24px;
+    background-color: aquamarine;
+}
+
+.avatar-bar {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 132px;
     top: 0px;
+    border-radius: 48px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    border-radius: 0 16px 0 0;
-    z-index: 1;
+    background: #FFF2E7;
+}
+
+.name-bar {
+    position: absolute;
+    width: 124px;
+    height: 42px;
+    left: 48px;
+    top: 0px;
+}
+
+.name-bar p {
+    position: absolute;
+    width: 47px;
+    height: 18px;
+    right: 77px;
+    top: 0px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #7E7D88;
+}
+
+.name-bar .ant-typography {
+    position: absolute;
+    width: 124px;
+    height: 24px;
+    right: 0px;
+    top: 18px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #535261;
 }

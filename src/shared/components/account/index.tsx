@@ -1,5 +1,15 @@
-const AccComponent = (): JSX.Element => (
-    <h1>Acc</h1>
+export const AvatarComponent = () => (
+    <h5 style={{ width: '100%', height: 'auto' }} >Avatar</h5>
 );
 
-export default AccComponent;
+export const ChangeAvatarComponent = () => (
+    <h5 style={{ width: '100%', height: 'auto' }} >Change</h5>
+);
+
+export const NameComponent = () => (
+    <h5 style={{ width: '100%', height: 'auto' }} >Name</h5>
+);
+
+export const InforComponent = () => (
+    <h5 style={{ width: '100%', height: 'auto' }} >Form Information</h5>
+);
