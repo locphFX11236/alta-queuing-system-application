@@ -1,0 +1,213 @@
+.equip-list .title-1 {
+    width: 200px;
+    height: 36px;
+    left: 24px;
+    top: 104px;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FF7506;
+}
+
+.input-equip-1 {
+    position: absolute;
+    width: 300px;
+    height: 72px;
+    left: 24px;
+    top: 156px;
+    background-color: antiquewhite; /* x */
+}
+
+.input-equip-2 {
+    position: absolute;
+    width: 300px;
+    height: 72px;
+    left: 348px;
+    top: 156px;
+    background-color: antiquewhite; /* x */
+}
+
+.input-equip-3 {
+    position: absolute;
+    width: 300px;
+    height: 72px;
+    left: 836px;
+    top: 156px;
+    background-color: antiquewhite; /* x */
+}
+
+.table-equip {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    width: 1112px;
+    height: 490px;
+    left: 24px;
+    top: 244px;
+    filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
+    border-radius: 12px;
+    background-color: antiquewhite; /* x */
+}
+
+.pagination-equip {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    width: 288px;
+    height: 32px;
+    left: 848px;
+    top: 758px;
+    background-color: antiquewhite; /* x */
+}
+
+.affix-equip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 4px;
+    gap: 4px;
+    position: absolute;
+    width: 80px;
+    height: 94px;
+    right: 0px;
+    top: 244px;
+    background: #FFF2E7;
+    box-shadow: 0px 0px 6px #E7E9F2;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.manage-equip-list .title-1 {
+    width: 169px;
+    height: 36px;
+    left: 24px;
+    top: 104px;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FF7506;
+}
+
+.manage-equip-list .manage-equip {
+    position: absolute;
+    width: 1178px;
+    height: 534px;
+    left: 24px;
+    top: 172px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+    border-radius: 16px;
+}
+
+.manage-equip-list .buttons {
+    position: absolute;
+    width: 326px;
+    height: 48px;
+    left: 450px;
+    top: 730px;
+}
+
+.manage-equip-list .buttons .button-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+    gap: 8px;
+    position: absolute;
+    width: 147px;
+    height: 48px;
+    left: 0px;
+    top: 0px;
+    color: #FF9138;
+    background: #FFF2E7;
+    border: 1.5px solid #FF9138;
+    box-shadow: 0px 0px 6px #E7E9F2;
+    border-radius: 8px;
+}
+
+.manage-equip-list .buttons .button-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+    gap: 8px;
+    position: absolute;
+    width: 147px;
+    height: 48px;
+    left: 179px;
+    top: 0px;
+    color: #FFFFFF;
+    background: #FF9138;
+    box-shadow: 0px 0px 6px #E7E9F2;
+    border-radius: 8px;
+}
+
+.manage-equip-list .manage-equip .title-2 {
+    position: absolute;
+    width: 160px;
+    height: 30px;
+    left: 24px;
+    top: 16px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FF7506;
+}
+
+.infor-equip .title-1 {
+    width: 169px;
+    height: 36px;
+    left: 32px;
+    top: 104px;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FF7506;
+}
+
+.infor-equip .infor-manage-equip {
+    position: absolute;
+    width: 1112px;
+    height: 604px;
+    left: 24px;
+    top: 156px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+    border-radius: 16px;
+}
+
+.infor-equip .affix-manage-equip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 4px;
+    gap: 4px;
+    position: absolute;
+    width: 80px;
+    height: 94px;
+    right: 0px;
+    top: 156px;
+    background: #FFF2E7;
+    box-shadow: 0px 0px 6px #E7E9F2;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.infor-equip .infor-manage-equip .title-2 {
+    position: absolute;
+    width: 160px;
+    height: 30px;
+    left: 24px;
+    top: 16px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FF7506;
+}

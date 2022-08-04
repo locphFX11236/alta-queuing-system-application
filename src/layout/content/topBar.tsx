@@ -12,7 +12,7 @@ const TopBar = (): JSX.Element => (
             <div className="avatar-bar"><AvatarComponent /></div>
             <div className="name-bar">
                 <p>Xin Chào</p>
-                <Typography.Title level={5}><NameComponent /></Typography.Title>
+                <Typography.Title className="title-1" level={5}><NameComponent /></Typography.Title>
             </div>
         </div>
     </div>

@@ -5,7 +5,7 @@ import StatisticNumberComponent from "../../shared/components/statisticNumber";
 
 const LeftDashboard = (): JSX.Element => (
     <div className="left-dashboard">
-        <Typography.Title>Bieu do</Typography.Title>
+        <Typography.Title className="title-1">Bieu do</Typography.Title>
         <div><StatisticNumberComponent /></div>
         <div><ChartComponent /></div>
     </div>

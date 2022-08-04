@@ -1,3 +1,11 @@
 @import './dashboard/dashboard.css';
 @import './login/login.css';
 @import './information/infomation.css';
+@import './equipmentManagement/equipment.css';
+
+.title-1 {
+    position: absolute;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700 !important;
+}

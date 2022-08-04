@@ -4,7 +4,7 @@ import StatisticOverviewComponent from "../../shared/components/statisticOvervie
 
 const RightDashboard = (): JSX.Element => (
     <div className="right-dashboard">
-        <Typography.Title>Tong quan</Typography.Title>
+        <Typography.Title className="title-1">Tong quan</Typography.Title>
         <div><StatisticOverviewComponent /></div>
         <div><CalendarComponent /></div>
     </div>
