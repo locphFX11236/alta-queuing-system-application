@@ -10,3 +10,11 @@
     border: 1px solid;
     box-sizing: content-box;
 }
+
+.text {
+    position: absolute;
+    font-family: 'Nunito';
+    font-style: normal;
+    flex: none;
+    flex-grow: 0;
+}

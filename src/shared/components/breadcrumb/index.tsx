@@ -1,5 +1,5 @@
 const BreadcrumbComponent = (): JSX.Element => (
-    <h1>Breadcrumb</h1>
+    <>Breadcrumb</>
 );
 
 export default BreadcrumbComponent;

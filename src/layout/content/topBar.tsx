@@ -6,13 +6,13 @@ import NotiComponent from "../../shared/components/notification";
 
 const TopBar = (): JSX.Element => (
     <div className="top-bar">
-        <div className="breadcrumb"><BreadcrumbComponent /></div>
+        <div className="text breadcrumb"><BreadcrumbComponent /></div>
         <div className="noti"><NotiComponent /></div>
         <div className="acc">
             <div className="avatar-bar"><AvatarComponent /></div>
-            <div className="name-bar">
-                <p>Xin Chào</p>
-                <Typography.Title className="title-1" level={5}><NameComponent /></Typography.Title>
+            <div className="acc-bar">
+                <p className="text">Xin Chào</p>
+                <Typography.Title className="name-bar" level={5}><NameComponent /></Typography.Title>
             </div>
         </div>
     </div>

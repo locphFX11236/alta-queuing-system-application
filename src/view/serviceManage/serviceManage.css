@@ -1,0 +1,148 @@
+.service .title-lv-1,
+.manage-service .title-lv-1,
+.infor-service .title-lv-1 {
+    top: 104px;
+    left: 24px;
+    width: 171px;
+}
+
+.service .input {
+    top: 156px;
+    width: 300px;
+}
+
+.service .input-1 { left: 24px; }
+
+.service .input-2 {
+    left: 348px;
+    width: 320px;
+}
+
+.service .input-3 { left: 836px; }
+
+.service .main-list {
+    top: 244px;
+    left: 24px;
+    width: 1112px;
+    height: 490px;
+}
+
+.manage-service .main-box {
+    top: 172px;
+    width: 1178px;
+    height: 534px;
+}
+
+.infor-service .main-box:nth-child(2) {
+    top: 172px;
+    width: 370px;
+    height: 606px;
+}
+
+.infor-service .main-box:nth-child(3) {
+    top: 172px;
+    left: 418px;
+    width: 718px;
+    height: 606px;
+}
+
+.infor-service .main-box:nth-child(3) .input-1 {
+    top: 16px;
+    left: 24px;
+    width: 160px;
+}
+
+.infor-service .main-box:nth-child(3) .input-2 {
+    top: 16px;
+    left: 196px;
+    width: 280px;
+}
+
+.infor-service .main-box:nth-child(3) .input-3 {
+    top: 16px;
+    left: 488px;
+    width: 206px;
+}
+
+.infor-service .main-box:nth-child(3) .main-list {
+    top: 104px;
+    left: 25px;
+    width: 669px;
+    height: 441px;
+}
+
+.infor-service .main-box:nth-child(3) .pagination {
+    top: 561px;
+    left: 406px;
+}
+
+.infor-service .main-box .title-lv-2:nth-child(1),
+.manage-service .main-box .title-lv-2 {
+    top: 16px;
+    left: 24px;
+    width: 162px;
+}
+
+.infor-service .main-box .title-lv-2:nth-child(3) {
+    top: 170px;
+    left: 24px;
+    width: 136px;
+}
+
+.manage-service .button-group {
+    top: 730px;
+    left: 434.5px;
+    width: 326px;
+}
+
+.manage-service .button-group .button-1 {
+    left: 0px;
+    width: 147px;
+    color: #FF9138;
+    background: #FFF2E7;
+    border: 1.5px solid #FF9138;
+}
+
+.manage-service .button-group .button-2 {
+    left: 179px;
+    width: 147px;
+    color: #FFFFFF;
+    background: #FF9138;
+}
+
+.service .affix-group,
+.infor-service .affix-group {
+    right: 0px;
+    height: 94px;
+    order: 0;
+}
+
+.service .affix-group { top: 244px; }
+
+.infor-service .affix-group { top: 156px; }
+
+.manage-service .main-box .form-box,
+.infor-service .main-box .infor-box:nth-child(2) {
+    position: absolute;
+    top: 58px;
+    left: 24px;
+    right: 24px;
+    bottom: 452px;
+    background-color: antiquewhite; /* x */
+} /* x */
+
+.manage-service .main-box .form-box { bottom: 17px; }
+
+.infor-service .main-box .infor-box:nth-child(4) {
+    position: absolute;
+    top: 222px;
+    left: 24px;
+    right: 24px;
+    bottom: 222px;
+    background-color: antiquewhite; /* x */
+} /* x */
+
+.service .pagination {
+    top: 758px;
+    left: 848px;
+}

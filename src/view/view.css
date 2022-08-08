@@ -1,11 +1,101 @@
 @import './dashboard/dashboard.css';
 @import './login/login.css';
-@import './information/infomation.css';
-@import './equipmentManagement/equipment.css';
+@import './inforMember/inforMember.css';
+@import './equipManage/equipManage.css';
+@import './serviceManage/serviceManage.css';
+@import './numCouManage/numCouManage.css';
+@import './report/report.css';
+@import './userLog/userLog.css';
 
-.title-1 {
+.ant-typography {
     position: absolute;
     font-family: 'Nunito';
     font-style: normal;
+}
+
+.title-lv-1 {
+    height: 36px;
     font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 36px !important;
+    color: #FF7506 !important;
+}
+
+.input {
+    position: absolute;
+    height: 72px;
+    background-color: antiquewhite; /* x */
+}
+
+.table {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: absolute;
+    padding: 0px;
+    filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
+    border-radius: 12px;
+    background-color: antiquewhite; /* x */
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    width: 288px;
+    height: 32px;
+    background-color: antiquewhite; /* x */
+}
+
+.affix-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 4px;
+    gap: 4px;
+    position: absolute;
+    width: 80px;
+    background: #FFF2E7;
+    box-shadow: 0px 0px 6px #E7E9F2;
+    border-radius: 8px 0px 0px 8px;
+    flex: none;
+    flex-grow: 0;
+}
+
+.main-box {
+    position: absolute;
+    left: 24px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+    border-radius: 16px;
+}
+
+.title-lv-2 {
+    height: 30px;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    line-height: 30px !important;
+    color: #FF7506 !important;
+}
+
+.button-group {
+    position: absolute;
+    height: 48px;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+    gap: 8px;
+    position: absolute;
+    height: 48px;
+    top: 0px;
+    box-shadow: 0px 0px 6px #E7E9F2;
+    border-radius: 8px;
 }

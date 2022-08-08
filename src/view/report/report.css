@@ -1,0 +1,24 @@
+.report .input-1 {
+    top: 104px;
+    left: 24px;
+    width: 320px;
+}
+
+.report .main-list {
+    top: 192px;
+    left: 24px;
+    width: 1112px;
+    height: 539px;
+}
+
+.report .pagination {
+    top: 755px;
+    left: 848px;
+}
+
+.report .affix-group {
+    top: 192px;
+    right: 0px;
+    height: 75px;
+    order: 0;
+}

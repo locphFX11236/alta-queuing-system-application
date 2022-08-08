@@ -1,94 +1,89 @@
 .content {
     position: absolute;
+    top: 0px;
+    left: 200px;
     width: 1240px !important;
     height: 100%;
-    left: 200px;
-    top: 0px;
 }
 
 .top-bar {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     width: 1240px;
     height: 88px;
     z-index: 1;
 }
 
 .breadcrumb {
-    position: absolute;
-    height: 100%;
-    left: 0px;
-    top: 0px;
-    padding: 29px 24px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: aquamarine;
+    top: 24px;
+    left: 24px;
+    height: 40px;
+    padding: 0px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    background-color: aquamarine; /* x */
 }
 
 .noti {
     position: absolute;
+    top: 28px;
+    right: 260px;
     width: 32px;
     height: 32px;
-    right: 260px;
-    top: 28px;
     background: #FFF2E7;
     border-radius: 32px;
 }
 
 .acc {
     position: absolute;
+    top: 24px;
+    right: 64px;
     width: 172px;
     height: 42px;
-    right: 64px;
-    top: 24px;
-    background-color: aquamarine;
+    background-color: aquamarine; /* x */
 }
 
 .avatar-bar {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    right: 132px;
-    top: 0px;
-    border-radius: 48px;
     display: flex;
     align-items: center;
+    top: 0px;
+    right: 132px;
+    width: 40px;
+    height: 40px;
+    border-radius: 48px;
     background: #FFF2E7;
 }
 
-.name-bar {
+.acc-bar {
     position: absolute;
+    top: 0px;
+    left: 48px;
     width: 124px;
     height: 42px;
-    left: 48px;
-    top: 0px;
 }
 
-.name-bar p {
-    position: absolute;
+.acc-bar .text {
+    top: 0px;
+    right: 77px;
     width: 47px;
     height: 18px;
-    right: 77px;
-    top: 0px;
-    font-family: 'Nunito';
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
     color: #7E7D88;
 }
 
-.name-bar .ant-typography {
-    position: absolute;
+.acc-bar .name-bar {
+    top: 18px;
+    right: 0px;
     width: 124px;
     height: 24px;
-    right: 0px;
-    top: 18px;
+    font-weight: 700;
     font-size: 16px;
     line-height: 24px;
     color: #535261;

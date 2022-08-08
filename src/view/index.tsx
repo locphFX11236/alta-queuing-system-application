@@ -1,19 +1,35 @@
 import IndexLayout from "../layout";
 // import Login from "./login";
-// import Information from "./information";
+// import Information from "./inforMember";
 // import Dashboard from "./dashboard";
-// import EquipmentList from "./equipmentManagement";
-// import ManageList from "./equipmentManagement/add_update";
-import InforEquipment from "./equipmentManagement/information";
+// import EquipList from "./equipManage";
+// import ManageEquip from "./equipManage/manage";
+// import InforEquip from "./equipManage/information";
+// import ServiceList from "./serviceManage";
+// import ManageService from "./serviceManage/manage";
+// import InforService from "./serviceManage/information";
+// import NumberCountList from "./numCouManage";
+// import ManageNumberCount from "./numCouManage/manage";
+// import InforNumberCount from "./numCouManage/information";
+// import ReportList from "./report";
+import UserLogList from "./userLog";
 
 function IndexView () {
     return (
         // <Login />
         // <IndexLayout content={<Information />}/>
         // <IndexLayout content={<Dashboard />}/>
-        // <IndexLayout content={<EquipmentList />}/>
-        // <IndexLayout content={<ManageList />}/>
-        <IndexLayout content={<InforEquipment />}/>
+        // <IndexLayout content={<EquipList />}/>
+        // <IndexLayout content={<ManageEquip />}/>
+        // <IndexLayout content={<InforEquip />}/>
+        // <IndexLayout content={<ServiceList />}/>
+        // <IndexLayout content={<ManageService />}/>
+        // <IndexLayout content={<InforService />}/>
+        // <IndexLayout content={<NumberCountList />}/>
+        // <IndexLayout content={<ManageNumberCount />}/>
+        // <IndexLayout content={<InforNumberCount />}/>
+        // <IndexLayout content={<ReportList />}/>
+        <IndexLayout content={<UserLogList />}/>
     );
 };
 

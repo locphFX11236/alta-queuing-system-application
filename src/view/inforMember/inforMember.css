@@ -1,12 +1,9 @@
-.infor {
-    position: absolute;
+.infor-member {
+    top: 168px;
     width: 1112px;
     height: 397px;
-    left: 24px;
-    top: 168px;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 6px rgba(219, 219, 219, 0.5);
-    border-radius: 12px;
+    box-shadow: 0px 2px 6px rgba(219, 219, 219, 0.5) !important;
+    border-radius: 12px !important;
 }
 
 .left-infor {
@@ -15,41 +12,44 @@
     height: 303px;
     left: 24px;
     top: 40px;
-    background-color: aqua;
+    background-color: aqua; /* x */
 }
 
-.avatar-infor {
+.avatar-member {
     position: absolute;
     width: 248px;
     height: 248px;
     border-radius: 318px;
     display: flex;
     align-items: center;
-    background-color: rgba(219, 219, 219, 0.5);
+    background-color: rgba(219, 219, 219, 0.5); /* x */
 }
 
-.change-avatar {
+.avatar-change {
     position: absolute;
     width: 45px;
     height: 45px;
     left: 171px;
     top: 206px;
+    display: flex;
+    align-items: center;
+    background: #FF7506;
     border: 2px solid #FFFFFF;
     border-radius: 50%;
-    background: #FF7506;
 }
 
 .name-infor {
-    position: absolute;
     width: 186px;
     height: 36px;
     left: 55px;
-    top: 267px;
+    top: 307px;
+    font-weight: 700 !important;
     font-size: 24px !important;
     line-height: 36px !important;
     display: flex;
     align-items: center;
     color: #282739 !important;
+    background-color: rgba(219, 219, 219, 0.5); /* x */
 }
 
 .right-infor {
@@ -58,5 +58,5 @@
     height: 276px;
     left: 296px;
     top: 40px;
-    background-color: aqua;
+    background-color: aqua; /* x */
 }

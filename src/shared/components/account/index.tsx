@@ -1,15 +1,15 @@
 export const AvatarComponent = () => (
-    <h5 style={{ width: '100%', height: 'auto' }} >Avatar</h5>
+    <div style={{ width: '100%', height: 'auto' }} >Avatar</div>
 );
 
 export const ChangeAvatarComponent = () => (
-    <h5 style={{ width: '100%', height: 'auto' }} >Change</h5>
+    <div style={{ width: '100%', height: 'auto' }} >Change</div>
 );
 
 export const NameComponent = () => (
-    <h5 style={{ width: '100%', height: 'auto' }} >Name</h5>
+    <div style={{ width: '100%', height: 'auto' }} >Name</div>
 );
 
 export const InforComponent = () => (
-    <h5 style={{ width: '100%', height: 'auto' }} >Form Information</h5>
+    <div style={{ width: '100%', height: 'auto' }} >Form Information</div>
 );

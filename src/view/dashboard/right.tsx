@@ -4,9 +4,9 @@ import StatisticOverviewComponent from "../../shared/components/statisticOvervie
 
 const RightDashboard = (): JSX.Element => (
     <div className="right-dashboard">
-        <Typography.Title className="title-1">Tong quan</Typography.Title>
-        <div><StatisticOverviewComponent /></div>
-        <div><CalendarComponent /></div>
+        <Typography.Title className="title-lv-1">Tổng quan</Typography.Title>
+        <div className="right-statistic-group"><StatisticOverviewComponent /></div>
+        <div className="dashboard-calendar"><CalendarComponent /></div>
     </div>
 );
 
