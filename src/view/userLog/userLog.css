@@ -4,6 +4,12 @@
     width: 320px;
 }
 
+.user-log .input-search {
+    top: 104px;
+    left: 896px;
+    width: 240px;
+}
+
 .user-log .main-list {
     top: 192px;
     left: 24px;

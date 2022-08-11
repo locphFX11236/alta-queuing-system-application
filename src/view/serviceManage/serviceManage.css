@@ -18,7 +18,7 @@
     width: 320px;
 }
 
-.service .input-3 { left: 836px; }
+.service .input-search { left: 836px; }
 
 .service .main-list {
     top: 244px;
@@ -58,7 +58,7 @@
     width: 280px;
 }
 
-.infor-service .main-box:nth-child(3) .input-3 {
+.infor-service .main-box:nth-child(3) .input-search {
     top: 16px;
     left: 488px;
     width: 206px;
