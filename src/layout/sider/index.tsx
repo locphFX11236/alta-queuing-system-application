@@ -8,7 +8,7 @@ const { Sider } = Layout;
 const SiderLayout = (): JSX.Element => (
     <Sider theme='light' className='sider'>
         <div className='logo-sider'><LogoComponent /></div>
-        <div className='menu'><MenuComponent /></div>
+        <MenuComponent />
         <div className='logout-button'>Log out</div>
     </Sider>
 );
