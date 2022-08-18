@@ -30,16 +30,18 @@ import ManageAccount from "../view/accountManage/manage";
 
 import UserLogList from "../view/userLog";
 
+import ErrorPage from '../view/errorPage';
+
 const Router: React.FC = () => (
     <Routes>
-        <Route path='/' element={ <IndexLayout content={<Dashboard />}/> } />
+        <Route path='/' element={ <IndexLayout content={<Dashboard /> } /> } />
 
         <Route path='/login' element={ <Login /> }/>
-        <Route path='/login/infor' element={ <IndexLayout content={<Information />}/> } />
+        <Route path='/login/infor' element={ <IndexLayout content={ <Information /> } /> } />
 
-        <Route path='/equip' element={ <IndexLayout content={<EquipList />}/> } />
-        <Route path='/equip/manage' element={ <IndexLayout content={<ManageEquip />}/> } />
-        <Route path='/equip/infor' element={ <IndexLayout content={<InforEquip />}/> } />
+        <Route path='/equip' element={ <IndexLayout content={<EquipList /> } /> } />
+        <Route path='/equip/manage' element={ <IndexLayout content={<ManageEquip /> } /> } />
+        <Route path='/equip/infor' element={ <IndexLayout content={<InforEquip /> } /> } />
 
         <Route path='/service' element={ <IndexLayout content={<ServiceList />}/> } />
         <Route path='/service/manage' element={ <IndexLayout content={<ManageService />}/> } />
@@ -58,6 +60,8 @@ const Router: React.FC = () => (
         <Route path='/setting/account/manage' element={ <IndexLayout content={<ManageAccount />}/> } />
 
         <Route path='/setting/user-log' element={ <IndexLayout content={<UserLogList />}/> } />
+
+        <Route path='*' element={ <IndexLayout content={<ErrorPage />}/> } />
     </Routes>
 );
 

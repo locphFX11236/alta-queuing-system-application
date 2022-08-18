@@ -24,12 +24,12 @@
 }
 
 .menu .ant-menu-item:hover,
-.ant-menu-submenu-popup ul li:hover {
+.ant-menu-submenu-popup ul .ant-menu-item:hover {
     width: 100%;
     margin: 0 !important;
     font-weight: 700;
-    color: #FF7506;;
-    background-color: #FFF2E7;
+    color: #FF7506;
+    background-color: #FFF2E7 !important;
 }
 
 .menu .ant-menu-item-selected,
@@ -37,7 +37,7 @@
     width: 100%;
     margin: 0 !important;
     font-weight: 700;
-    color: #FFFFFF !important;
+    color: #FFFFFF;
     background-color: #FF7506 !important;
 }
 
@@ -57,7 +57,7 @@
     margin: 0;
     padding: 0;
     font-weight: 700;
-    color: #FF7506;;
+    color: #FF7506 !important;
     background-color: #FFF2E7;
 }
 

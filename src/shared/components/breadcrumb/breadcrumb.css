@@ -1,0 +1,42 @@
+.breadcrumb {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: 24px;
+    left: 24px;
+    height: 40px;
+    padding: 0px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.ant-breadcrumb li:hover {
+    background-color: #FFF2E7;
+}
+
+.ant-breadcrumb li a {
+    color: #7E7D88;
+}
+
+.ant-breadcrumb li:last-child a {
+    color: #FF7506;
+}
+
+.ant-breadcrumb-separator span {
+    width: 20px;
+    height: 20px;
+}
+
+.ant-breadcrumb-separator span svg path {
+    position: absolute;
+    left: 37%;
+    right: 36.98%;
+    top: 28.14%;
+    bottom: 28.16%;
+    background: #7E7D88;
+}

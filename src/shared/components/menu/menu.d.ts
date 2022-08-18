@@ -1,3 +1,5 @@
-type MenuItem = Required<MenuProps>['items'][number];
+import { MenuProps } from 'antd';
 
-export default MenuItem;
+export type MenuItem = Required<MenuProps>['items'][number];
+
+export type MenuProps = MenuProps;

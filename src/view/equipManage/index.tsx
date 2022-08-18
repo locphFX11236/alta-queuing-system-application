@@ -8,7 +8,7 @@ const EquipList = (): JSX.Element => (
         <div className="input input-search">Search box</div>
         <div className="table main-list">Table</div>
         <div className="pagination">Pagination</div>
-        <div className="affix-group">Affix</div>
+        <div className="affix-group">Thêm</div>
     </div>
 );
 

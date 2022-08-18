@@ -1,9 +1,7 @@
 import Icon, { CommentOutlined } from '@ant-design/icons';
-import { MenuProps } from 'antd';
-import React from 'react';
 
 import { Dashboard, Layer, Monitor, Nut, Report } from '../../assets/icon';
-import MenuItem from './menu';
+import { MenuItem, MenuProps } from './menu';
 
 function getItem(
     label: React.ReactNode,

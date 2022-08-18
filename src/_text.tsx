@@ -1,88 +1,66 @@
-import React, {useState} from 'react';
-import { Layout, Menu, Tooltip } from 'antd'
-import {
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-  TeamOutlined,
-  UserOutlined,
-} from '@ant-design/icons'
-import { useLocation, useNavigate, Route, Routes } from 'react-router-dom'
+import { Alert, Breadcrumb } from 'antd';
+import React from 'react';
+import { HashRouter, Link, Route, Routes, useLocation } from 'react-router-dom';
 
-import 'antd/dist/antd.min.css';
+const Apps = () => (
+  <ul className="app-list">
+    <li>
+      <Link to="/apps/1">Application1</Link>：<Link to="/apps/1/detail">Detail</Link>
+    </li>
+    <li>
+      <Link to="/apps/2">Application2</Link>：<Link to="/apps/2/detail">Detail</Link>
+    </li>
+  </ul>
+);
 
-const { Content, Sider } = Layout;
+const breadcrumbNameMap: Record<string, string> = {
+  '/apps': 'Application List',
+  '/apps/1': 'Application1',
+  '/apps/2': 'Application2',
+  '/apps/1/detail': 'Detail',
+  '/apps/2/detail': 'Detail',
+};
 
-const Page1 = () => {
- return <h4> Page 1</h4>
-}
+const Home = () => {
+  const location = useLocation();
+  const pathSnippets = location.pathname.split('/').filter(i => i);
 
-const Page2 = () => {
-  return <h4> Page 2</h4>
-}
+  
+  const extraBreadcrumbItems = pathSnippets.map((_, index) => {
+    const url = `/${pathSnippets.slice(0, index + 1).join('/')}`;
+    return (
+      <Breadcrumb.Item key={url}>
+        <Link to={url}>{breadcrumbNameMap[url]}</Link>
+      </Breadcrumb.Item>
+    );
+  });
 
-
-const App = () => {
-  const [collapsed, setCollapsed] = useState(true);
-
-  const toggleCollapsed = () => {
-    setCollapsed(!collapsed);
-  };
-
-  let navigate = useNavigate();
-  const selectedKey = useLocation().pathname
-
-  const highlight = () => {
-    if (selectedKey === '/'){
-      return ['1']
-    } else if (selectedKey === '/page2'){
-      return ['2']
-    }  
-  }
-
- 
+  const breadcrumbItems = [
+    <Breadcrumb.Item key="home">
+      <Link to="/">Home</Link>
+    </Breadcrumb.Item>,
+  ].concat(extraBreadcrumbItems);
 
   return (
-    <Layout className="site-layout">
-      <Sider trigger={null} collapsible collapsed={collapsed}>
-        <div className="logo" style={{color: 'white'}}> 
-            <Tooltip placement="right" arrowPointAtCenter  title="Expand / Shrink Menu" >
-                {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-                    className: 'trigger',
-                    onClick: toggleCollapsed,
-                })}
-            </Tooltip>
-          </div>
-          <Menu
-            mode="inline"
-            theme="light"
-            defaultSelectedKeys={['1']}
-            selectedKeys={highlight()}
-            style={{ height: '100%', borderRight:0 }}
-            items={[
-              {
-                key: '1',
-                icon: <UserOutlined />,
-                label: "Page 1",
-                onClick: () => { navigate('/')}
-              },
-              {
-                key: '2',
-                icon: <TeamOutlined />,
-                label: "Page 2",
-                onClick: () => { navigate('/page2')}
-              }
+    <div className="demo">
+      <div className="demo-nav">
+        <Link to="/">Home</Link>
+        <Link to="/apps">Application List</Link>
+      </div>
+      <Routes>
+        <Route path="/apps" element={<Apps />} />
+        <Route path="*" element={<span>Home Page</span>} />
+      </Routes>
+      <Alert style={{ margin: '16px 0' }} message="Click the navigation above to switch:" />
+      <Breadcrumb>{breadcrumbItems}</Breadcrumb>
+    </div>
+  );
+};
 
-            ]}
-            />
-        </Sider>
-        <Content>
-          <Routes>
-            <Route path="/" element={<Page1 />} />
-            <Route path="/page2" element={<Page2 />} />
-          </Routes>
-        </Content>
-    </Layout>
-  )
-}
+const App: React.FC = () => (
+  <HashRouter>
+    <Home />
+  </HashRouter>
+);
 
 export default App;
