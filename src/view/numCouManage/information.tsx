@@ -1,4 +1,5 @@
 import { Typography } from "antd";
+import { Link } from "react-router-dom";
 
 const InforNumberCount = (): JSX.Element => (
     <div className="infor-numberCount">
@@ -7,7 +8,9 @@ const InforNumberCount = (): JSX.Element => (
             <Typography.Title className="title-lv-2">Thông tin cấp số</Typography.Title>
             <div className="infor-box">Information</div>
         </div>
-        <div className="affix-group">Affix</div>
+        <div className="affix-group">
+            <Link to='/number-count'>Quay lại</Link>
+        </div>
     </div>
 );
 

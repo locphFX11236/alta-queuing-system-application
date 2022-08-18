@@ -1,4 +1,5 @@
 import { Typography } from "antd";
+import { Link } from "react-router-dom";
 
 const InforEquipment = (): JSX.Element => (
     <div className="infor-equip">
@@ -7,7 +8,9 @@ const InforEquipment = (): JSX.Element => (
             <Typography.Title className="title-lv-2">Thông tin thiết bị</Typography.Title>
             <div className="infor-box">Information</div>
         </div>
-        <div className="affix-group">Affix</div>
+        <div className="affix-group">
+            <Link to='/equip/equ-manage-upd'>Cập nhật</Link>
+        </div>
     </div>
 );
 
