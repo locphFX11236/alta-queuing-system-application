@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Breadcrumb } from 'antd';
 import { RightOutlined } from '@ant-design/icons';
 
@@ -7,12 +7,13 @@ import PathItem from './items';
 const BreadcrumbComponent: React.FC = () => {
     const location = useLocation();
     const pathSnippets = location.pathname.split('/').filter((_, i) => i !== 0);
-
+    console.log('Breadcrumb.index ',location.pathname)
+    
     const breadcrumbItems = pathSnippets.map((a) => {
         const url = '/' + a;
         return (
             <Breadcrumb.Item key={url}>
-                <Link to={url}>{PathItem[url]}</Link>
+                <NavLink to={url}>{PathItem[url]}</NavLink>
             </Breadcrumb.Item>
         );
     });

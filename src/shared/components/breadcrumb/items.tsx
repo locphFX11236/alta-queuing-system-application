@@ -20,8 +20,8 @@ const PathItem: Record<string, string> = {
     '/setting': 'Cài đặt hệ thống',
 
     '/role': 'Quản lý vai trò',
-    '/rol-manage-add': 'Thêm dịch vụ',
-    '/rol-manage-upd': 'Cập nhật dịch vụ',
+    '/rol-manage-add': 'Thêm vai trò',
+    '/rol-manage-upd': 'Cập nhật vai trò',
 
     '/account': 'Quản lý tài khoản',
     '/acc-manage-add': 'Thêm tài khoản',

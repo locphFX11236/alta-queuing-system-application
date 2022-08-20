@@ -3,10 +3,10 @@ import { Layout } from 'antd';
 import ContentLayout from './content';
 import SiderLayout from './sider';
 
-const IndexLayout = ({content}: any): JSX.Element => (
+const IndexLayout = (): JSX.Element => (
     <Layout className='main'>
         <SiderLayout />
-        <ContentLayout children={content}/>
+        <ContentLayout />
     </Layout>
 );
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import IndexLayout from "../layout";
 
@@ -34,38 +34,69 @@ import ErrorPage from '../view/errorPage';
 
 const Router: React.FC = () => (
     <Routes>
-        <Route path='/' element={ <IndexLayout content={<Dashboard /> } /> } />
-
         <Route path='/login' element={ <Login /> }/>
-        <Route path='/login/infor' element={ <IndexLayout content={ <Information /> } /> } />
 
-        <Route path='/equip' element={ <IndexLayout content={<EquipList /> } /> } />
-        <Route path='/equip/equ-manage-add' element={ <IndexLayout content={<ManageEquip /> } /> } />
-        <Route path='/equip/equ-manage-upd' element={ <IndexLayout content={<ManageEquip /> } /> } />
-        <Route path='/equip/equ-infor' element={ <IndexLayout content={<InforEquip /> } /> } />
+        <Route path='/' element={ <IndexLayout /> } >
+            <Route path='infor' element={ <Information /> } />
 
-        <Route path='/service' element={ <IndexLayout content={<ServiceList />}/> } />
-        <Route path='/service/ser-manage-add' element={ <IndexLayout content={<ManageService />}/> } />
-        <Route path='/service/ser-manage-upd' element={ <IndexLayout content={<ManageService />}/> } />
-        <Route path='/service/ser-infor' element={ <IndexLayout content={<InforService />}/> } />
+            <Route index element={ <Dashboard /> } />
+            {/* Thuộc tính 'index' sẽ là đường đẫn mặc định khi truy cập vào 'path' của 'route parent' */}
 
-        <Route path='/number-count' element={ <IndexLayout content={<NumberCountList />}/> } />
-        <Route path='/number-count/num-manage-add' element={ <IndexLayout content={<ManageNumberCount />}/> } />
-        <Route path='/number-count/num-infor' element={ <IndexLayout content={<InforNumberCount />}/> } />
+            <Route path='equip' >
+                {/* Sau path của route parent không nhất thiết phải có dấu '/' */}
+                <Route index element={ <EquipList /> } />
+                <Route path='equ-manage-add' element={ <ManageEquip /> } />
+                <Route path='equ-manage-upd' element={ < ManageEquip /> } />
+                <Route path='equ-infor' element={ <InforEquip /> } />
+            </Route>
 
-        <Route path='/report' element={ <IndexLayout content={<ReportList />}/> } />
+            <Route path='service' >
+                <Route index element={ <ServiceList /> } />
+                <Route path='ser-manage-add' element={ <ManageService /> } />
+                <Route path='ser-manage-upd' element={ <ManageService /> } />
+                <Route path='ser-infor' element={ <InforService /> } />
+            </Route>
 
-        <Route path='/setting/role' element={ <IndexLayout content={<RoleList />}/> } />
-        <Route path='/setting/role/rol-manage-add' element={ <IndexLayout content={<ManageRole />}/> } />
-        <Route path='/setting/role/rol-manage-upd' element={ <IndexLayout content={<ManageRole />}/> } />
+            <Route path='number-count' >
+                <Route index element={ <NumberCountList /> } />
+                <Route path='num-manage-add' element={ <ManageNumberCount /> } />
+                <Route path='num-infor' element={ <InforNumberCount /> } />
+            </Route>
 
-        <Route path='/setting/account' element={ <IndexLayout content={<AccountList />}/> } />
-        <Route path='/setting/account/acc-manage-add' element={ <IndexLayout content={<ManageAccount />}/> } />
-        <Route path='/setting/account/acc-manage-upd' element={ <IndexLayout content={<ManageAccount />}/> } />
+            <Route path='report' element={ <ReportList /> } />
 
-        <Route path='/setting/user-log' element={ <IndexLayout content={<UserLogList />}/> } />
+            <Route path='setting' >
 
-        <Route path='*' element={ <IndexLayout content={<ErrorPage />}/> } />
+                <Route index element={ <Navigate to='/setting/role' replace={true} /> } />
+                {/*
+                - Chú ý nếu trước 'path' có dấu '/' là đường dẫn trực tiếp 'route' sẽ bỏ qua 'path' của 'route parent' mà truy cập thẳng vào.
+                - Ngược lại đường dẫn gián tiếp sẽ truy cập 'path' của 'route parent' + 'path' của 'route children'
+                - Điều này rất quan trọng khi dùng 'Navigate'
+                */}
+
+                <Route path='role' >
+                    <Route index element={ <RoleList /> } />
+                    <Route path='rol-manage-add' element={ <ManageRole /> } />
+                    <Route path='rol-manage-upd' element={ <ManageRole /> } />
+                </Route>
+
+                <Route path='account' >
+                    <Route index element={ <AccountList /> } />
+                    <Route path='acc-manage-add' element={ <ManageAccount /> } />
+                    <Route path='acc-manage-upd' element={ <ManageAccount /> } />
+                </Route>
+
+                <Route path='user-log' element={ <UserLogList /> } />
+            </Route>
+
+            {/* Redirect v6 */}
+            <Route path='role' element={ <Navigate to='/setting/role' replace={true} /> } />
+            <Route path='account' element={ <Navigate to='/setting/account' replace={true} /> } />
+            <Route path='user-log' element={ <Navigate to='/setting/user-log' replace={true} /> } />
+        </Route>
+
+        {/* Error path v6 */}
+        <Route path='*' element={ <ErrorPage /> } />
     </Routes>
 );
 
