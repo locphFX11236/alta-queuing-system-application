@@ -1,4 +1,5 @@
 import { Typography } from "antd";
+import { Link } from "react-router-dom";
 
 import { AvatarComponent, NameComponent } from "../../shared/components/account";
 import BreadcrumbComponent from "../../shared/components/breadcrumb";
@@ -8,13 +9,17 @@ const TopBar = (): JSX.Element => (
     <div className="top-bar">
         <BreadcrumbComponent />
         <div className="noti"><NotiComponent /></div>
-        <div className="acc">
+        <Link
+            className="acc"
+            to='/infor'
+            replace={true}
+        >
             <div className="avatar-bar"><AvatarComponent /></div>
             <div className="acc-bar">
                 <p className="text">Xin Chào</p>
                 <Typography.Title className="name-bar" level={5}><NameComponent /></Typography.Title>
             </div>
-        </div>
+        </Link>
     </div>
 );
 

@@ -1,5 +1,6 @@
 const PathItem: Record<string, string> = {
     '/': 'Dashboard',
+    '/infor': 'Thông tin cá nhân',
 
     '/equip': 'Thiết bị',
     '/equ-manage-add': 'Thêm thiết bị',

@@ -5,9 +5,8 @@ import { RightOutlined } from '@ant-design/icons';
 import PathItem from './items';
 
 const BreadcrumbComponent: React.FC = () => {
-    const location = useLocation();
-    const pathSnippets = location.pathname.split('/').filter((_, i) => i !== 0);
-    console.log('Breadcrumb.index ',location.pathname)
+    const locationPath = useLocation().pathname;
+    const pathSnippets = locationPath.split('/').filter((_, i) => i !== 0);
     
     const breadcrumbItems = pathSnippets.map((a) => {
         const url = '/' + a;
