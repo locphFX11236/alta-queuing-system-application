@@ -8,7 +8,7 @@ const { Content } = Layout;
 const LeftLogin = (): JSX.Element => (
     <Content className='left-login'>
         <div className='logo-login'><Logo /></div>
-        <div className='form-login _center'><FormLogin /></div>
+        <FormLogin />
     </Content>
 );
 
