@@ -2,6 +2,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Menu } from 'antd';
 import { MoreOutlined } from '@ant-design/icons';
 
+import './menu.css';
 import Items from './itemMenu';
 import { MenuProps } from './menu';
 

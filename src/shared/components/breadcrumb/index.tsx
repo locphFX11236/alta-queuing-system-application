@@ -2,6 +2,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { Breadcrumb } from 'antd';
 import { RightOutlined } from '@ant-design/icons';
 
+import './breadcrumb.css';
 import PathItem from './items';
 
 const BreadcrumbComponent: React.FC = () => {

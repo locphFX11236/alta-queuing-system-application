@@ -1,7 +1,6 @@
 @import '~antd/dist/antd.css';
 @import './layout/layout.css';
 @import './view/view.css';
-@import './shared/components/component.css';
 
 * {
     box-sizing: border-box;

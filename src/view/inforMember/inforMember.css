@@ -12,7 +12,6 @@
     height: 303px;
     left: 24px;
     top: 40px;
-    background-color: aqua; /* x */
 }
 
 .avatar-member {
@@ -22,20 +21,26 @@
     border-radius: 318px;
     display: flex;
     align-items: center;
-    background-color: rgba(219, 219, 219, 0.5); /* x */
 }
 
 .avatar-change {
     position: absolute;
+    display: flex;
     width: 45px;
     height: 45px;
     left: 171px;
     top: 206px;
-    display: flex;
-    align-items: center;
-    background: #FF7506;
+    padding: 6px;
+    align-items: center !important;
+    background: #FF7506 !important;
     border: 2px solid #FFFFFF;
     border-radius: 50%;
+}
+
+.avatar-change span svg {
+    width: 30px;
+    height: 30px;
+    color: #FFFFFF;
 }
 
 .name-infor {
@@ -49,7 +54,6 @@
     display: flex;
     align-items: center;
     color: #282739 !important;
-    background-color: rgba(219, 219, 219, 0.5); /* x */
 }
 
 .right-infor {

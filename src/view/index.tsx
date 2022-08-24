@@ -1,16 +1,20 @@
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { selectUser } from "../features/slice";
+// import type { UserState } from "../features/redux";
+
+// import { useAppSelector } from "../features/hookRedux";
+// import { SelectUser } from "../features/userSlice";
 import Router from "../routes/routes";
 
 function IndexView () {
-    const user = useSelector(selectUser)
     let navigate = useNavigate();
+    // const userState: UserState = useAppSelector(SelectUser)
 
     useEffect(() => {
-        user ? navigate('/') : navigate('/login');
+        // user.isLoggedIn ? navigate('/') : navigate('/login');
+        
+        navigate('/infor');
     }, []) // eslint-disable-line react-hooks/exhaustive-deps
     // Đoạn comment cuối Hook này để bỏ qua (ignore) 'eslint's warning'
 

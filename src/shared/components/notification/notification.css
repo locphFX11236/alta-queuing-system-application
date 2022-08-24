@@ -1,0 +1,68 @@
+.noti {
+    position: absolute;
+    top: 28px;
+    right: 260px;
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    background: #FFF2E7;
+    border-radius: 32px;
+}
+
+.noti:hover, .noti:active,
+.noti::selection, .noti:focus {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    background: #FF7506;
+}
+
+.noti span svg {
+    width: 20px;
+    height: 20px;
+    background: #FFAC6A;
+}
+
+.noti span svg:hover,
+.noti span svg:active,
+.noti span svg::selection {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    background: #FFFFFF;
+}
+
+.ant-popover-content {
+    position: absolute;
+    width: 360px;
+    height: 526px;
+    left: 0px;
+    top: 59px;
+    overflow-y: scroll;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
+    border-radius: 10px;
+}
+
+.ant-popover-title {
+    position: absolute;
+    width: 360px;
+    height: 48px;
+    left: 0px;
+    top: 0px;
+    background: #FF9138;
+}
+
+.ant-popover-inner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    width: 360px;
+    left: 0px;
+    top: 48px;
+}
+
+.content-noti {
+    width: 360px;
+    height: 80px;
+}
