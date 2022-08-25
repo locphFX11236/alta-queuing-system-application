@@ -7,16 +7,6 @@
     padding: 104px 24px 30px;
 }
 
-.left-statistic {
-    position: absolute;
-    width: 790px;
-    height: 128px;
-    left: 24px;
-    top: 156px;
-    border-radius: 12px;
-    background-color: antiquewhite; /* x */
-}
-
 .dashboard-chart {
     position: absolute;
     width: 791px;
