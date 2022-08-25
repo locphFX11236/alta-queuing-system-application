@@ -14,14 +14,19 @@ const NumCountJSON = JSON.stringify(data); // Chuyển đổi tạm để xử l
 
 function Render () {
     const dataObj = JSON.parse(NumCountJSON);
-    return dataObj.map((a: dataNumCount) => {
-        return (
-            <Card className="content-noti">
-                <h4>Người dùng: { a.name }</h4>
-                <p>Thời gian nhận số: { a.time }</p>
-            </Card>
-        );
-    });
+    return(
+        <Card title='Thông báo'>
+            {dataObj.map((a: dataNumCount) => {
+                return (
+                    <div className="card-noti">
+                        <h4>Người dùng: { a.name }</h4>
+                        <p>Thời gian nhận số: { a.time }</p>
+                        <hr/>
+                    </div>
+                );
+            })}
+        </Card>
+    )
 };
 
 
@@ -34,10 +39,8 @@ const NotiComponent = () => {
 
     return (
         <Popover
-            title="Thông báo"
             content={ <Render /> }
             trigger="click"
-            placement="bottomRight"
             showArrow={false}
             visible={visible}
             onVisibleChange={handleVisibleChange}
