@@ -15,7 +15,7 @@ const NumCountJSON = JSON.stringify(data); // Chuyển đổi tạm để xử l
 function Render () {
     const dataObj = JSON.parse(NumCountJSON);
     return(
-        <Card title='Thông báo'>
+        <Card title='Thông báo' className="noti-list">
             {dataObj.map((a: dataNumCount) => {
                 return (
                     <div className="card-noti">
@@ -40,7 +40,7 @@ const NotiComponent = () => {
     return (
         <Popover
             content={ <Render /> }
-            trigger="click"
+            trigger='focus'
             showArrow={false}
             visible={visible}
             onVisibleChange={handleVisibleChange}

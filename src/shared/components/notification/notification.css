@@ -16,15 +16,15 @@
     background: #FF7506;
 }
 
-.noti span svg {
+.noti svg g path {
     width: 20px;
     height: 20px;
     background: #FFF2E7;
 }
 
-.noti span svg:hover,
-.noti span svg:active,
-.noti span svg::selection {
+.noti svg g path:hover,
+.noti svg g path:active,
+.noti svg g path::selection {
     color: #FFFFFF;
     border-color: #FFFFFF;
     background: #FFFFFF;
@@ -49,7 +49,7 @@
     background: #FFFFFF;
 }
 
-.ant-card-head {
+.noti-list .ant-card-head {
     width: 360px;
     height: 48px;
     color: #FFFFFF;
@@ -57,7 +57,7 @@
     border-radius: 10px 10px 0 0;
 }
 
-.ant-card-head-title {
+.noti-list .ant-card-head div .ant-card-head-title {
     position: absolute;
     left: 24px;
     top: 9px;
@@ -69,7 +69,7 @@
     line-height: 30px;
 }
 
-.ant-card-body {
+.noti-list .ant-card-body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
