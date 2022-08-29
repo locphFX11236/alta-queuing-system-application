@@ -9,25 +9,18 @@
     background: #FFAC6A;
 }
 
-.noti:hover, .noti:active,
-.noti::selection, .noti:focus {
-    color: #FFFFFF;
-    border-color: #FFFFFF;
-    background: #FF7506;
-}
-
-.noti svg g path {
+.noti svg {
     width: 20px;
     height: 20px;
-    background: #FFF2E7;
+    color: #FFF2E7;
 }
 
-.noti svg g path:hover,
-.noti svg g path:active,
-.noti svg g path::selection {
+.noti:hover, .noti:active,
+.noti::selection, .noti:focus,
+.noti svg:hover, .noti svg:active,
+.noti svg::selection, .noti svg:focus {
     color: #FFFFFF;
-    border-color: #FFFFFF;
-    background: #FFFFFF;
+    background: #FF7506;
 }
 
 .ant-popover {

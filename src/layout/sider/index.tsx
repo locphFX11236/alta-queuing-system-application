@@ -17,7 +17,9 @@ const SiderLayout = (): JSX.Element => {
     
     return (
         <Sider theme='light' className='sider'>
-            <div className='logo-sider'><LogoComponent /></div>
+            <Link className='logo-sider' to='/text' replace={true}>
+                <LogoComponent />
+            </Link>
             <MenuComponent />
             <Link
                 to='/login'

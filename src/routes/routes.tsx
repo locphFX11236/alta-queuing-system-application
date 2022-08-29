@@ -32,12 +32,16 @@ import UserLogList from "../view/userLog";
 
 import ErrorPage from '../view/errorPage';
 
+import { MyResponsiveRadialBar } from '../view/text';
+
 const Router: React.FC = () => (
     <Routes>
-        <Route path='/login' element={ <Login /> }/>
+        <Route path='/login' element={ <Login /> } />
 
         <Route path='/' element={ <IndexLayout /> } >
             <Route path='infor' element={ <Information /> } />
+
+            <Route path='text' element={ <MyResponsiveRadialBar /> } />
 
             <Route index element={ <Dashboard /> } />
             {/* Thuộc tính 'index' sẽ là đường đẫn mặc định khi truy cập vào 'path' của 'route parent' */}

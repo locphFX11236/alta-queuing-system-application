@@ -16,9 +16,9 @@ function Render () {
     const dataObj = JSON.parse(NumCountJSON);
     return(
         <Card title='Thông báo' className="noti-list">
-            {dataObj.map((a: dataNumCount) => {
+            {dataObj.map((a: dataNumCount, i: number) => {
                 return (
-                    <div className="card-noti">
+                    <div className="card-noti" key={i}>
                         <h4>Người dùng: { a.name }</h4>
                         <p>Thời gian nhận số: { a.time }</p>
                         <hr/>

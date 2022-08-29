@@ -1,12 +1,18 @@
+import { Outlet } from 'react-router-dom';
 import { Layout } from 'antd';
 
-import ContentLayout from './content';
 import SiderLayout from './sider';
+import TopBar from './topBar';
+
+const { Content } = Layout;
 
 const IndexLayout = (): JSX.Element => (
     <Layout className='main'>
         <SiderLayout />
-        <ContentLayout />
+        <Content className='content'>
+            <TopBar />
+            <Outlet />
+        </Content>
     </Layout>
 );
 

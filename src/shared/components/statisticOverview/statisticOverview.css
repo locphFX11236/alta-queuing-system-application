@@ -1,0 +1,12 @@
+.overview {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 353px;
+    height: 83px;
+    padding: 10px 16px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
+    border-radius: 12px;
+}
