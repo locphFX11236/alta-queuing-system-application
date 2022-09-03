@@ -1,4 +1,5 @@
-import data from '../../../data/user.json'
+import HandleData from "../../../data/handle";
+import { userJSON } from '../../../data/dummy';
 
 type dataUser = {
     id: string,
@@ -12,10 +13,8 @@ type dataUser = {
     status: boolean
 };
 
-const userJSON = JSON.stringify(data); // Chuyển đổi tạm để xử lý data
-
 const UserData = (id: string) => {
-    const dataObj = JSON.parse(userJSON);
+    const dataObj = HandleData(userJSON);
     const userData = dataObj.find((u: dataUser) => u.id === id);
     return userData;
 };

@@ -1,0 +1,92 @@
+[
+    {
+        "key": "Thiết bị",
+        "name": "Thiết bị",
+        "amount": 4221,
+        "rate%": 0,
+        "color": [ "#FF7506", "#7E7D88" ],
+        "data": [
+            {
+                "id": "actived",
+                "data": [ {
+                    "x": "Đang hoạt động",
+                    "y": 3799,
+                    "proportion%": 90.00,
+                    "rate%": -32.41
+                } ]
+            },
+            {
+                "id": "none",
+                "data": [ {
+                    "x": "Ngưng hoạt động",
+                    "y": 422,
+                    "proportion%": 10.00,
+                    "rate%": 32.41
+                } ]
+            }
+        ]
+    },
+    {
+        "key": "Dịch vụ",
+        "name": "Dịch vụ",
+        "amount": 276,
+        "rate%": 0,
+        "color": [ "#4277FF", "#7E7D88" ],
+        "data": [
+            {
+                "id": "actived",
+                "data": [ {
+                    "x": "Đang hoạt động",
+                    "y": 210,
+                    "proportion%": 76.09,
+                    "rate%": 32.41
+                } ]
+            },
+            {
+                "id": "none",
+                "data": [ {
+                    "x": "Ngưng hoạt động",
+                    "y": 66,
+                    "proportion%": 23.91,
+                    "rate%": -32.41
+                } ]
+            }
+        ]
+    },
+    {
+        "key": "Cấp số",
+        "name": "Số thứ tự đã cấp",
+        "amount": 4221,
+        "rate%": 32.41,
+        "color": [ "#35C75A", "#7E7D88", "#F178B6" ],
+        "data": [
+            {
+                "id": "actived",
+                "data": [ {
+                    "x": "Số thứ tự đã sử dụng",
+                    "y": 3721,
+                    "proportion%": 88.15,
+                    "rate%": -32.41
+                } ]
+            },
+            {
+                "id": "waitting",
+                "data": [ {
+                    "x": "Số thứ tự đang chờ",
+                    "y": 486,
+                    "proportion%": 0,
+                    "rate%": 56.41
+                } ]
+            },
+            {
+                "id": "skip",
+                "data": [ {
+                    "x": "Số thứ tự đã bỏ qua",
+                    "y": 32,
+                    "proportion%": 0,
+                    "rate%": -22.41
+                } ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,1 @@
+export default function HandleData(data: string) { return JSON.parse(data) };

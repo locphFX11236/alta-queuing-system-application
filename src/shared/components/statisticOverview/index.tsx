@@ -1,27 +1,40 @@
+import Icon, { CommentOutlined } from '@ant-design/icons';
+import { Badge } from 'antd';
+
 import './statisticOverview.css';
-import data from '../../../data/dataStatistic.json';
-import { MyResponsiveRadialBar } from '../chart/radialBar';
+import { statisticJSON } from '../../../data/dummy';
+import RadialBar from '../chart/radialBarChart/radialBar';
+import { Layer, Monitor } from '../../assets/icon';
+import HandleData from '../../../data/handle';
 
-const StaCouJSON = JSON.stringify(data); // Chuyển đổi tạm để xử lý data
+const dataObj = HandleData(statisticJSON);
 
-const dataObj = JSON.parse(StaCouJSON);
+const RenderIcon = [
+    <Icon component={Monitor} />,
+    <CommentOutlined style={{ fontSize: '20px', opacity:"0.6" }} />,
+    <Icon component={Layer} />
+];
 
-const AOverview = () => {
-    console.log(dataObj[2].data[0].data[0].x);
-    return dataObj.map((D: any, i: number) => (
-        <div className="overview" key={i}>
-            <MyResponsiveRadialBar />
+const AOverview = () => dataObj.map((D: any, i: number) => (
+    <div className="overview" key={`${D.key}_${i}`}>
+        <RadialBar choice={i} />
+        <p>{Math.round(D.data[0].data[0]['proportion%'])}%</p>
+        <div>
             <p>{D.amount}</p>
-            <div>
-                { D.data.map((d: any, i: number) => d.data.map((a: any, i: number) => (
-
-                <p>{a.x} {a.y}</p>
-
-                ))) }
-            </div>
+            <p style={{ color: D.color[0] }}>{RenderIcon[i]}</p>
+            <p style={{ color: D.color[0] }}>{D.key}</p>
         </div>
-    ))
-};
+        <div>{ D.data.map((d: any, i: number) => (
+
+            <div key={i}>
+                <Badge color={D.color[i]} />
+                <p>{d.data[0].x}</p>
+                <p style={{ color: D.color[0] }}>{d.data[0].y}</p>
+            </div>
+
+        )) }</div>
+    </div>
+));
 
 const StatisticOverviewComponent = (): JSX.Element => (
     <AOverview />

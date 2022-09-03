@@ -7,17 +7,6 @@
     padding: 104px 24px 30px;
 }
 
-.dashboard-chart {
-    position: absolute;
-    width: 791px;
-    height: 484px;
-    left: 24px;
-    top: 296px;
-    background: #FFFFFF;
-    border-radius: 12px;
-    filter: drop-shadow(2px 2px 15px rgba(70, 64, 67, 0.1));
-}
-
 .right-dashboard {
     position: absolute;
     top: 0px;

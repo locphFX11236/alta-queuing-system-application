@@ -20,7 +20,7 @@ import NumberCountList from "../view/numCouManage";
 import ManageNumberCount from "../view/numCouManage/manage";
 import InforNumberCount from "../view/numCouManage/information";
 
-import ReportList from "../view/report";
+import ReportList from "../view/reportPage";
 
 import RoleList from "../view/roleManage";
 import ManageRole from "../view/roleManage/manage";

@@ -1,12 +1,16 @@
-import { ArrowUpOutlined, ArrowDownOutlined, CaretRightOutlined } from '@ant-design/icons';
+import Icon, { ArrowUpOutlined, ArrowDownOutlined, CaretRightOutlined } from '@ant-design/icons';
 
 import './statisticCount.css';
-import data from '../../../data/dataStatistic.json';
 import { Await, Calen, CalenCheck, Flash } from '../../assets/icon';
+import HandleData from '../../../data/handle';
+import { statisticJSON } from '../../../data/dummy';
 
-const StaCouJSON = JSON.stringify(data); // Chuyển đổi tạm để xử lý data
-
-const Icon = [ <Calen />, <CalenCheck />, <Await />, <Flash /> ];
+const RenderIcon = [
+    <Icon component={Calen} />,
+    <Icon component={CalenCheck} />,
+    <Icon component={Await} />,
+    <Icon component={Flash} />
+];
 
 function TagCom ({d}: any) {
     if (d > 0) {
@@ -34,13 +38,13 @@ function TagCom ({d}: any) {
 };
 
 const StatisticCountComponent = () => {
-    const dataObj = JSON.parse(StaCouJSON)[2];
+    const dataObj = HandleData(statisticJSON)[2];
     return(
         <div className="left-statistic">
             <div key={dataObj.name} className="sta-cou-box">
                 <p>{dataObj.name}</p>
                 <h3>{dataObj.amount}</h3>
-                <div className="sta-cou-box-icon">{ Icon[0] }</div>
+                <div className="sta-cou-box-icon">{ RenderIcon[0] }</div>
                 <TagCom d={dataObj['rate%']} />
             </div>
 
@@ -49,7 +53,7 @@ const StatisticCountComponent = () => {
             <div key={d.id} className="sta-cou-box">
                 <p>{d.data[0].x}</p>
                 <h3>{d.data[0].y}</h3>
-                <div className="sta-cou-box-icon">{ Icon[i] }</div>
+                <div className="sta-cou-box-icon">{ RenderIcon[i + 1] }</div>
                 <TagCom d={d.data[0]['rate%']} />
             </div>
 

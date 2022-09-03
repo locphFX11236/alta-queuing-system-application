@@ -1,12 +1,11 @@
 import { ResponsiveRadialBar } from '@nivo/radial-bar';
 
-import data from '../data/dataStatistic.json';
-
-const StaCouJSON = JSON.stringify(data); // Chuyển đổi tạm để xử lý data
+import { statisticJSON } from '../data/dummy';
+import HandleData from '../data/handle';
 
 let Choice: number = 2;
 
-const dataObj = JSON.parse(StaCouJSON)[Choice];
+const dataObj = HandleData(statisticJSON)[Choice];
 
 const RadialBarColor = {
     tracksColor: '#EAEAEC',

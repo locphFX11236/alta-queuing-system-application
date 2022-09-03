@@ -4,7 +4,7 @@
 @import './equipManage/equipManage.css';
 @import './serviceManage/serviceManage.css';
 @import './numCouManage/numCouManage.css';
-@import './report/report.css';
+@import './reportPage/report.css';
 @import './roleManage/roleManage.css';
 @import './accountManage/accountManage.css';
 @import './userLog/userLog.css';
@@ -80,7 +80,7 @@
     font-weight: 700 !important;
     font-size: 20px !important;
     line-height: 30px !important;
-    color: #FF7506 !important;
+    color: #FF7506;
 }
 
 .button-group {

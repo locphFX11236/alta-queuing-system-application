@@ -1,4 +1,5 @@
 .overview {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -9,4 +10,107 @@
     background: #FFFFFF;
     box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
     border-radius: 12px;
+}
+
+.overview > p:nth-child(2) {
+    position: absolute;
+    top: 30px;
+    left: 31px;
+    width: 31px;
+    height: 24px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #535261;
+}
+
+.overview div:nth-child(3) p:nth-child(1) {
+    position: absolute;
+    width: 64px;
+    height: 36px;
+    left: 88px;
+    top: 14px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 36px;
+    color: #535261;
+}
+
+.overview div:nth-child(3) p:nth-child(2) {
+    position: absolute;
+    left: 88px;
+    top: 45px;
+}
+
+.overview div:nth-child(3) p:nth-child(2) .anticon svg {
+    width: 14px;
+    height: 14px;
+}
+
+.overview div:nth-child(3) p:nth-child(3) {
+    position: absolute;
+    top: 47px;
+    left: 106px;
+    width: 49px;
+    height: 21px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.overview div:nth-child(4) {
+    position: absolute;
+    width: 145px;
+    height: 63px;
+    left: 192px;
+    top: 10px;
+}
+
+.overview div:nth-child(4) div {
+    position: relative;
+    width: 145px;
+    height: 21px;
+}
+
+.overview div:nth-child(4) div span {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+}
+
+.overview div:nth-child(4) div p:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    width: 100px;
+    height: 21px;
+    margin: 0;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    color: #7E7D88;
+}
+
+.overview div:nth-child(4) div p:nth-child(3) {
+    position: absolute;
+    top: 2px;
+    left: 110px;
+    width: 26px;
+    height: 18px;
+    margin: 0;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
 }

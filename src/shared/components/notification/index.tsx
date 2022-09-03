@@ -3,17 +3,16 @@ import { useState } from "react";
 
 import './notification.css';
 import { Bell } from "../../assets/icon";
-import data from '../../../data/num-count.json'
+import HandleData from "../../../data/handle";
+import { notiJSON } from "../../../data/dummy";
 
 type dataNumCount = {
     name: string,
     time: string
 };
 
-const NumCountJSON = JSON.stringify(data); // Chuyển đổi tạm để xử lý data
-
 function Render () {
-    const dataObj = JSON.parse(NumCountJSON);
+    const dataObj = HandleData(notiJSON);
     return(
         <Card title='Thông báo' className="noti-list">
             {dataObj.map((a: dataNumCount, i: number) => {
