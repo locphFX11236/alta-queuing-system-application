@@ -1,8 +1,8 @@
 import { Layout, Button } from 'antd';
 import { Link } from 'react-router-dom';
 
-import { useAppDispatch } from '../../features/hookRedux';
-import { logout } from '../../features/userSlice';
+import { useAppDispatch } from '../../core/features/hookRedux';
+import { logout } from '../../core/features/userSlice';
 import { LogOut } from '../../shared/assets/icon';
 import LogoComponent from '../../shared/components/logo';
 import MenuComponent from '../../shared/components/menu';

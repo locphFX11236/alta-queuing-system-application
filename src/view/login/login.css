@@ -47,7 +47,34 @@
     height: 614.06px;
     left: 79px;
     top: 112.94px;
-    background-color: antiquewhite;
+}
+
+.picture-1 h2 {
+    position: absolute;
+    width: 142px;
+    height: 54px;
+    left: 375px;
+    top: 294px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 51px;
+    color: #FF7506;
+}
+
+.picture-1 h1 {
+    position: absolute;
+    width: 361px;
+    height: 54px;
+    left: 375px;
+    top: 341px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 54px;
+    color: #FF7506;
 }
 
 .picture-2 {
@@ -56,5 +83,4 @@
     height: 560px;
     left: 43px;
     top: 153px;
-    background-color: aquamarine;
 }

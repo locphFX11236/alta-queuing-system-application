@@ -1,9 +1,9 @@
 import Icon, { ArrowUpOutlined, ArrowDownOutlined, CaretRightOutlined } from '@ant-design/icons';
 
 import './statisticCount.css';
-import { Await, Calen, CalenCheck, Flash } from '../../assets/icon';
-import HandleData from '../../../data/handle';
-import { statisticJSON } from '../../../data/dummy';
+import { Await, Calen, CalenCheck, Flash } from '../../../assets/icon';
+import HandleData from '../../../../data/handle';
+import { statisticJSON } from '../../../../data/dummy';
 
 const RenderIcon = [
     <Icon component={Calen} />,

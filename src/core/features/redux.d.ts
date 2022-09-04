@@ -1,5 +1,5 @@
 import type { TypedUseSelectorHook } from 'react-redux';
-import type { store } from '../core/store';
+import type { store } from '../store';
 import type { AnyAction, CaseReducer, PayloadAction, Slice } from '@reduxjs/toolkit';
 
 export interface UserState {

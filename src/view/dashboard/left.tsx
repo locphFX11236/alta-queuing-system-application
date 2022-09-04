@@ -1,7 +1,7 @@
 import { Typography } from "antd";
 
 import ChartComponent from "../../shared/components/chart/areaChart";
-import StatisticCountComponent from "../../shared/components/statisticCount";
+import StatisticCountComponent from "../../shared/components/statistic/count";
 
 const LeftDashboard = (): JSX.Element => (
     <div className="left-dashboard">

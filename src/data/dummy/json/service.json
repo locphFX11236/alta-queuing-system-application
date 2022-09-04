@@ -1,0 +1,74 @@
+[
+    {
+        "code": "SERV_01",
+        "name": "Service 01",
+        "description": "Hoạt động 1234",
+        "actionStatus": true
+    },
+    {
+        "code": "SERV_02",
+        "name": "Service 02",
+        "description": "Hoạt động 1234",
+        "actionStatus": false
+    },
+    {
+        "code": "SERV_03",
+        "name": "Service 03",
+        "description": "Hoạt động 1234",
+        "actionStatus": true
+    },
+    {
+        "code": "SERV_04",
+        "name": "Service 04",
+        "description": "Hoạt động 1234",
+        "actionStatus": false
+    },
+    {
+        "code": "SERV_01",
+        "name": "Service 01",
+        "description": "Hoạt động 1234",
+        "actionStatus": true
+    },
+    {
+        "code": "SERV_02",
+        "name": "Service 02",
+        "description": "Hoạt động 1234",
+        "actionStatus": false
+    },
+    {
+        "code": "SERV_03",
+        "name": "Service 03",
+        "description": "Hoạt động 1234",
+        "actionStatus": true
+    },
+    {
+        "code": "SERV_04",
+        "name": "Service 04",
+        "description": "Hoạt động 1234",
+        "actionStatus": false
+    },
+    {
+        "code": "SERV_01",
+        "name": "Service 01",
+        "description": "Hoạt động 1234",
+        "actionStatus": true
+    },
+    {
+        "code": "SERV_02",
+        "name": "Service 02",
+        "description": "Hoạt động 1234",
+        "actionStatus": false
+    },
+    {
+        "code": "SERV_03",
+        "name": "Service 03",
+        "description": "Hoạt động 1234",
+        "actionStatus": true
+    },
+    {
+        "code": "SERV_04",
+        "name": "Service 04",
+        "description": "Hoạt động 1234",
+        "actionStatus": false
+    }
+]

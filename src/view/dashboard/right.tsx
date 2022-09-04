@@ -1,6 +1,6 @@
 import { Card, Typography } from "antd";
 import { CalendarComponent } from "../../shared/components/calendar";
-import StatisticOverviewComponent from "../../shared/components/statisticOverview";
+import StatisticOverviewComponent from "../../shared/components/statistic/overview";
 
 const RightDashboard = (): JSX.Element => (
     <div className="right-dashboard">

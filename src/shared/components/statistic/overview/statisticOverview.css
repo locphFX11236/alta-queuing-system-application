@@ -66,10 +66,14 @@
 
 .overview div:nth-child(4) {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    top: 10px;
+    left: 192px;
     width: 145px;
     height: 63px;
-    left: 192px;
-    top: 10px;
 }
 
 .overview div:nth-child(4) div {

@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { Button } from "antd";
 
 import './formLogin.css'
-import { useAppDispatch } from "../../../features/hookRedux";
-import { login } from "../../../features/userSlice";
-import type { PayloadUser } from "../../../features/redux";
+import { useAppDispatch } from "../../../core/features/hookRedux";
+import { login } from "../../../core/features/userSlice";
+import type { PayloadUser } from "../../../core/features/redux";
 
 const FormLogin = (): JSX.Element => {
     const dispatch = useAppDispatch();

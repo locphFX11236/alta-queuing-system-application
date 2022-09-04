@@ -2,10 +2,10 @@ import Icon, { CommentOutlined } from '@ant-design/icons';
 import { Badge } from 'antd';
 
 import './statisticOverview.css';
-import { statisticJSON } from '../../../data/dummy';
-import RadialBar from '../chart/radialBarChart/radialBar';
-import { Layer, Monitor } from '../../assets/icon';
-import HandleData from '../../../data/handle';
+import { statisticJSON } from '../../../../data/dummy';
+import RadialBar from '../../chart/radialBarChart/radialBar';
+import { Layer, Monitor } from '../../../assets/icon';
+import HandleData from '../../../../data/handle';
 
 const dataObj = HandleData(statisticJSON);
 
@@ -29,7 +29,7 @@ const AOverview = () => dataObj.map((D: any, i: number) => (
             <div key={i}>
                 <Badge color={D.color[i]} />
                 <p>{d.data[0].x}</p>
-                <p style={{ color: D.color[0] }}>{d.data[0].y}</p>
+                <p style={{ color: D.color[i] }}>{d.data[0].y}</p>
             </div>
 
         )) }</div>
