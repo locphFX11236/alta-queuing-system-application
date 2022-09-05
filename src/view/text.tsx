@@ -1,37 +1,109 @@
-import { ResponsiveRadialBar } from '@nivo/radial-bar';
+import { Table } from 'antd';
+import type { ColumnsType, TablePaginationConfig } from 'antd/es/table';
+import type { FilterValue, SorterResult } from 'antd/es/table/interface';
+import qs from 'qs';
+import React, { useEffect, useState } from 'react';
 
-import { statisticJSON } from '../data/dummy';
-import HandleData from '../data/handle';
+interface DataType {
+  name: {
+    first: string;
+    last: string;
+  };
+  gender: string;
+  email: string;
+  login: {
+    uuid: string;
+  };
+}
 
-let Choice: number = 2;
+interface Params {
+  pagination?: TablePaginationConfig;
+  sorter?: SorterResult<any> | SorterResult<any>[];
+  total?: number;
+  sortField?: string;
+  sortOrder?: string;
+}
 
-const dataObj = HandleData(statisticJSON)[Choice];
+const columns: ColumnsType<DataType> = [
+  {
+    title: 'Name',
+    dataIndex: 'name',
+    sorter: true,
+    render: name => `${name.first} ${name.last}`,
+    width: '20%',
+  },
+  {
+    title: 'Gender',
+    dataIndex: 'gender',
+    filters: [
+      { text: 'Male', value: 'male' },
+      { text: 'Female', value: 'female' },
+    ],
+    width: '20%',
+  },
+  {
+    title: 'Email',
+    dataIndex: 'email',
+  },
+];
 
-const RadialBarColor = {
-    tracksColor: '#EAEAEC',
-    customColor: [
-        [ '#7E7D88', '#FF7506' ],
-        [ '#7E7D88', '#4277FF' ],
-        [ '#F178B6', '#7E7D88', '#35C75A' ]
-    ]
+const getRandomuserParams = (params: Params) => ({
+  results: params.pagination?.pageSize,
+  page: params.pagination?.current,
+  ...params,
+});
+
+const App: React.FC = () => {
+  const [data, setData] = useState();
+  const [loading, setLoading] = useState(false);
+  const [pagination, setPagination] = useState<TablePaginationConfig>({
+    current: 1,
+    pageSize: 10,
+  });
+
+  const fetchData = (params: Params = {}) => {
+    setLoading(true);
+    fetch(`https://randomuser.me/api?${qs.stringify(getRandomuserParams(params))}`)
+      .then(res => res.json())
+      .then(({ results }) => {
+        setData(results);
+        setLoading(false);
+        setPagination({
+          ...params.pagination,
+          total: 200,
+          // 200 is mock data, you should read it from server
+          // total: data.totalCount,
+        });
+      });
+  };
+
+  useEffect(() => {
+    fetchData({ pagination });
+  }, []);
+
+  const handleTableChange = (
+    newPagination: TablePaginationConfig,
+    filters?: Record<string, FilterValue | null>,
+    sorter?: SorterResult<DataType> | SorterResult<DataType>[],
+  ): void => {
+    fetchData({
+      sortField: '' as string,
+      sortOrder: '' as string,
+      pagination: newPagination,
+      ...filters,
+    });
+  };
+
+  return (
+    <Table
+      columns={columns}
+      rowKey={record => record.login.uuid}
+      dataSource={data}
+      pagination={pagination}
+      loading={loading}
+      onChange={(a, b, c) => handleTableChange(a, b, c)}
+    />
+  );
 };
 
-export const MyResponsiveRadialBar = () => (
-    <div style={{position: 'absolute', width: 60, height: 60}} >
-        <ResponsiveRadialBar
-            data={dataObj.data}
-            maxValue={dataObj.amount}
-            endAngle={360}
-            innerRadius={0.33}
-            padding={0.5}
-            colors={RadialBarColor.customColor[Choice]}
-            cornerRadius={10}
-            enableTracks={true}
-            tracksColor={RadialBarColor.tracksColor}
-            enableRadialGrid={false}
-            enableCircularGrid={false}
-            radialAxisStart={null}
-            circularAxisOuter={null}
-        />
-    </div>
-)
+export default App;

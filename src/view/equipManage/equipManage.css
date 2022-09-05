@@ -21,13 +21,6 @@
 
 .equip .input-search { left: 836px; }
 
-.equip .main-list {
-    top: 244px;
-    left: 24px;
-    width: 1112px;
-    height: 490px;
-}
-
 .manage-equip .main-box {
     top: 156px;
     width: 1152px;
@@ -88,8 +81,3 @@
     bottom: 67px;
     background-color: antiquewhite; /* x */
 } /* x */
-
-.equip .pagination {
-    top: 758px;
-    left: 848px;
-}

@@ -1,5 +1,6 @@
 [
     {
+        "key": 1,
         "code": "KIO_01",
         "name": "Kiosk",
         "IPAddress": "192.168.1.10",
@@ -8,6 +9,7 @@
         "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
     },
     {
+        "key": 2,
         "code": "KIO_01",
         "name": "Kiosk",
         "IPAddress": "192.168.1.10",
@@ -16,6 +18,7 @@
         "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
     },
     {
+        "key": 3,
         "code": "KIO_01",
         "name": "Kiosk",
         "IPAddress": "192.168.1.10",
@@ -24,38 +27,7 @@
         "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
     },
     {
-        "code": "KIO_01",
-        "name": "Kiosk",
-        "IPAddress": "192.168.1.10",
-        "actionStatus": false,
-        "connectStatus": true,
-        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
-    },
-    {
-        "code": "KIO_01",
-        "name": "Kiosk",
-        "IPAddress": "192.168.1.10",
-        "actionStatus": true,
-        "connectStatus": true,
-        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
-    },
-    {
-        "code": "KIO_01",
-        "name": "Kiosk",
-        "IPAddress": "192.168.1.10",
-        "actionStatus": true,
-        "connectStatus": false,
-        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
-    },
-    {
-        "code": "KIO_01",
-        "name": "Kiosk",
-        "IPAddress": "192.168.1.10",
-        "actionStatus": false,
-        "connectStatus": false,
-        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
-    },
-    {
+        "key": 4,
         "code": "KIO_01",
         "name": "Kiosk",
         "IPAddress": "192.168.1.10",
@@ -64,6 +36,7 @@
         "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
     },
     {
+        "key": 5,
         "code": "KIO_01",
         "name": "Kiosk",
         "IPAddress": "192.168.1.10",
@@ -72,6 +45,7 @@
         "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
     },
     {
+        "key": 6,
         "code": "KIO_01",
         "name": "Kiosk",
         "IPAddress": "192.168.1.10",
@@ -80,6 +54,7 @@
         "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
     },
     {
+        "key": 7,
         "code": "KIO_01",
         "name": "Kiosk",
         "IPAddress": "192.168.1.10",
@@ -88,6 +63,43 @@
         "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
     },
     {
+        "key": 8,
+        "code": "KIO_01",
+        "name": "Kiosk",
+        "IPAddress": "192.168.1.10",
+        "actionStatus": false,
+        "connectStatus": true,
+        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
+    },
+    {
+        "key": 9,
+        "code": "KIO_01",
+        "name": "Kiosk",
+        "IPAddress": "192.168.1.10",
+        "actionStatus": true,
+        "connectStatus": true,
+        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
+    },
+    {
+        "key": 10,
+        "code": "KIO_01",
+        "name": "Kiosk",
+        "IPAddress": "192.168.1.10",
+        "actionStatus": true,
+        "connectStatus": false,
+        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
+    },
+    {
+        "key": 11,
+        "code": "KIO_01",
+        "name": "Kiosk",
+        "IPAddress": "192.168.1.10",
+        "actionStatus": false,
+        "connectStatus": false,
+        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
+    },
+    {
+        "key": 12,
         "code": "KIO_01",
         "name": "Kiosk",
         "IPAddress": "192.168.1.10",

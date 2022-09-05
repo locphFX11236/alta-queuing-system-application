@@ -29,28 +29,6 @@
     background-color: antiquewhite; /* x */
 }
 
-.table {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    position: absolute;
-    padding: 0px;
-    filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
-    border-radius: 12px;
-    background-color: antiquewhite; /* x */
-}
-
-.pagination {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    position: absolute;
-    width: 288px;
-    height: 32px;
-    background-color: antiquewhite; /* x */
-}
-
 .affix-group {
     display: flex;
     flex-direction: column;
