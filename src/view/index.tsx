@@ -14,7 +14,7 @@ function IndexView () {
     useEffect(() => {
         // user.isLoggedIn ? navigate('/') : navigate('/login');
         
-        navigate('/equip');
+        navigate('/report');
     }, []) // eslint-disable-line react-hooks/exhaustive-deps
     // Đoạn comment cuối Hook này để bỏ qua (ignore) 'eslint's warning'
 

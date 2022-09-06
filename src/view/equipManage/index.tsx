@@ -1,6 +1,6 @@
 import { Typography } from "antd";
 import { Link } from "react-router-dom";
-import TableComp from "../../shared/components/table";
+import { EquipTable } from "../../shared/components/table";
 
 const EquipList = (): JSX.Element => (
     <div className="equip">
@@ -8,7 +8,7 @@ const EquipList = (): JSX.Element => (
         <div className="input input-1">Input 1</div>
         <div className="input input-2">Input 2</div>
         <div className="input input-search">Search box</div>
-        <TableComp />
+        <EquipTable />
         <div className="affix-group">
             <Link to='/equip/equ-manage-add'>Thêm thiết bị</Link>
         </div>

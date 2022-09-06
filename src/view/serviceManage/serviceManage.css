@@ -20,13 +20,6 @@
 
 .service .input-search { left: 836px; }
 
-.service .main-list {
-    top: 244px;
-    left: 24px;
-    width: 1112px;
-    height: 490px;
-}
-
 .manage-service .main-box {
     top: 172px;
     width: 1178px;
@@ -141,8 +134,3 @@
     bottom: 222px;
     background-color: antiquewhite; /* x */
 } /* x */
-
-.service .pagination {
-    top: 758px;
-    left: 848px;
-}

@@ -29,13 +29,6 @@
     width: 240px;
 }
 
-.numberCount .main-list {
-    top: 244px;
-    left: 24px;
-    width: 1112px;
-    height: 490px;
-}
-
 .manage-numberCount .main-box {
     top: 164px;
     width: 1192px;
@@ -114,8 +107,3 @@
     bottom: 354px;
     background-color: antiquewhite; /* x */
 } /* x */
-
-.numberCount .pagination {
-    top: 758px;
-    left: 852px;
-}

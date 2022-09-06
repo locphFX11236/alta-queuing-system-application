@@ -5,6 +5,8 @@
     width: 1112px;
     max-height: 490px;
     padding: 0px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
     filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
 }
 
@@ -24,15 +26,33 @@
 }
 
 .ant-table-thead > tr > th {
-    background: #FF9138;
+    background-color: #FF9138;
     color: #FFFFFF;
     height: 49px;
-    padding: 0px 8px;
+    padding: 0px 8px;font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.ant-table-tbody tr:nth-child(even) {
+    background-color: #FFF2E7;
+}
+
+.ant-table-tbody tr:nth-last-child(1) {
+    border-radius: 0 0 12px 12px !important;
 }
 
 .ant-table-tbody > tr > td {
     height: 49px !important;
     padding: 0px 8px !important;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #535261;
 }
 
 .ant-table-tbody > tr > td > p {
@@ -50,4 +70,31 @@
     padding: 0px;
     width: 288px;
     height: 32px;
+}
+
+.table div div ul .ant-pagination-item {
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    color: #7E7D88;
+    background-color: inherit;
+    border: none;
+    flex: none;
+    flex-grow: 0;
+}
+
+.table div div ul .ant-pagination-item-active {
+    color: #FFFFFF;
+    background-color: #FF7506;
+    border-radius: 4px;
+}
+
+.ant-pagination-prev span svg,
+.ant-pagination-next span svg {
+    color: #7E7D88;
+}
+
+.ant-pagination-item a,
+.ant-pagination-item-active a {
+    color: inherit;
 }
