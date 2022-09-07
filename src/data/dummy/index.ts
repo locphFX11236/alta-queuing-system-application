@@ -3,7 +3,7 @@ import noti from './json/noti.json';
 import user from './json/user.json';
 import area from './json/areaChartText.json';
 import account from './json/account.json';
-import accountLog from './json/accountLog.json';
+import accountLog from './json/userLog.json';
 import count_num from './json/count_num.json';
 import equip from './json/equip.json';
 import report from './json/report.json';

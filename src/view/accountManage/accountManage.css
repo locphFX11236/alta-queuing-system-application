@@ -16,13 +16,6 @@
 
 .account .input-search { left: 836px; }
 
-.account .main-list {
-    top: 244px;
-    left: 24px;
-    width: 1112px;
-    height: 490px;
-}
-
 .manage-account .main-box {
     top: 150px;
     width: 1192px;
@@ -63,11 +56,6 @@
     width: 147px;
     color: #FFFFFF;
     background: #FF9138;
-}
-
-.account .pagination {
-    top: 758px;
-    left: 848px;
 }
 
 .account .affix-group {

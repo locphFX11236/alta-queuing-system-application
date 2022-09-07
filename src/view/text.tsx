@@ -1,109 +1,66 @@
 import { Table } from 'antd';
-import type { ColumnsType, TablePaginationConfig } from 'antd/es/table';
-import type { FilterValue, SorterResult } from 'antd/es/table/interface';
-import qs from 'qs';
-import React, { useEffect, useState } from 'react';
+import type { ColumnsType, TableProps } from 'antd/es/table';
+import React from 'react';
 
 interface DataType {
-  name: {
-    first: string;
-    last: string;
-  };
-  gender: string;
-  email: string;
-  login: {
-    uuid: string;
-  };
-}
-
-interface Params {
-  pagination?: TablePaginationConfig;
-  sorter?: SorterResult<any> | SorterResult<any>[];
-  total?: number;
-  sortField?: string;
-  sortOrder?: string;
+  key: React.Key;
+  name: string;
+  age: number;
+  address: string;
 }
 
 const columns: ColumnsType<DataType> = [
   {
     title: 'Name',
     dataIndex: 'name',
-    sorter: true,
-    render: name => `${name.first} ${name.last}`,
-    width: '20%',
+    // specify the condition of filtering result
+    // here is that finding the name started with `value`
+    sorter: (a, b) => a.name.length - b.name.length,
+    sortDirections: ['descend'],
   },
   {
-    title: 'Gender',
-    dataIndex: 'gender',
-    filters: [
-      { text: 'Male', value: 'male' },
-      { text: 'Female', value: 'female' },
-    ],
-    width: '20%',
+    title: 'Age',
+    dataIndex: 'age',
+    defaultSortOrder: 'descend',
+    sorter: (a, b) => a.age - b.age,
   },
   {
-    title: 'Email',
-    dataIndex: 'email',
+    title: 'Address',
+    dataIndex: 'address'
   },
 ];
 
-const getRandomuserParams = (params: Params) => ({
-  results: params.pagination?.pageSize,
-  page: params.pagination?.current,
-  ...params,
-});
+const data = [
+  {
+    key: '1',
+    name: 'John Brown',
+    age: 32,
+    address: 'New York No. 1 Lake Park',
+  },
+  {
+    key: '2',
+    name: 'Jim Green',
+    age: 42,
+    address: 'London No. 1 Lake Park',
+  },
+  {
+    key: '3',
+    name: 'Joe Black',
+    age: 32,
+    address: 'Sidney No. 1 Lake Park',
+  },
+  {
+    key: '4',
+    name: 'Jim Red',
+    age: 32,
+    address: 'London No. 2 Lake Park',
+  },
+];
 
-const App: React.FC = () => {
-  const [data, setData] = useState();
-  const [loading, setLoading] = useState(false);
-  const [pagination, setPagination] = useState<TablePaginationConfig>({
-    current: 1,
-    pageSize: 10,
-  });
-
-  const fetchData = (params: Params = {}) => {
-    setLoading(true);
-    fetch(`https://randomuser.me/api?${qs.stringify(getRandomuserParams(params))}`)
-      .then(res => res.json())
-      .then(({ results }) => {
-        setData(results);
-        setLoading(false);
-        setPagination({
-          ...params.pagination,
-          total: 200,
-          // 200 is mock data, you should read it from server
-          // total: data.totalCount,
-        });
-      });
-  };
-
-  useEffect(() => {
-    fetchData({ pagination });
-  }, []);
-
-  const handleTableChange = (
-    newPagination: TablePaginationConfig,
-    filters?: Record<string, FilterValue | null>,
-    sorter?: SorterResult<DataType> | SorterResult<DataType>[],
-  ): void => {
-    fetchData({
-      sortField: '' as string,
-      sortOrder: '' as string,
-      pagination: newPagination,
-      ...filters,
-    });
-  };
-
-  return (
-    <Table
-      columns={columns}
-      rowKey={record => record.login.uuid}
-      dataSource={data}
-      pagination={pagination}
-      loading={loading}
-      onChange={(a, b, c) => handleTableChange(a, b, c)}
-    />
-  );
+const onChange: TableProps<DataType>['onChange'] = (pagination, filters, sorter, extra) => {
+  console.log('params', pagination, filters, sorter, extra);
 };
+
+const App: React.FC = () => <Table columns={columns} dataSource={data} onChange={onChange} />;
 
 export default App;

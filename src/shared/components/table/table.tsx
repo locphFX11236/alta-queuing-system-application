@@ -1,15 +1,18 @@
 import { useState } from 'react';
-import { Table, TablePaginationConfig } from 'antd';
+import { Table } from 'antd';
 import { CaretLeftOutlined, CaretRightOutlined } from '@ant-design/icons';
-import type { ColumnsType } from 'antd/es/table';
+
+import { ColProps, Datas, PaginationProps } from './tableType';
+import customOption from './customOption';
 
 const TableFC = (
-    columns: ColumnsType<Array<any>>,
-    data: Array<any>
+    columns: ColProps,
+    data: Datas,
+    custom?: string
 ): JSX.Element => {
-    const [pagination, setPagination] = useState<TablePaginationConfig>({
+    const [pagination, setPagination] = useState<PaginationProps>({
         current: 1,
-        pageSize: 9,
+        pageSize: custom === 'report' ? customOption[custom].pageSize : 9,
         hideOnSinglePage: true,
         itemRender: (_, type, originalElement) => {
             if (type === 'prev') return <CaretLeftOutlined />;

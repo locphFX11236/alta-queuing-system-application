@@ -3,7 +3,8 @@
     top: 244px;
     left: 24px;
     width: 1112px;
-    max-height: 490px;
+    max-height: 539px;
+    /* height: 490px; */
     padding: 0px;
     background-color: #FFFFFF;
     border-radius: 12px;
@@ -41,6 +42,7 @@
 }
 
 .ant-table-tbody tr:nth-last-child(1) {
+    box-sizing: content-box;
     border-radius: 0 0 12px 12px !important;
 }
 

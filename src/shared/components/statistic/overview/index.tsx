@@ -36,7 +36,7 @@ const AOverview = () => dataObj.map((D: any, i: number) => (
     </div>
 ));
 
-const StatisticOverviewComponent = (): JSX.Element => (
+const StatisticOverviewComponent: React.FC = () => (
     <AOverview />
 );
 

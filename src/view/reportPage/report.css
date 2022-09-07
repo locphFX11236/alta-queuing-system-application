@@ -11,9 +11,8 @@
     height: 539px;
 }
 
-.report .pagination {
-    top: 755px;
-    left: 848px;
+.report .table div div ul {
+    top: 563px;
 }
 
 .report .affix-group {
