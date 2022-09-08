@@ -1,31 +1,36 @@
-import React from 'react';
-import { Button, Form, Input } from 'antd';
-import { useAppDispatch } from '../core/features/hookRedux';
-import { PayloadUser } from '../core/features/redux';
-import { login } from '../core/features/userSlice';
+import { Button, Form, Input } from "antd";
 
-const App: React.FC = () => {
+import './formLogin.css'
+import { useAppDispatch } from "../../../../core/features/hookRedux";
+import { login } from "../../../../core/features/userSlice";
+import type { PayloadUser } from "../../../../core/features/redux";
+
+const FormLogin = (): JSX.Element => {
     const dispatch = useAppDispatch();
- 
+
     const logInPayload: PayloadUser = {
         userId: 'Admin'
     };
 
-    const onFinish = (values: any) => dispatch( login( logInPayload ));
+    const onFinish = (values: any) => {
+        console.log('Sucess:', values)
+        dispatch( login( logInPayload ));
+    }
 
     const onFinishFailed = (errorInfo: any) => {
         console.log('Failed:', errorInfo);
     };
 
-    return (
+    return(
         <Form
-          name="login"
-          layout='vertical'
-          onFinish={onFinish}
-          onFinishFailed={onFinishFailed}
+            className='form-login _center'
+            name="login"
+            layout='vertical'
+            onFinish={onFinish}
+            onFinishFailed={onFinishFailed}
         >
             <Form.Item
-                label="Username"
+                label="Tên đăng nhập"
                 name="username"
                 rules={[{ required: true, message: 'Please input your username!' }]}
             >
@@ -33,14 +38,14 @@ const App: React.FC = () => {
             </Form.Item>
 
             <Form.Item
-                label="Password"
+                label="Mật khẩu"
                 name="password"
                 rules={[{ required: true, message: 'Please input your password!' }]}
             >
                 <Input.Password />
             </Form.Item>
 
-            <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+            <Form.Item>
                 <Button type="primary" htmlType="submit">
                     Đăng nhập
                 </Button>
@@ -49,4 +54,4 @@ const App: React.FC = () => {
     );
 };
 
-export default App;
+export default FormLogin;

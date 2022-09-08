@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 
 import IndexLayout from "../layout";
 
-import Login from "../view/login";
+import Login from "../view/loginPage";
 import Information from "../view/inforMember";
 
 import Dashboard from "../view/dashboard";

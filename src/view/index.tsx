@@ -1,21 +1,21 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-// import type { UserState } from "../features/redux";
+import { useAppSelector } from "../core/features/hookRedux";
+import { UserState } from "../core/features/redux";
+import { SelectUser } from "../core/features/userSlice";
 
-// import { useAppSelector } from "../features/hookRedux";
-// import { SelectUser } from "../features/userSlice";
 import Router from "../routes/routes";
 
 function IndexView () {
     let navigate = useNavigate();
-    // const userState: UserState = useAppSelector(SelectUser)
+    const userState: UserState = useAppSelector(SelectUser);
 
     useEffect(() => {
-        // user.isLoggedIn ? navigate('/') : navigate('/login');
+        userState.isLoggedIn ? navigate('/') : navigate('/login');
         
-        navigate('/report');
-    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+        // navigate('/infor');
+    }, [userState]) // eslint-disable-line react-hooks/exhaustive-deps
     // Đoạn comment cuối Hook này để bỏ qua (ignore) 'eslint's warning'
 
     return <Router />;

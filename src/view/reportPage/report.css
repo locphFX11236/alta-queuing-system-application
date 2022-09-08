@@ -8,7 +8,7 @@
     top: 192px;
     left: 24px;
     width: 1112px;
-    height: 539px;
+    max-height: 539px;
 }
 
 .report .table div div ul {

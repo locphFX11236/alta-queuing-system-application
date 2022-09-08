@@ -1,5 +1,6 @@
 import HandleData from "../../../data/handle";
 import { userJSON } from '../../../data/dummy';
+import InforMemberForm from "../form/inforMember";
 
 type dataUser = {
     id: string,
@@ -25,6 +26,4 @@ export const FullName = () => UserData('NV01').fullName;
 
 export const HandleChangeAvatar = () => console.log(UserData('NV01').imgUrl);
 
-export const InforComponent = () => (
-    <div style={{ width: '100%', height: 'auto' }} >Form Information</div>
-);
+export const InforComponent = () => <InforMemberForm data={UserData('NV01')} />;
