@@ -1,12 +1,13 @@
 import { ResponsiveRadialBar } from '@nivo/radial-bar';
 import { statisticJSON } from '../../../../data/dummy';
 
+import './radialBar.css';
 import HandleData from '../../../../data/handle';
 
 const RadialBar = ({choice}: any): JSX.Element => {
     const dataObj = HandleData(statisticJSON)[choice];
     return (
-        <div style={{width: 60, height: 60}} >
+        <div className='radial-bar' >
             <ResponsiveRadialBar
                 data={dataObj.data.reverse()}
                 maxValue={dataObj.amount}

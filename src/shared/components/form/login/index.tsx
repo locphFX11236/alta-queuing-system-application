@@ -1,9 +1,10 @@
 import { Button, Form, Input } from "antd";
 
-import './formLogin.css'
+import './formLogin.css';
 import { useAppDispatch } from "../../../../core/features/hookRedux";
 import { login } from "../../../../core/features/userSlice";
 import type { PayloadUser } from "../../../../core/features/redux";
+import { Link } from "react-router-dom";
 
 const FormLogin = (): JSX.Element => {
     const dispatch = useAppDispatch();
@@ -50,6 +51,9 @@ const FormLogin = (): JSX.Element => {
                     Đăng nhập
                 </Button>
             </Form.Item>
+            
+            <Link to='/forget'>Quên mật khẩu?</Link>
+
         </Form>
     );
 };

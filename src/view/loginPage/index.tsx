@@ -3,10 +3,10 @@ import { Layout } from 'antd';
 import LeftLogin from "./left";
 import RightLogin from "./right";
 
-const Login = (): JSX.Element => (
+const Login = ({state}: any): JSX.Element => (
     <Layout className='login-layout'>
-        <LeftLogin />
-        <RightLogin />
+        <LeftLogin state={state} />
+        <RightLogin state={state} />
     </Layout>
 );
 

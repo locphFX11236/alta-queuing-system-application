@@ -36,7 +36,8 @@ import Text from '../view/text';
 
 const Router: React.FC = () => (
     <Routes>
-        <Route path='/login' element={ <Login /> } />
+        <Route path='/login' element={ <Login state='login' /> } />
+        <Route path='/forget' element={ <Login state='forget' /> } />
 
         <Route path='/' element={ <IndexLayout /> } >
             <Route path='infor' element={ <Information /> } />

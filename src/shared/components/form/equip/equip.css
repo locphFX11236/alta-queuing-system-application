@@ -1,0 +1,48 @@
+.manage-equip .main-box {
+    top: 156px;
+    width: 1152px;
+    height: 550px;
+}
+
+.infor-equip .main-box {
+    top: 156px;
+    width: 1112px;
+    height: 604px;
+}
+
+.infor-equip .main-box .title-lv-2,
+.manage-equip .main-box .title-lv-2 {
+    top: 16px;
+    left: 24px;
+    width: 160px;
+}
+
+.manage-equip .button-group {
+    top: 730px;
+    left: 434.5px;
+    width: 326px;
+}
+
+.manage-equip .button-group .button-1 {
+    left: 0px;
+    width: 147px;
+    color: #FF9138;
+    background: #FFF2E7;
+    border: 1.5px solid #FF9138;
+}
+
+.manage-equip .button-group .button-2 {
+    left: 179px;
+    width: 147px;
+    color: #FFFFFF;
+    background: #FF9138;
+}
+
+.manage-equip .main-box .form-box,
+.infor-equip .infor-box {
+    position: absolute;
+    top: 58px;
+    left: 24px;
+    right: 24px;
+    background-color: antiquewhite; /* x */
+} /* x */
