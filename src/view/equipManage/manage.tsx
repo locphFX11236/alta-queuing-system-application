@@ -1,6 +1,6 @@
 import { Typography } from "antd";
 
-import ManEquForm from "../../shared/components/form/equip/manage";
+import { ManEquForm } from "../../shared/components/form/equip";
 
 const ManageEquip = (): JSX.Element => (
     <div className="manage-equip">

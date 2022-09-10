@@ -26,12 +26,12 @@ export const equipCols: ColProps = [
         render: u => <p>{u[0]}, {u[1]}...<br/><Link to='/equip/equ-infor'>Xem thêm</Link></p>
     },
     {
-        title: '', dataIndex: 'usedService', key: 'usedService', width: 82,
-        render: () => <Link to='/equip/equ-infor'>Chi tiết</Link>
+        title: '', dataIndex: 'key', key: 'key', width: 82,
+        render: (_, record) => <Link to='/equip/equ-infor' state={record}>Chi tiết</Link>
     },
     {
-        title: '', dataIndex: 'usedService', key: 'usedService', width: 106,
-        render: () => <Link to='/equip/equ-manage-upd'>Cập nhật</Link>
+        title: '', dataIndex: 'key', key: 'key', width: 106,
+        render: (_, record) => <Link to='/equip/equ-manage-upd' state={record}>Cập nhật</Link>
     }
 ];
 

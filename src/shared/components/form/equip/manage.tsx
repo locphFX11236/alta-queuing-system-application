@@ -1,30 +1,35 @@
 import { Button, Col, Form, Input, Row, Select, Typography } from "antd";
 import { CaretDownOutlined } from '@ant-design/icons';
+import { Location, NavigateFunction, useLocation, useNavigate } from "react-router-dom";
 
-import './equip.css';
+import { initAdd, status } from "./items";
+import { EquipDataType } from "./equipType";
 
 const { Option } = Select;
 
-const ManEquForm = (): JSX.Element => {
-    const onFinish = (values: any) => {
-        console.log('Sucess:', values)
+const Manage = (): JSX.Element => {
+    const navigate: NavigateFunction = useNavigate();
+    const location: Location = useLocation();
+    const statusUrl: string = location.pathname.slice(-3);
+    const updRecord: EquipDataType = location.state;
+    const initValues: EquipDataType = statusUrl === 'upd' ? updRecord : initAdd;
+
+    const onFinish = (values: EquipDataType) => {
+        console.log('Sucess:', values);
+        navigate('/');
     }
-
-    const onFinishFailed = (errorInfo: any) => {
-        console.log('Failed:', errorInfo);
-    };
-
+    
     const Cancel = () => {
         console.log('Cancel');
+        navigate('/equip');
     };
 
     return (
         <Form
             name='man-equ-form'
             layout="vertical"
-            colon={true}
             onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
+            initialValues={initValues}
         >
             <Row className="main-box">
                 <Typography.Title className="title-lv-2">Thông tin thiết bị</Typography.Title>
@@ -101,12 +106,14 @@ const ManEquForm = (): JSX.Element => {
                         name='usedService'
                         rules={[{ required: true, message: 'Please select used service!' }]}
                     >
-                        <Select placeholder="Nhập dịch vụ sử dụng" showArrow={false} tagRender={({value}) => <p>{value}</p>}>
-                            <Option key="all" value="all">Tất cả</Option>
+                        <Select
+                            mode="multiple"
+                            placeholder="Nhập dịch vụ sử dụng"
+                        >
                             <Option key="rhm" value="rhm">Khám răng hàm mặt</Option>
                             <Option key="tmh" value="tmh">Khám tai mũi họng</Option>
                             <Option key="tm" value="tm">Khám tim mạch</Option>
-                            <Option key="spk" value="spk">Khám sản - Phụ khoa</Option>
+                            <Option key="s-pk" value="s-pk">Khám sản - Phụ khoa</Option>
                             <Option key="hh" value="hh">Khám hô hấp</Option>
                             <Option key="tq" value="tq">Khám tổng quát</Option>
                         </Select>
@@ -117,10 +124,10 @@ const ManEquForm = (): JSX.Element => {
             </Row>
             <Row className="button-group">
                 <Button className="button button-1" type="primary" onClick={Cancel}>Hủy bỏ</Button>
-                <Button className="button button-2" type="primary" htmlType="submit">Thêm thiết bị</Button>
+                <Button className="button button-2" type="primary" htmlType="submit">{status[statusUrl]}</Button>
             </Row>
         </Form>
     );
 };
 
-export default ManEquForm;
+export default Manage;

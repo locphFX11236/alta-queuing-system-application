@@ -1,52 +1,29 @@
+import { Select } from 'antd';
 import React from 'react';
-import { Button, Form, Input } from 'antd';
-import { useAppDispatch } from '../core/features/hookRedux';
-import { PayloadUser } from '../core/features/redux';
-import { login } from '../core/features/userSlice';
 
-const App: React.FC = () => {
-    const dispatch = useAppDispatch();
- 
-    const logInPayload: PayloadUser = {
-        userId: 'Admin'
-    };
+const { Option } = Select;
 
-    const onFinish = (values: any) => dispatch( login( logInPayload ));
+const children: React.ReactNode[] = [];
+for (let i = 10; i < 36; i++) {
+  children.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
+}
 
-    const onFinishFailed = (errorInfo: any) => {
-        console.log('Failed:', errorInfo);
-    };
-
-    return (
-        <Form
-          name="login"
-          layout='vertical'
-          onFinish={onFinish}
-          onFinishFailed={onFinishFailed}
-        >
-            <Form.Item
-                label="Username"
-                name="username"
-                rules={[{ required: true, message: 'Please input your username!' }]}
-            >
-                <Input />
-            </Form.Item>
-
-            <Form.Item
-                label="Password"
-                name="password"
-                rules={[{ required: true, message: 'Please input your password!' }]}
-            >
-                <Input.Password />
-            </Form.Item>
-
-            <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                <Button type="primary" htmlType="submit">
-                    Đăng nhập
-                </Button>
-            </Form.Item>
-        </Form>
-    );
+const handleChange = (value: string[]) => {
+  console.log(`selected ${value}`);
 };
+
+const App: React.FC = () => (
+    <>
+        <Select
+            mode="multiple"
+            style={{ width: '50%' }}
+            placeholder="Please select"
+            defaultValue={['a10', 'c12']}
+            onChange={handleChange}
+        >
+            {children}
+        </Select>
+    </>
+);
 
 export default App;
