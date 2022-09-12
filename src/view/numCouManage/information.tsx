@@ -1,5 +1,6 @@
-import { Typography } from "antd";
+import { Space, Typography } from "antd";
 import { Link } from "react-router-dom";
+import { BackNum } from "../../shared/components/affix";
 
 const InforNumberCount = (): JSX.Element => (
     <div className="infor-numberCount">
@@ -8,9 +9,11 @@ const InforNumberCount = (): JSX.Element => (
             <Typography.Title className="title-lv-2">Thông tin cấp số</Typography.Title>
             <div className="infor-box">Information</div>
         </div>
-        <div className="affix-group">
-            <Link to='/number-count'>Quay lại</Link>
-        </div>
+        <Space className="affix-group">
+            <Link to='/number-count'>
+                <BackNum />
+            </Link>
+        </Space>
     </div>
 );
 

@@ -1,5 +1,6 @@
-import { Typography } from "antd";
+import { Space, Typography } from "antd";
 import { Link } from "react-router-dom";
+import { AddAcc } from "../../shared/components/affix";
 import { AccountTable } from "../../shared/components/table";
 
 const AccountList = (): JSX.Element => (
@@ -8,9 +9,11 @@ const AccountList = (): JSX.Element => (
         <div className="input input-1">Input</div>
         <div className="input input-search">Search box</div>
         <AccountTable />
-        <div className="affix-group">
-            <Link to='/setting/account/acc-manage-add'>Thêm tài khoản</Link>
-        </div>
+        <Space className="affix-group">
+            <Link to='acc-manage-add'>
+                <AddAcc />
+            </Link>
+        </Space>
     </div>
 );
 

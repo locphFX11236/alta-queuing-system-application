@@ -1,5 +1,6 @@
-import { Typography } from "antd";
+import { Space, Typography } from "antd";
 import { Link } from "react-router-dom";
+import { AddRole } from "../../shared/components/affix";
 import { RoleTable } from "../../shared/components/table";
 
 const RoleList = (): JSX.Element => (
@@ -7,9 +8,11 @@ const RoleList = (): JSX.Element => (
         <Typography.Title className="title-lv-1">Danh sách vai trò</Typography.Title>
         <div className="input input-search">Search box</div>
         <RoleTable />
-        <div className="affix-group">
-            <Link to='/setting/role/rol-manage-add'>Thêm vai trò</Link>
-        </div>
+        <Space className="affix-group">
+            <Link to='rol-manage-add'>
+                <AddRole />
+            </Link>
+        </Space>
     </div>
 );
 

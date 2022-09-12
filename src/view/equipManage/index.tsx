@@ -1,5 +1,6 @@
-import { Typography } from "antd";
+import { Space, Typography } from "antd";
 import { Link } from "react-router-dom";
+import { AddEquip } from "../../shared/components/affix";
 import { EquipTable } from "../../shared/components/table";
 
 const EquipList = (): JSX.Element => (
@@ -9,9 +10,11 @@ const EquipList = (): JSX.Element => (
         <div className="input input-2">Input 2</div>
         <div className="input input-search">Search box</div>
         <EquipTable />
-        <div className="affix-group">
-            <Link to='/equip/equ-manage-add'>Thêm thiết bị</Link>
-        </div>
+        <Space className="affix-group">
+            <Link to='equ-manage-add'>
+                <AddEquip />
+            </Link>
+        </Space>
     </div>
 );
 

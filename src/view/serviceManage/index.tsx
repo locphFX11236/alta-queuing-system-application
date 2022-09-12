@@ -1,5 +1,6 @@
-import { Typography } from "antd";
+import { Space, Typography } from "antd";
 import { Link } from "react-router-dom";
+import { AddService } from "../../shared/components/affix";
 import { ServiceTable } from "../../shared/components/table";
 
 const ServiceList = (): JSX.Element => (
@@ -9,9 +10,11 @@ const ServiceList = (): JSX.Element => (
         <div className="input input-2">Input 2</div>
         <div className="input input-search">Search box</div>
         <ServiceTable />
-        <div className="affix-group">
-            <Link to='/service/ser-manage-add'>Thêm dịch vụ</Link>
-        </div>
+        <Space className="affix-group">
+            <Link to='ser-manage-add'>
+                <AddService />
+            </Link>
+        </Space>
     </div>
 );
 

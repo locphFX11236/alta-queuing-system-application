@@ -106,13 +106,12 @@
 .service .affix-group,
 .infor-service .affix-group {
     right: 0px;
-    height: 94px;
     order: 0;
 }
 
 .service .affix-group { top: 244px; }
 
-.infor-service .affix-group { top: 156px; }
+.infor-service .affix-group { top: 172px; }
 
 .manage-service .main-box .form-box,
 .infor-service .main-box .infor-box:nth-child(2) {

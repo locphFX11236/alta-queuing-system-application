@@ -34,13 +34,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 12px 4px;
     gap: 4px;
     position: absolute;
-    width: 80px;
-    background: #FFF2E7;
-    box-shadow: 0px 0px 6px #E7E9F2;
-    border-radius: 8px 0px 0px 8px;
     flex: none;
     flex-grow: 0;
 }

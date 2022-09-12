@@ -1,5 +1,6 @@
-import { Typography } from "antd";
+import { Space, Typography } from "antd";
 import { Link } from "react-router-dom";
+import { BackService, UpdService } from "../../shared/components/affix";
 
 const InforService = (): JSX.Element => (
     <div className="infor-service">
@@ -17,9 +18,14 @@ const InforService = (): JSX.Element => (
             <div className="table main-list">Table</div>
             <div className="pagination">Pagination</div>
         </div>
-        <div className="affix-group">
-            <Link to='/service/ser-manage-upd'>Cập nhật</Link>
-        </div>
+        <Space className="affix-group">
+            <Link to='/service/ser-manage-upd'>
+                <UpdService />
+            </Link>
+            <Link to='/service'>
+                <BackService />
+            </Link>
+        </Space>
     </div>
 );
 

@@ -1,5 +1,6 @@
-import { Typography } from "antd";
+import { Space, Typography } from "antd";
 import { Link } from "react-router-dom";
+import { AddNum } from "../../shared/components/affix";
 import { NumCouTable } from "../../shared/components/table";
 
 const NumberCountList = (): JSX.Element => (
@@ -11,9 +12,11 @@ const NumberCountList = (): JSX.Element => (
         <div className="input input-4">Input 4</div>
         <div className="input input-search">Search box</div>
         <NumCouTable />
-        <div className="affix-group">
-            <Link to='/number-count/num-manage-add'>Cấp số mới</Link>
-        </div>
+        <Space className="affix-group">
+            <Link to='num-manage-add'>
+                <AddNum />
+            </Link>
+        </Space>
     </div>
 );
 

@@ -11,6 +11,10 @@
     width: 240px;
 }
 
+.role .main-list {
+    top: 192px;
+}
+
 .manage-role .main-box {
     top: 172px;
     width: 1192px;
@@ -66,6 +70,5 @@
 .role .affix-group {
     top: 192px;
     right: 0px;
-    height: 94px;
     order: 0;
 }
