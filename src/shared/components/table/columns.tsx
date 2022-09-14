@@ -48,11 +48,23 @@ export const serviceCols: ColProps = [
     },
     {
         title: '', dataIndex: 'code', key: 'code', width: 125,
-        render: () => <Link to='/service/ser-infor'>Chi tiết</Link>
+        render: (_, record) => <Link to='/service/ser-infor' state={record}>Chi tiết</Link>
     },
     {
         title: '', dataIndex: 'code', key: 'code', width: 126,
-        render: () => <Link to='/service/ser-manage-upd'>Cập nhật</Link>
+        render: (_, record) => <Link to='/service/ser-manage-upd' state={record}>Cập nhật</Link>
+    }
+];
+
+export const setNumCols: ColProps = [
+    { title: 'STT', dataIndex: 'key', key: 'key', width: 334 },
+    {
+        title: 'Trạng thái', dataIndex: 'status', key: 'status', width: 335,
+        render: s => {
+            if(s === 'Đã sử dụng') return <p><Badge color={'#34CD26'} /> Đã hoàn thành</p>;
+            if(s === 'Đang chờ') return <p><Badge color={'#5490EB'} /> Đang thực hiện</p>;
+            else  return <p><Badge color={'#6C7585'} /> Vắng</p>;
+        }
     }
 ];
 

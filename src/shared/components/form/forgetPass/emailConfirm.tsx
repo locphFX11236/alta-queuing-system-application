@@ -1,6 +1,5 @@
 import { Button, Form, Input } from "antd";
 
-import './forget.css';
 import { useNavigate } from "react-router-dom";
 
 const EmailConfirm = ({onOk}: any): JSX.Element => {
@@ -8,7 +7,7 @@ const EmailConfirm = ({onOk}: any): JSX.Element => {
 
     const onFinish = (values: any) => {
         console.log('Sucess:', values)
-        onOk('password');
+        onOk(true);
     }
 
     const onFinishFailed = (errorInfo: any) => {

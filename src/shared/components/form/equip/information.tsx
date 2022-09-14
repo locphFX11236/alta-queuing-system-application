@@ -19,30 +19,30 @@ const Information = (): JSX.Element => {
                     <Row>
                         <Col span={12}>
                             <Form.Item
-                                label="Mã thiết bị:"
+                                label="Mã thiết bị"
                                 name='code'
-                                labelCol={{ span: 12 }}
                                 labelAlign='left'
+                                labelCol={{ span: 12 }}
                                 wrapperCol={{ span: 12 }}
                             >
                                 <span>{inforRecord.code}</span>
                             </Form.Item>
 
                             <Form.Item
-                                label="Tên thiết bị:"
+                                label="Tên thiết bị"
                                 name='name'
-                                labelCol={{ span: 12 }}
                                 labelAlign='left'
+                                labelCol={{ span: 12 }}
                                 wrapperCol={{ span: 12 }}
                             >
                                 <span>{inforRecord.name}</span>
                             </Form.Item>
 
                             <Form.Item
-                                label="Địa chỉ IP:"
+                                label="Địa chỉ IP"
                                 name='IPAddress'
-                                labelCol={{ span: 12 }}
                                 labelAlign='left'
+                                labelCol={{ span: 12 }}
                                 wrapperCol={{ span: 12 }}
                             >
                                 <span>{inforRecord.IPAddress}</span>
@@ -51,30 +51,30 @@ const Information = (): JSX.Element => {
 
                         <Col span={12}>
                             <Form.Item
-                                label="Loại thiết bị:"
+                                label="Loại thiết bị"
                                 name='type'
-                                labelCol={{ span: 12 }}
                                 labelAlign='left'
+                                labelCol={{ span: 12 }}
                                 wrapperCol={{ span: 12 }}
                             >
                                 <span>{inforRecord.type}</span>
                             </Form.Item>
 
                             <Form.Item
-                                label="Tên đăng nhập:"
+                                label="Tên đăng nhập"
                                 name='userId'
-                                labelCol={{ span: 12 }}
                                 labelAlign='left'
+                                labelCol={{ span: 12 }}
                                 wrapperCol={{ span: 12 }}
                             >
                                 <span>{inforRecord.userId}</span>
                             </Form.Item>
 
                             <Form.Item
-                                label="Mật khẩu:"
+                                label="Mật khẩu"
                                 name='password'
-                                labelCol={{ span: 12 }}
                                 labelAlign='left'
+                                labelCol={{ span: 12 }}
                                 wrapperCol={{ span: 12 }}
                             >
                                 <span>{inforRecord.password}</span>

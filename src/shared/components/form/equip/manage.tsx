@@ -18,7 +18,7 @@ const Manage = (): JSX.Element => {
         console.log('Sucess:', values);
         navigate('/');
     }
-    
+
     const Cancel = () => {
         console.log('Cancel');
         navigate('/equip');
@@ -26,7 +26,7 @@ const Manage = (): JSX.Element => {
 
     return (
         <Form
-            name='man-equ-form'
+            name='mana-equ-form'
             layout="vertical"
             onFinish={onFinish}
             initialValues={initValues}

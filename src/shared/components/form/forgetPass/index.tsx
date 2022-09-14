@@ -4,10 +4,10 @@ import { useState } from 'react';
 import PassConfirm from './passConfirm';
 
 const FormForget = (): JSX.Element => {
-    const [confirm, setConfirm] = useState('email');
+    const [isPassConfirm, setIsPassConfirm] = useState<boolean>(false);
 
-    if (confirm === 'email') return <EmailConfirm onOk={setConfirm}/>;
-    else return <PassConfirm />;
+    if (isPassConfirm) return <PassConfirm />;
+    else return <EmailConfirm onOk={setIsPassConfirm}/>;
 };
 
 export default FormForget;

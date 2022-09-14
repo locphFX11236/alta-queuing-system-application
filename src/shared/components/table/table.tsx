@@ -12,7 +12,7 @@ const TableFC = (
 ): JSX.Element => {
     const [pagination, setPagination] = useState<PaginationProps>({
         current: 1,
-        pageSize: custom === 'report' ? customOption[custom].pageSize : 9,
+        pageSize: (custom !== undefined) ? customOption[custom].pageSize : 9,
         hideOnSinglePage: true,
         itemRender: (_, type, originalElement) => {
             if (type === 'prev') return <CaretLeftOutlined />;
