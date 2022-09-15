@@ -21,3 +21,5 @@ export const initAdd: ServiceDataType = {
         }
     }
 };
+
+export const AddSetting = initAdd.setting;

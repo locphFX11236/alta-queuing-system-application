@@ -1,18 +1,19 @@
-import { Affix } from 'antd';
+import { Button, notification } from 'antd';
 import React from 'react';
 
-const App: React.FC = () => {
-
-    return (
-        <Affix
-            offsetTop={90}
-            onChange={affixed => console.log(affixed)}
-            style={{ background: 'yellow' }}
-            // className='Affix'
-        >
-            <div style={{ background: 'red', width: 80, height: 100 }}>A</div>
-        </Affix>
-    );
+const openNotification = () => {
+    notification.open({
+        placement: 'top',
+        duration: 0,
+        message: 'Notification',
+        description: 'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
+    });
 };
+
+const App: React.FC = () => (
+    <Button onClick={openNotification}>
+        top
+    </Button>
+);
 
 export default App;

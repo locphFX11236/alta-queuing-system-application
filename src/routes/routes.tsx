@@ -76,7 +76,7 @@ const Router: React.FC = () => (
                 {/*
                 - Chú ý nếu trước 'path' có dấu '/' là đường dẫn trực tiếp 'route' sẽ bỏ qua 'path' của 'route parent' mà truy cập thẳng vào.
                 - Ngược lại đường dẫn gián tiếp sẽ truy cập 'path' của 'route parent' + 'path' của 'route children'
-                - Điều này rất quan trọng khi dùng 'Navigate'
+                - Quan trọng khi dùng 'Navigate'
                 */}
 
                 <Route path='role' >

@@ -1,22 +1,13 @@
 import { Form, Input, Typography } from "antd";
 import { Location, useLocation } from "react-router-dom";
+import { AddSetting } from "./items";
 import { ServiceDataType } from "./serviceType";
 
 const Information = (): JSX.Element => {
     const location: Location = useLocation();
     const inforRecord: ServiceDataType = location.state;
 
-    inforRecord.setting = {
-        mode: ['v1', 'v2', 'v3', 'v4'],
-        values: {
-            v1: {
-                from: 1,
-                to: 9999
-            },
-            v2: 100,
-            v3: 1000
-        }
-    };
+    inforRecord.setting = AddSetting;
 
     const isHidden = (a: string) => {
         if (!inforRecord.setting.mode) return false;

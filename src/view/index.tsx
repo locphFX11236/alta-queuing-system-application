@@ -12,7 +12,7 @@ function IndexView () {
     const userState: UserState = useAppSelector(SelectUser);
 
     useEffect(() => {
-        userState.isLoggedIn ? navigate('/') : navigate('/service');
+        userState.isLoggedIn ? navigate('/') : navigate('/number-count');
         
         // navigate('/infor');
     }, [userState]) // eslint-disable-line react-hooks/exhaustive-deps

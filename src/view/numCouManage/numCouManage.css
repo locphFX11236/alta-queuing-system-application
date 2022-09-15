@@ -29,56 +29,6 @@
     width: 240px;
 }
 
-.manage-numberCount .main-box {
-    top: 164px;
-    width: 1192px;
-    height: 604px;
-}
-
-.infor-numberCount .main-box {
-    top: 164px;
-    width: 1112px;
-    height: 604px;
-}
-
-.infor-numberCount .main-box .title-lv-2 {
-    top: 16px;
-    left: 24px;
-    width: 155px;
-}
-
-.manage-numberCount .main-box .title-lv-0 {
-    top: 24px;
-    left: 501px;
-    width: 191px;
-    height: 48px;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 48px;
-    color: #FF7506;
-}
-
-.manage-numberCount .main-box .button-group {
-    top: 258px;
-    left: 465px;
-    width: 262px;
-}
-
-.manage-numberCount .button-group .button-1 {
-    left: 0px;
-    width: 115px;
-    color: #FF9138;
-    background: #FFF2E7;
-    border: 1.5px solid #FF9138;
-}
-
-.manage-numberCount .button-group .button-2 {
-    left: 147px;
-    width: 115px;
-    color: #FFFFFF;
-    background: #FF9138;
-}
-
 .numberCount .affix-group,
 .infor-numberCount .affix-group {
     right: 0px;
@@ -88,21 +38,3 @@
 .numberCount .affix-group { top: 244px; }
 
 .infor-numberCount .affix-group { top: 156px; }
-
-.manage-numberCount .main-box .form-box {
-    position: absolute;
-    top: 92px;
-    left: 396px;
-    right: 396px;
-    bottom: 426px;
-    background-color: antiquewhite; /* x */
-}
-
-.infor-numberCount .infor-box {
-    position: absolute;
-    top: 66px;
-    left: 24px;
-    right: 24px;
-    bottom: 354px;
-    background-color: antiquewhite; /* x */
-} /* x */
