@@ -16,48 +16,6 @@
 
 .account .input-search { left: 836px; }
 
-.manage-account .main-box {
-    top: 150px;
-    width: 1192px;
-    height: 534px;
-}
-
-.manage-account .main-box .title-lv-2 {
-    top: 16px;
-    left: 24px;
-    width: 181px;
-}
-
-.manage-account .main-box .form-box {
-    position: absolute;
-    top: 66px;
-    left: 24px;
-    right: 24px;
-    bottom: 77px;
-    background-color: antiquewhite; /* x */
-} /* x */
-
-.manage-account .button-group {
-    top: 730px;
-    left: 457px;
-    width: 326px;
-}
-
-.manage-account .button-group .button-1 {
-    left: 0px;
-    width: 147px;
-    color: #FF9138;
-    background: #FFF2E7;
-    border: 1.5px solid #FF9138;
-}
-
-.manage-account .button-group .button-2 {
-    left: 179px;
-    width: 147px;
-    color: #FFFFFF;
-    background: #FF9138;
-}
-
 .account .affix-group {
     top: 244px;
     right: 0px;

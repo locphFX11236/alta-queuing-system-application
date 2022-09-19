@@ -29,5 +29,22 @@ type NuCoType = {
     useService: string
 };
 
-export type DataType = any | NuCoType |ServiceType | EquipType;
+type RoleType = {
+    position: string,
+    description: string,
+    functions:  Array<string>,
+};
+
+type AccountType = {
+    key: string,
+    name: string,
+    phoneNumber: string,
+    email: string,
+    position: string,
+    password: string,
+    passwordConfirm: string,
+    status: boolean,
+};
+
+export type DataType = any | AccountType | RoleType | NuCoType |ServiceType | EquipType;
 export type Datas = DataType[];

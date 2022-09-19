@@ -1,4 +1,6 @@
-export const initAdd: any = {
+import { RoleDataType } from "./roleType";
+
+export const initAdd: RoleDataType = {
     position: 'Supper Admin',
     description: 'Báo cáo',
     functions: ['A', 'B'],

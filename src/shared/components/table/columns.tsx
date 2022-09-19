@@ -126,7 +126,7 @@ export const accountCols: ColProps = [
     },
     {
         title: '', dataIndex: 'key', key: 'key', width: 100,
-        render: () => <Link to='/setting/account/acc-manage-upd'>Cập nhật</Link>
+        render: (_, record) => <Link to='/setting/account/acc-manage-upd' state={record}>Cập nhật</Link>
     }
 ];
 
