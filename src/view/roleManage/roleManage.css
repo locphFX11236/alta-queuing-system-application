@@ -15,58 +15,6 @@
     top: 192px;
 }
 
-.manage-role .main-box {
-    top: 172px;
-    width: 1192px;
-    height: 534px;
-}
-
-.manage-role .main-box .title-lv-2 {
-    top: 16px;
-    left: 24px;
-    width: 154px;   
-}
-
-.manage-role .main-box .form-box {
-    position: absolute;
-    top: 58px;
-    left: 24px;
-    right: 24px;
-    bottom: 24px;
-    background-color: aqua; /* x */
-} /* x */
-
-.manage-role .main-box .form-box .check-box {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    width: 560px;
-    height: 420px;
-    background: #FFF2E7;
-    border-radius: 8px;
-}
-
-.manage-role .button-group {
-    top: 730px;
-    left: 450px;
-    width: 326px;
-}
-
-.manage-role .button-group .button-1 {
-    left: 0px;
-    width: 147px;
-    color: #FF9138;
-    background: #FFF2E7;
-    border: 1.5px solid #FF9138;
-}
-
-.manage-role .button-group .button-2 {
-    left: 179px;
-    width: 147px;
-    color: #FFFFFF;
-    background: #FF9138;
-}
-
 .role .affix-group {
     top: 192px;
     right: 0px;

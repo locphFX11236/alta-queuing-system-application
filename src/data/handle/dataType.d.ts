@@ -25,5 +25,9 @@ type ServiceType = {
     }
 };
 
-export type DataType = any | null |ServiceType | EquipType;
+type NuCoType = {
+    useService: string
+};
+
+export type DataType = any | NuCoType |ServiceType | EquipType;
 export type Datas = DataType[];

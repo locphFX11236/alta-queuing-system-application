@@ -110,7 +110,7 @@ export const roleCols: ColProps = [
     { title: 'Mô tả', dataIndex: 'description', key: 'description', width: 535 },
     {
         title: '', dataIndex: 'key', key: 'key', width: 126,
-        render: () => <Link to='/setting/role/rol-manage-upd'>Cập nhật</Link>
+        render: (_, record) => <Link to='/setting/role/rol-manage-upd' state={record}>Cập nhật</Link>
     }
 ];
 

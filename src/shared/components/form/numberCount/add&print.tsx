@@ -3,13 +3,16 @@ import { CaretDownOutlined } from '@ant-design/icons';
 import { NavigateFunction, useNavigate } from "react-router-dom";
 
 import { openNotification } from "../../popUp";
+import { NuCoDataType } from "./NuCoType";
 
 const { Option } = Select;
+
+const addItem: NuCoDataType = { useService: 'tmh' };
 
 const NumberPrint = (): JSX.Element => {
     const navigate: NavigateFunction = useNavigate();
 
-    const onFinish = (values: any) => {
+    const onFinish = (values: NuCoDataType) => {
         console.log('Sucess:', values);
         openNotification(values); // Nên để ở reducer
     }
@@ -25,12 +28,13 @@ const NumberPrint = (): JSX.Element => {
             name='add-num-form'
             layout="vertical"
             onFinish={onFinish}
+            initialValues={addItem}
         >
             <Typography.Title className="title-lv-0">CẤP SỐ MỚI</Typography.Title>
             <div className="form-box">
                 <p style={{ textAlign: 'center', marginBottom: 12 }}>Dịch vụ khách hàng lựa chọn</p>
 
-                <Form.Item name='choiceService' >
+                <Form.Item name='useService' >
                     <Select
                         placeholder="Chọn dịch vụ"
                         suffixIcon={<CaretDownOutlined style={{ color: '#FF7506' }}/>} 

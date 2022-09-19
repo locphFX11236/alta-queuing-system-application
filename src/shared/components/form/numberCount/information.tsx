@@ -2,13 +2,14 @@ import { Col, Form, Row, Typography } from "antd";
 import { Location, useLocation } from "react-router-dom";
 
 import { StatusTag } from "../../badgeTag";
+import { NuCoDataType } from "./NuCoType";
 
 const Information = (): JSX.Element => {
     const location: Location = useLocation();
-    const inforRecord: any = location.state;
+    const inforRecord: NuCoDataType = location.state;
 
-    inforRecord.phoneNumber = '0123456789 Add sdt';
-    inforRecord.emailAddress = 'aaa@axa.com Add email';
+    inforRecord.phoneNumber = '0123456789 (Add sdt)';
+    inforRecord.emailAddress = 'aaa@axa.com (Add email)';
 
     return (
         <Form
