@@ -6,7 +6,7 @@
         "IPAddress": "192.168.1.10",
         "actionStatus": true,
         "connectStatus": true,
-        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
+        "usedService": ["tm", "m", "hh"]
     },
     {
         "key": 2,
@@ -15,7 +15,7 @@
         "IPAddress": "192.168.1.10",
         "actionStatus": true,
         "connectStatus": false,
-        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
+        "usedService": ["tm", "m", "hh"]
     },
     {
         "key": 3,
@@ -24,7 +24,7 @@
         "IPAddress": "192.168.1.10",
         "actionStatus": false,
         "connectStatus": false,
-        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
+        "usedService": ["tm", "m", "hh"]
     },
     {
         "key": 4,
@@ -33,7 +33,7 @@
         "IPAddress": "192.168.1.10",
         "actionStatus": false,
         "connectStatus": true,
-        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
+        "usedService": ["tm", "m", "hh"]
     },
     {
         "key": 5,
@@ -42,7 +42,7 @@
         "IPAddress": "192.168.1.10",
         "actionStatus": true,
         "connectStatus": true,
-        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
+        "usedService": ["tm", "m", "hh"]
     },
     {
         "key": 6,
@@ -51,7 +51,7 @@
         "IPAddress": "192.168.1.10",
         "actionStatus": true,
         "connectStatus": false,
-        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
+        "usedService": ["tm", "m", "hh"]
     },
     {
         "key": 7,
@@ -60,7 +60,7 @@
         "IPAddress": "192.168.1.10",
         "actionStatus": false,
         "connectStatus": false,
-        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
+        "usedService": ["tm", "m", "hh"]
     },
     {
         "key": 8,
@@ -69,7 +69,7 @@
         "IPAddress": "192.168.1.10",
         "actionStatus": false,
         "connectStatus": true,
-        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
+        "usedService": ["tm", "m", "hh"]
     },
     {
         "key": 9,
@@ -78,7 +78,7 @@
         "IPAddress": "192.168.1.10",
         "actionStatus": true,
         "connectStatus": true,
-        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
+        "usedService": ["tm", "m", "hh"]
     },
     {
         "key": 10,
@@ -87,7 +87,7 @@
         "IPAddress": "192.168.1.10",
         "actionStatus": true,
         "connectStatus": false,
-        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
+        "usedService": ["tm", "m", "hh"]
     },
     {
         "key": 11,
@@ -96,7 +96,7 @@
         "IPAddress": "192.168.1.10",
         "actionStatus": false,
         "connectStatus": false,
-        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
+        "usedService": ["tm", "m", "hh"]
     },
     {
         "key": 12,
@@ -105,6 +105,6 @@
         "IPAddress": "192.168.1.10",
         "actionStatus": false,
         "connectStatus": true,
-        "usedService": ["Khám tim mạch", "Khám mắt", "Khám hô hấp"]
+        "usedService": ["tm", "m", "hh"]
     }
 ]

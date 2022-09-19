@@ -7,7 +7,7 @@ export const initAdd: RoleDataType = {
 };
 
 export const status: Record<string, string> = {
-    add: 'Thêm thiết bị',
+    add: 'Thêm',
     upd: 'Cập nhật'
 };
 

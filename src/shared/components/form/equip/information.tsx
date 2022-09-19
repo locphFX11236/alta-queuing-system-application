@@ -2,10 +2,11 @@ import { Col, Form, Row, Typography } from "antd";
 import { Location, useLocation } from "react-router-dom";
 
 import { EquipDataType } from "./equipType";
+import { addInforRecord, RenderUseService } from "./items";
 
 const Information = (): JSX.Element => {
     const location: Location = useLocation();
-    const inforRecord: EquipDataType = location.state;
+    const inforRecord: EquipDataType = Object.assign({}, location.state, addInforRecord);
 
     return (
         <Form
@@ -83,7 +84,7 @@ const Information = (): JSX.Element => {
                     </Row>
 
                     <label>Dịch vụ sử dụng:</label>
-                    <p>{inforRecord.usedService.join(', ')}.</p>
+                    <p>{inforRecord.usedService.map((a: any) => RenderUseService[a]).join(', ')}.</p>
                 </div>
             </Row>
         </Form>

@@ -13,6 +13,7 @@ const Manage = (): JSX.Element => {
     const statusUrl: string = location.pathname.slice(-3);
     const updRecord: EquipDataType = location.state;
     const initValues: EquipDataType = statusUrl === 'upd' ? updRecord : initAdd;
+    console.log(updRecord);
 
     const onFinish = (values: EquipDataType) => {
         console.log('Sucess:', values);
@@ -111,6 +112,7 @@ const Manage = (): JSX.Element => {
                             placeholder="Nhập dịch vụ sử dụng"
                         >
                             <Option key="rhm" value="rhm">Khám răng hàm mặt</Option>
+                            <Option key="m" value="m">Khám mắt</Option>
                             <Option key="tmh" value="tmh">Khám tai mũi họng</Option>
                             <Option key="tm" value="tm">Khám tim mạch</Option>
                             <Option key="s-pk" value="s-pk">Khám sản - Phụ khoa</Option>

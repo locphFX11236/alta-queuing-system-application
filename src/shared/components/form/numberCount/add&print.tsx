@@ -40,6 +40,7 @@ const NumberPrint = (): JSX.Element => {
                         suffixIcon={<CaretDownOutlined style={{ color: '#FF7506' }}/>} 
                     >
                         <Option key="rhm" value="rhm">Khám răng hàm mặt</Option>
+                        <Option key="m" value="m">Khám mắt</Option>
                         <Option key="tmh" value="tmh">Khám tai mũi họng</Option>
                         <Option key="tm" value="tm">Khám tim mạch</Option>
                         <Option key="s-pk" value="s-pk">Khám sản - Phụ khoa</Option>

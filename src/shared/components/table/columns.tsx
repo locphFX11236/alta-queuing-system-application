@@ -1,15 +1,8 @@
-import { Badge } from 'antd';
 import { Link } from 'react-router-dom';
+
 import { ActiveTag, StatusTag } from '../badgeTag';
-import { StringTag } from '../badgeTag/badgeTageType';
-
+import { CustomTag, RenderUseService } from './items';
 import type { ColProps } from './tableType';
-
-const CustomTag = ({s}: StringTag): JSX.Element => {
-    if(s === 'Đã sử dụng') return <p><Badge color={'#34CD26'} /> Đã hoàn thành</p>;
-    if(s === 'Đang chờ') return <p><Badge color={'#5490EB'} /> Đang thực hiện</p>;
-    else  return <p><Badge color={'#6C7585'} /> Vắng</p>;
-};
 
 export const equipCols: ColProps = [
     { title: 'Mã thiết bị', dataIndex: 'code', key: 'code', width: 103 },
@@ -25,7 +18,7 @@ export const equipCols: ColProps = [
     },
     {
         title: 'Dịch vụ sử dụng', dataIndex: 'usedService', key: 'usedService', width: 268,
-        render: u => <p>{u[0]}, {u[1]}...<br/><Link to='/equip/equ-infor'>Xem thêm</Link></p>
+        render: (u, record) => <p>{RenderUseService[u[0]]}, {RenderUseService[u[1]]}...<br/><Link to='/equip/equ-infor' state={record}>Xem thêm</Link></p>
     },
     {
         title: '', dataIndex: 'key', key: 'key', width: 82,
