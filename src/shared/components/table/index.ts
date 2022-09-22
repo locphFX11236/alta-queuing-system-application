@@ -19,4 +19,4 @@ export const NumCouTable: React.FC = () => TableFC(numCouCols, numCouData);
 export const ReportTable: React.FC = () => TableFC(reportCols, reportData, 'report');
 export const RoleTable: React.FC = () => TableFC(roleCols, roleData);
 export const AccountTable: React.FC = () => TableFC(accountCols, accountData);
-export const AccountLogTable: React.FC = () => TableFC(accountLogCols, accountLogData);
+export const AccountLogTable: React.FC = () => TableFC(accountLogCols, accountLogData, 'log');

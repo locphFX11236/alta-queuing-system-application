@@ -2,6 +2,7 @@ import { Space, Typography } from "antd";
 import { Link } from "react-router-dom";
 
 import { SelectS1 } from "../../shared/components/filter/select";
+import { SearchS3 } from "../../shared/components/filter/search";
 import { ServiceTable } from "../../shared/components/table";
 import { AddService } from "../../shared/components/affix";
 
@@ -13,7 +14,10 @@ const ServiceList = (): JSX.Element => (
             <SelectS1 />
         </div>
         <div className="input input-2">Input 2</div>
-        <div className="input input-search">Search box</div>
+        <div className="input input-search">
+            <label>Từ khóa</label>
+            <SearchS3 />
+        </div>
         <ServiceTable />
         <Space className="affix-group">
             <Link to='ser-manage-add'>

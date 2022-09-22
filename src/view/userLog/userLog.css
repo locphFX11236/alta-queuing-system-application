@@ -9,3 +9,14 @@
     left: 896px;
     width: 240px;
 }
+
+.user-log .main-list {
+    top: 192px;
+    left: 24px;
+    width: 1112px;
+    max-height: 539px;
+}
+
+.user-log .table div div ul {
+    top: 563px;
+}

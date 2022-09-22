@@ -1,6 +1,7 @@
 import { Space, Typography } from "antd";
 import { Link } from "react-router-dom";
 import { AddNum } from "../../shared/components/affix";
+import { SearchNc5 } from "../../shared/components/filter/search";
 import { SelectNc1, SelectNc2, SelectNc3 } from "../../shared/components/filter/select";
 import { NumCouTable } from "../../shared/components/table";
 
@@ -20,7 +21,10 @@ const NumberCountList = (): JSX.Element => (
             <SelectNc3 />
         </div>
         <div className="input input-4">Input 4</div>
-        <div className="input input-search">Search box</div>
+        <div className="input input-search">
+            <label>Từ khóa</label>
+            <SearchNc5 />
+        </div>
         <NumCouTable />
         <Space className="affix-group">
             <Link to='num-manage-add'>

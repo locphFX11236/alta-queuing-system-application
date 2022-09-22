@@ -1,6 +1,7 @@
 import { Space, Typography } from "antd";
 import { Link } from "react-router-dom";
 import { AddAcc } from "../../shared/components/affix";
+import { SearchA2 } from "../../shared/components/filter/search";
 import { SelectA1 } from "../../shared/components/filter/select";
 import { AccountTable } from "../../shared/components/table";
 
@@ -11,7 +12,10 @@ const AccountList = (): JSX.Element => (
             <label>Tên vai trò</label>
             <SelectA1 />
         </div>
-        <div className="input input-search">Search box</div>
+        <div className="input input-search">
+            <label>Từ khóa</label>
+            <SearchA2 />
+        </div>
         <AccountTable />
         <Space className="affix-group">
             <Link to='acc-manage-add'>

@@ -9,6 +9,10 @@ const customOption: Record<string, CustomOjectType> = {
     'setNum': {
         pageSize: 8
         // Style
+    },
+    'log': {
+        pageSize: 10
+        // Style
     }
 };
 
