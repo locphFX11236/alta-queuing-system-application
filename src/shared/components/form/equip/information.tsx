@@ -2,7 +2,7 @@ import { Col, Form, Row, Typography } from "antd";
 import { Location, useLocation } from "react-router-dom";
 
 import { EquipDataType } from "./equipType";
-import { addInforRecord, RenderUseService } from "./items";
+import { addInforRecord, RenderValue } from "./items";
 
 const Information = (): JSX.Element => {
     const location: Location = useLocation();
@@ -58,7 +58,7 @@ const Information = (): JSX.Element => {
                                 labelCol={{ span: 12 }}
                                 wrapperCol={{ span: 12 }}
                             >
-                                <span>{inforRecord.type}</span>
+                                <span>{ RenderValue[inforRecord.type] }</span>
                             </Form.Item>
 
                             <Form.Item
@@ -84,7 +84,7 @@ const Information = (): JSX.Element => {
                     </Row>
 
                     <label>Dịch vụ sử dụng:</label>
-                    <p>{inforRecord.usedService.map((a: any) => RenderUseService[a]).join(', ')}.</p>
+                    <p>{inforRecord.usedService.map((a: any) => RenderValue[a]).join(', ')}.</p>
                 </div>
             </Row>
         </Form>

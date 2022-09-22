@@ -21,12 +21,14 @@ export const addInforRecord = {
     password: '123456'
 };
 
-export const RenderUseService: Record<string, string> = {
+export const RenderValue: Record<string, string> = {
     'm': 'Khám mắt',
     'rhm': 'Khám răng hàm mặt',
     'tmh': 'Khám tai mũi họng',
     'tm': 'Khám tim mạch',
     "s-pk": 'Khám sản - Phụ khoa',
     "hh": 'Khám hô hấp',
-    "tq": 'Khám tổng quát'
+    "tq": 'Khám tổng quát',
+    "kiosk": 'Kiosk',
+    "counter": 'Display counter'
 };
