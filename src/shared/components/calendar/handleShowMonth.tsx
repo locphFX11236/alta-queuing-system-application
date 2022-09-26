@@ -1,8 +1,8 @@
 import { Moment } from 'moment';
 
 const ShowMonth = (rootDate: Moment): any => {
-    const startDay: Moment = rootDate.clone().startOf('month').startOf('week'); // Lấy thông tin ngày của tuần chứa ngày đầu tiên của tháng.
-    const endDay: Moment = rootDate.clone().endOf('month').endOf('week'); // Lấy thông tin ngày của tuần chứa ngày cuối cùng của tháng.
+    const startDay: Moment = rootDate.clone().startOf('month').startOf('week'); // Lấy thông tin ngày đầu của tuần chứa ngày đầu tiên của tháng.
+    const endDay: Moment = rootDate.clone().endOf('month').endOf('week'); // Lấy thông tin ngày cuối của tuần chứa ngày cuối cùng của tháng.
     const day: Moment = startDay.clone().subtract(1, 'day'); // Lấy thông tin ngày sẽ render, bắt đầu từ ngày trước (startDay).
     const currentMonth: any = []; // Sẽ là mảng render thông tin tháng, chứa các mảng render thông tin tuần.
 

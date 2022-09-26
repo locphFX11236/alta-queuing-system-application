@@ -5,6 +5,7 @@ import { SelectS1 } from "../../shared/components/filter/select";
 import { SearchS3 } from "../../shared/components/filter/search";
 import { ServiceTable } from "../../shared/components/table";
 import { AddService } from "../../shared/components/affix";
+import DatePickerCustom from "../../shared/components/filter/time";
 
 const ServiceList = (): JSX.Element => (
     <div className="service">
@@ -13,7 +14,10 @@ const ServiceList = (): JSX.Element => (
             <label>Trạng thái hoạt động</label>
             <SelectS1 />
         </div>
-        <div className="input input-2">Input 2</div>
+        <div className="input input-2">
+            <label>Chọn thời gian</label>
+            <DatePickerCustom />
+        </div>
         <div className="input input-search">
             <label>Từ khóa</label>
             <SearchS3 />

@@ -10,11 +10,13 @@ updateLocale('en', {
 }); // Custom cho moment
 
 const WeekDateName = (): React.ReactElement => (
-    <Row className='calendar-week cal-title'>{weekdaysMin().map((a, i) => (
-        <Col key={i}>
-            <div className='calendar-day'>{a}</div>
-        </Col>
-    ))}</Row>
+    <Row className='calendar-week cal-title'>
+
+    {weekdaysMin().map((a, i) => (
+        <Col className='calendar-day' key={i}>{a}</Col>
+    ))}
+
+    </Row>
 );
 
 export default WeekDateName;

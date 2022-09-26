@@ -1,4 +1,4 @@
-import { Button, Card, Popover } from "antd";
+import { Button, Card, Dropdown } from "antd";
 import { useState } from "react";
 
 import './notification.css';
@@ -37,19 +37,20 @@ const NotiComponent = () => {
     };
 
     return (
-        <Popover
-            content={ <Render /> }
-            trigger='focus'
-            showArrow={false}
+        <Dropdown
+            overlay={ <Render /> }
+            placement='bottomRight'
+            trigger={['hover']}
+            arrow={false}
             visible={visible}
-            onVisibleChange={handleVisibleChange}
+            onVisibleChange={ handleVisibleChange }
         >
             <Button
                 className="noti"
                 icon={ <Bell /> }
                 shape='circle'
             />
-        </Popover>
+        </Dropdown>
     );
 };
 
