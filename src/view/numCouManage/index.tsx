@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AddNum } from "../../shared/components/affix";
 import { SearchNc5 } from "../../shared/components/filter/search";
 import { SelectNc1, SelectNc2, SelectNc3 } from "../../shared/components/filter/select";
+import { RangeNumCou } from "../../shared/components/filter/time";
 import { NumCouTable } from "../../shared/components/table";
 
 const NumberCountList = (): JSX.Element => (
@@ -20,7 +21,10 @@ const NumberCountList = (): JSX.Element => (
             <label>Nguồn cấp</label>
             <SelectNc3 />
         </div>
-        <div className="input input-4">Input 4</div>
+        <div className="input input-4">
+            <label>Chọn thời gian</label>
+            <RangeNumCou />
+        </div>
         <div className="input input-search">
             <label>Từ khóa</label>
             <SearchNc5 />

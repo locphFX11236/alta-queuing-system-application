@@ -1,25 +1,10 @@
-import { Input, Popover } from 'antd';
-import Icon, { CaretRightOutlined } from '@ant-design/icons';
-import React, { useState } from 'react';
+import React from 'react';
 
-import './rangePicker.css';
-import { RangeCalen } from '../../../assets/icon';
-import CalendarCustom from './calendar';
+import RangePickerCustom from './rangePickerCustom';
+import { FuncNumCou, FuncReport, FuncSerInfo, FuncSerList, FuncUserLog } from './functions';
 
-const RangeCalenIcon = () => <Icon component={ RangeCalen } />
-
-const RangeCalendar = (cb: any) => <div className='range-calendar' ><CalendarCustom {...cb}/></div>
-
-const DatePickerCustom: React.FC = () => {
-    const [value, setValue] = useState([])
-    const onSelect = (v: any) => setValue(v);
-
-    return (
-        <Popover className='range-picker' content={<RangeCalendar cb={onSelect}/>} trigger="click" showArrow={false} >
-            <Input prefix={<RangeCalenIcon />} value={value[0]} readOnly />
-            <CaretRightOutlined />
-            <Input prefix={<RangeCalenIcon />} value={value[1]} readOnly />
-        </Popover>
-    );
-};
-export default DatePickerCustom;
+export const RangeSerList: React.FC = () => <RangePickerCustom Func={FuncSerList} />;
+export const RangeSerInfo: React.FC = () => <RangePickerCustom Func={FuncSerInfo} />;
+export const RangeNumCou: React.FC = () => <RangePickerCustom Func={FuncNumCou} />;
+export const RangeReport: React.FC = () => <RangePickerCustom Func={FuncReport} />;
+export const RangeUserLog: React.FC = () => <RangePickerCustom Func={FuncUserLog} />;

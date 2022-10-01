@@ -1,19 +1,7 @@
-import { Card } from "antd";
-
 import './calendar.css';
-import CalendarHeader from './head';
-import CalendarContent from "./content";
-import WeekDateName from "./weekDayName";
-import state from './function';
+import Func from './features';
+import Calendar from "./interface";
+import { DashboardCal } from './functions';
 
-export const CalendarComponent = (): JSX.Element => (
-    <Card
-        className='calendar-table'
-        title={ <CalendarHeader state={state()} /> }
-    >
-        <div className="calendar-content">
-            <WeekDateName />
-            <CalendarContent state={state()} />
-        </div>
-    </Card>
-);
+export const CalendarDashboard = (): JSX.Element => <Calendar state={Func(1, DashboardCal)} />;
+export const CalendarRange = ({cb}: any): JSX.Element => <Calendar state={Func(2, cb)} />;

@@ -3,10 +3,10 @@ import { Row } from "antd";
 
 import WeekCalendar from "./week";
 
-const MonthCalendar = ({ showMonth, weekClassName, ...state }: any): React.ReactElement => (
-    showMonth.map((week: any, index: any) => (
+const MonthCalendar = ({ showMonth, weekName, ...state }: any): React.ReactElement => (
+    showMonth.map((week: any, index: number) => (
         <Row
-            className={weekClassName()}
+            className={weekName(week)}
             key={`${state.rootDate.format('[M]MM')}_W${index + 1}`}
         >
             <WeekCalendar week={week} {...state} />

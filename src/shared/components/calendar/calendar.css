@@ -49,7 +49,6 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    border-radius: 12px
 }
 
 .calendar-day {
@@ -60,23 +59,48 @@
     height: 36px;
     font-size: 14px;
     line-height: 19px;
-    border-radius: 8px;
-}
-
-.date-selected {
-    background-color: #FFB800;
-    color: #fff;
 }
 
 .current-date {
     border: 1px solid #FFB800;
     background-color: #FFFFFF;
     color: #FFB800;
+    border-radius: 8px;
+}
+
+.week-range {
+    display: flex;
+    width: 100%;
+}
+
+.week-range .date-range,
+.week-range .calendar-day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 36px;
+    border: none;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.date-selected {
+    width: 36px !important;
+    height: 36px;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #FFB800;
+}
+
+.date-range {
+    background-color: #FFF2E7;
 }
 
 .out-month {
     opacity: 0.5;
 }
+
 /*
 .ant-popover-inner-content {
     padding: 0;

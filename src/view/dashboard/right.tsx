@@ -1,5 +1,5 @@
 import { Card, Typography } from "antd";
-import { CalendarComponent } from "../../shared/components/calendar";
+import { CalendarDashboard } from "../../shared/components/calendar";
 import StatisticOverviewComponent from "../../shared/components/statistic/overview";
 
 const RightDashboard = (): JSX.Element => (
@@ -7,7 +7,7 @@ const RightDashboard = (): JSX.Element => (
         <Typography.Title className="title-lv-1">Tổng quan</Typography.Title>
         <div className="right-statistic-group"><StatisticOverviewComponent /></div>
         <Card className="dashboard-calendar">
-            <CalendarComponent />
+            <CalendarDashboard />
         </Card>
     </div>
 );

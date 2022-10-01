@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { BackService, UpdService } from "../../shared/components/affix";
 import { SearchSI3 } from "../../shared/components/filter/search";
 import { SelectSI1 } from "../../shared/components/filter/select";
+import { RangeSerInfo } from "../../shared/components/filter/time";
 import { InfoServForm } from "../../shared/components/form/serviceForm";
 import { SetNumTable } from "../../shared/components/table";
 
@@ -16,7 +17,10 @@ const InforService = (): JSX.Element => (
                 <label>Trạng thái</label>
                 <SelectSI1 />
             </div>
-            <div className="input input-2">Input 2</div>
+            <div className="input input-2">
+                <label>Chọn thời gian</label>
+                <RangeSerInfo />
+            </div>
             <div className="input input-search">
                 <label>Từ khóa</label>
                 <SearchSI3 />

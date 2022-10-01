@@ -1,7 +1,8 @@
 import MonthCalendar from "./month";
 import WeekDayName from "./dayNames";
+import { CoreType } from "../../type";
 
-const BodyCalendar = (state: any): JSX.Element => (
+const BodyCalendar = (state: CoreType): JSX.Element => (
     <div className="calendar-content">
         <WeekDayName />
         <MonthCalendar {...state} />

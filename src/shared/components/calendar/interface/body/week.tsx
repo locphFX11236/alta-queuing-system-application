@@ -2,10 +2,10 @@ import React from "react";
 import { Col } from "antd";
 import { Moment } from "moment";
 
-const WeekCalendar = ({ week, onSelect, dateClassName }: any): React.ReactElement => (
+const WeekCalendar = ({ week, onSelect, dateName }: any): React.ReactElement => (
     week.map((date: Moment) => (
         <Col
-            className={dateClassName(date)}
+            className={dateName(date)}
             onClick={() => onSelect(date)}
             key={date.format("[M]MM_[D]DD")}
         >

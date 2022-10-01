@@ -1,0 +1,1 @@
+export const DashboardCal = (v: any) => console.log('Dashboard calendar: ', v);
