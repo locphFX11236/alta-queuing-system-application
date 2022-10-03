@@ -1,7 +1,8 @@
 import { ResponsiveLine } from '@nivo/line';
 
-import HandleData from '../../../../data/handle';
-import { areaJSON } from '../../../../data/dummy';
+
+import HandleData from '../../../../core/api/handleData';
+import { areaJSON } from '../../../../core/data/dummy';
 import { linearGradientDef } from '@nivo/core';
 import TooltipComponent from './tooltip';
 

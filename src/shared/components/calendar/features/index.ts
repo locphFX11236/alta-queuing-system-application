@@ -29,9 +29,12 @@ export default function Func (mode: number, cb: any) {
     };
 
     useEffect(() => {
-        cb(value);
         setShowMonth(HandleShowMonth(rootDate));
     }, [rootDate]); // eslint-disable-line react-hooks/exhaustive-deps
+
+    useEffect(() => {
+        cb(value);
+    }, [value]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return core;
 };

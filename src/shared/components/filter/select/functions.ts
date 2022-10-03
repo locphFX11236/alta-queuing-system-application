@@ -1,5 +1,7 @@
-export const FuncE1 = (value: string): void => {
-    console.log(`Danh sách thiết bị, trạng thái hoạt động: ${value}`);
+import { EquipSelect1 } from "../../../../core/featuresRedux/slice/equipmentSlice";
+
+export const FuncE1 = (value: string, state: any, dispatch: any) => {
+    dispatch( EquipSelect1( { actionStatus: value } ) )
 };
 
 export const FuncE2 = (value: string): void => {

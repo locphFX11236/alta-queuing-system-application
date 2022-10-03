@@ -1,40 +1,13 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-import IndexLayout from "../layout";
+import {
+    IndexLayout, Login, Information, Dashboard, EquipList, ManageEquip, InforEquip,
+    ServiceList, ManageService, InforService, NumberCountList, ManageNumberCount, InforNumberCount, ReportList,
+    RoleList, ManageRole, AccountList, ManageAccount, UserLogList, ErrorPage, Text
+} from './item';
 
-import Login from "../view/loginPage";
-import Information from "../view/inforMember";
-
-import Dashboard from "../view/dashboard";
-
-import EquipList from "../view/equipManage";
-import ManageEquip from "../view/equipManage/manage";
-import InforEquip from "../view/equipManage/information";
-
-import ServiceList from "../view/serviceManage";
-import ManageService from "../view/serviceManage/manage";
-import InforService from "../view/serviceManage/information";
-
-import NumberCountList from "../view/numCouManage";
-import ManageNumberCount from "../view/numCouManage/manage";
-import InforNumberCount from "../view/numCouManage/information";
-
-import ReportList from "../view/reportPage";
-
-import RoleList from "../view/roleManage";
-import ManageRole from "../view/roleManage/manage";
-
-import AccountList from "../view/accountManage";
-import ManageAccount from "../view/accountManage/manage";
-
-import UserLogList from "../view/userLog";
-
-import ErrorPage from '../view/errorPage';
-
-import Text from '../view/text';
-
-const Router: React.FC = () => (
+const PrivateRouter: React.FC = () => (
     <Routes>
         <Route path='/login' element={ <Login state='login' /> } />
         <Route path='/forget' element={ <Login state='forget' /> } />
@@ -105,4 +78,4 @@ const Router: React.FC = () => (
     </Routes>
 );
 
-export default Router;
+export default PrivateRouter;

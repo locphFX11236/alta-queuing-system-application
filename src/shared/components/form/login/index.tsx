@@ -1,13 +1,13 @@
 import { Button, Form, Input } from "antd";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import './formLogin.css';
-import { useAppDispatch } from "../../../../core/features/hookRedux";
-import { login } from "../../../../core/features/userSlice";
-import type { PayloadUser } from "../../../../core/features/redux";
-import { Link } from "react-router-dom";
+import { login } from "../../../../core/featuresRedux/slice/userSlice";
+import type { AppDispatch, PayloadUser } from "../../../../core/featuresRedux/redux";
 
 const FormLogin = (): JSX.Element => {
-    const dispatch = useAppDispatch();
+    const dispatch: AppDispatch = useDispatch();
 
     const logInPayload: PayloadUser = {
         userId: 'Admin'

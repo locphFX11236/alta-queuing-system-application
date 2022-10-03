@@ -1,1 +1,1 @@
-export const DashboardCal = (v: any) => console.log('Dashboard calendar: ', v);
+export const DashboardCal = (v: any) => (v.length !== 0 ? console.log('Dashboard calendar: ', v) : null);

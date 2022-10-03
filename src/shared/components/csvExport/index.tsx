@@ -1,7 +1,7 @@
 import { CSVLink } from 'react-csv';
 
-import { reportJSON } from '../../../data/dummy';
-import HandleData from '../../../data/handle';
+import HandleData from '../../../core/api/handleData';
+import { reportJSON } from '../../../core/data/dummy';
 
 const CSVExport = ({children}: any) => {
     const reportData = HandleData(reportJSON);

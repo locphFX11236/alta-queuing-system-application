@@ -1,8 +1,9 @@
 import { Layout, Button } from 'antd';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { useAppDispatch } from '../../core/features/hookRedux';
-import { logout } from '../../core/features/userSlice';
+import { AppDispatch } from '../../core/featuresRedux/redux';
+import { logout } from '../../core/featuresRedux/slice/userSlice';
 import { LogOut } from '../../shared/assets/icon';
 import LogoComponent from '../../shared/components/logo';
 import MenuComponent from '../../shared/components/menu';
@@ -10,9 +11,9 @@ import MenuComponent from '../../shared/components/menu';
 const { Sider } = Layout;
 
 const SiderLayout = (): JSX.Element => {
-    const dispatch = useAppDispatch();
+    const Dispatch: AppDispatch = useDispatch()
     const HandleClick = () => {
-        dispatch(logout(''));
+        Dispatch(logout(''));
     }
     
     return (

@@ -1,5 +1,5 @@
-import HandleData from "../../../data/handle";
-import { userJSON } from '../../../data/dummy';
+import HandleData from '../../../core/api/handleData';
+import { userJSON } from '../../../core/data/dummy';
 import InforMemberForm from "../form/inforMember";
 
 type dataUser = {

@@ -3,8 +3,8 @@ import { useState } from "react";
 
 import './notification.css';
 import { Bell } from "../../assets/icon";
-import HandleData from "../../../data/handle";
-import { notiJSON } from "../../../data/dummy";
+import HandleData from '../../../core/api/handleData';
+import { notiJSON } from '../../../core/data/dummy';
 
 type dataNumCount = {
     name: string,

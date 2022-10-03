@@ -1,9 +1,9 @@
 import { Badge } from 'antd';
 
 import './statisticOverview.css';
-import { statisticJSON } from '../../../../data/dummy';
+import HandleData from '../../../../core/api/handleData';
+import { statisticJSON } from '../../../../core/data/dummy';
 import RadialBar from '../../chart/radialBarChart/radialBar';
-import HandleData from '../../../../data/handle';
 import { RenderIcon } from './items';
 
 const dataObj = HandleData(statisticJSON);

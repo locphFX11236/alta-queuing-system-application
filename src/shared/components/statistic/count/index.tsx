@@ -1,6 +1,6 @@
 import './statisticCount.css';
-import HandleData from '../../../../data/handle';
-import { statisticJSON } from '../../../../data/dummy';
+import HandleData from '../../../../core/api/handleData';
+import { statisticJSON } from '../../../../core/data/dummy';
 import { RenderIcon, TagStatus } from './items';
 
 const dataObj = HandleData(statisticJSON)[2];
