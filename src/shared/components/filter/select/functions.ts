@@ -1,12 +1,10 @@
-import { EquipSelect1 } from "../../../../core/featuresRedux/slice/equipmentSlice";
+import { VoidExpression } from "typescript";
 
-export const FuncE1 = (value: string, state: any, dispatch: any) => {
-    dispatch( EquipSelect1( { actionStatus: value } ) )
-};
+import { FuncParamType } from "./type";
+import { EquipSelect1, EquipSelect2 } from "../../../../core/featuresRedux/slice/equipmentSlice";
 
-export const FuncE2 = (value: string): void => {
-    console.log(`Danh sách thiết bị, trạng thái kết nối: ${value}`);
-};
+export const FuncE1 = ({value, dispatch}: FuncParamType): VoidExpression => dispatch( EquipSelect1({ actionStatus: value }) );
+export const FuncE2 = ({value, dispatch}: FuncParamType): VoidExpression => dispatch( EquipSelect2({ connectStatus: value }) );
 
 export const FuncS1 = (value: string): void => {
     console.log(`Danh sách dịch vụ, trạng thái hoạt động: ${value}`);

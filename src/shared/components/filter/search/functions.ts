@@ -1,6 +1,9 @@
-export const FuncE3 = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
-    console.log('Danh sách thiết bị, từ khóa: ', e.target.value);
-};
+import { VoidExpression } from "typescript";
+
+import { FuncParamType } from "./type";
+import { EquipSearch3 } from "../../../../core/featuresRedux/slice/equipmentSlice";
+
+export const FuncE3 = ({e, dispatch}: FuncParamType): VoidExpression => dispatch( EquipSearch3({ keyWord: e.target.value }) );
 
 export const FuncS3 = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
     console.log('Danh sách dịch vụ, từ khóa: ', e.target.value);

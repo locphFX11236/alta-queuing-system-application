@@ -4,22 +4,18 @@ import { useDispatch } from 'react-redux';
 
 import { OptionItems, SelectCustomProps } from './type';
 import { AppDispatch } from '../../../../core/featuresRedux/redux';
-import { SelectEquipState } from '../../../../core/featuresRedux/hookRedux';
 
 const { Option } = Select;
 
 const SelectCustom = ({optionItems, functions}: SelectCustomProps): JSX.Element => {
     const dispatch: AppDispatch = useDispatch();
-    const state: Record<string, any> = {
-        'equipS1': SelectEquipState(),
-    };
 
     return (
         <Select
             defaultValue='all'
             suffixIcon={<CaretDownOutlined style={{ color: '#FF7506' }}/>}
             style={{ width: '100%' }}
-            onChange={(v) => functions(v, state, dispatch)}
+            onChange={ value => functions({ value, dispatch }) }
         >
             {optionItems.map( (o: OptionItems) => <Option key={o.text} value={o.value}>{o.text}</Option> )}
         </Select>

@@ -1,10 +1,12 @@
-type EquipType = {
+export type EquipType = {
     code: string,
     name: string,
     IPAddress: string,
     type: string,
     userId: string,
     password: string,
+    actionStatus: boolean,
+    connectStatus: boolean,
     usedService: Array<string>
 };
 
@@ -45,6 +47,10 @@ type AccountType = {
     passwordConfirm: string,
     status: boolean,
 };
+
+export type FetchData = {
+    equipDatas: EquipType[],
+}
 
 export type DataType = any | AccountType | RoleType | NuCoType |ServiceType | EquipType;
 export type Datas = DataType[];
