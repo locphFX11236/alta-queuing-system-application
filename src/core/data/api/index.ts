@@ -1,8 +1,8 @@
 import { message } from "antd";
 
-import { equipJSON } from "../dummy";
+import { equipJSON, serviceJSON } from "../dummy";
 
-const FakeAPI = (dataJSON: string) => new Promise((resolve, rejects) => {
+const FakeAPI = async (dataJSON: string) => new Promise((resolve, rejects) => {
     try {
         return setTimeout(() => {
             const datas = JSON.parse(dataJSON);
@@ -13,15 +13,19 @@ const FakeAPI = (dataJSON: string) => new Promise((resolve, rejects) => {
     }
 });
 
-// const FetchAPI = (url: string) => fetch(url)
-//     .then( response => response.json() ) //Trả về danh sách
-//     .catch( error => message.warning('Lỗi fetch api') )
-//     .finally( () => console.log('Fetched!!!') )
-// ;
+// const FetchAPI = async (url: string) => (
+//     fetch(url)
+//         .then( response => response.json() ) //Trả về danh sách
+//         .catch( error => message.warning('Lỗi fetch api') )
+//         .finally( () => console.log('Fetched!!!') )
+// );
 
 export const RequestAPI = {
-    getEquipDatas: async () => {
+    getEquipDatas: () => {
         return FakeAPI(equipJSON); // Fake fetch Api
         // return FetchAPI(url); // Fetch API
+    },
+    getServDatas: () => {
+        return FakeAPI(serviceJSON); // Fake fetch Api
     }
 };

@@ -1,21 +1,22 @@
-import { FuncType } from "./type";
+import { VoidExpression } from "typescript";
 
-export const FuncSerList: FuncType = (v: any) => {
-    console.log(`Danh sách dich vu: ${v.toString()}`);
-};
+import { ServTime2 } from "../../../../core/featuresRedux/slice/service";
+import { FuncParamType } from "./type";
 
-export const FuncSerInfo: FuncType = (v: any) => {
+export const FuncSerList = ({value, dispatch}: FuncParamType): VoidExpression => dispatch( ServTime2({ rangeTime: value }) );
+
+export const FuncSerInfo = (v: any) => {
     console.log(`Thong tin dich vu: ${v.toString()}`);
 };
 
-export const FuncNumCou: FuncType = (v: any) => {
+export const FuncNumCou = (v: any) => {
     console.log(`Danh sách cap so: ${v.toString()}`);
 };
 
-export const FuncReport: FuncType = (v: any) => {
+export const FuncReport = (v: any) => {
     console.log(`Danh sách bao cao: ${v.toString()}`);
 };
 
-export const FuncUserLog: FuncType = (v: any) => {
+export const FuncUserLog = (v: any) => {
     console.log(`Danh sách nhat ki nguoi dung: ${v.toString()}`);
 };

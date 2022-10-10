@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { AppDispatch } from '../../core/featuresRedux/redux';
-import { logout } from '../../core/featuresRedux/slice/userSlice';
+import { logout } from '../../core/featuresRedux/slice/user';
 import { LogOut } from '../../shared/assets/icon';
 import LogoComponent from '../../shared/components/logo';
 import MenuComponent from '../../shared/components/menu';

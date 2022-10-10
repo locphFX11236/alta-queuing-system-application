@@ -14,7 +14,7 @@ export const IsCurrentDate = (date: Moment): string => {
 
 export const IsValueDate = (date: Moment, value: string[], mode: number): string => {
     if (mode === 1) {
-        if (moment(value[0]).isSame(date, 'date')) return 'date-selected';
+        if (date.isSame(value[0], 'date')) return 'date-selected';
         return '';
     } else {
         if (date.isSame(value[0], 'date') || date.isSame(value[1], 'date')) return 'date-selected';

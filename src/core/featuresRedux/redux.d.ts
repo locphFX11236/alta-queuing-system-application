@@ -21,6 +21,18 @@ export interface EquipState {
     }
 };
 
+export interface ServState {
+    data: Datas,
+    search: {
+        condition: {
+            keyWord: string,
+            actionStatus: boolean | string,
+            rangeTime: string[]
+        },
+        result: Datas
+    }
+};
+
 export type PayloadUser = {
     userId: string
 } | {};

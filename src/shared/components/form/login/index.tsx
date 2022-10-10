@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import './formLogin.css';
-import { login } from "../../../../core/featuresRedux/slice/userSlice";
+import { login } from "../../../../core/featuresRedux/slice/user";
 import type { AppDispatch, PayloadUser } from "../../../../core/featuresRedux/redux";
 
 const FormLogin = (): JSX.Element => {

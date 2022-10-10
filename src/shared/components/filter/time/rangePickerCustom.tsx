@@ -1,18 +1,21 @@
 import { Input, Popover } from 'antd';
 import Icon, { CaretRightOutlined } from '@ant-design/icons';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import moment from 'moment';
 
 import './rangePicker.css';
 import { RangeCalen } from '../../../assets/icon';
 import { CalendarRange } from '../../calendar';
-import { FuncType, ValueType } from './type';
-import moment from 'moment';
+import { TimeCustomProps, ValueType } from './type';
+import { AppDispatch } from '../../../../core/featuresRedux/redux';
 
-const RangePickerCustom = ({Func}: FuncType): JSX.Element => {
+const RangePickerCustom = ({functions}: TimeCustomProps): JSX.Element => {
     const [value, setValue] = useState<ValueType>([]);
+    const dispatch: AppDispatch = useDispatch();
 
     useEffect(() => {
-        Func(value);
+        if (value.length === 2 ) functions({ value, dispatch });
     }, [value]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (

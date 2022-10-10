@@ -7,7 +7,7 @@ import { SelectE1, SelectE2 } from "../../shared/components/filter/select";
 import { SearchE3 } from "../../shared/components/filter/search";
 import { EquipTable } from "../../shared/components/table";
 import { AddEquip } from "../../shared/components/affix";
-import { EquipFetchAPI } from "../../core/featuresRedux/slice/equipmentSlice";
+import { EquipFetchAPI } from "../../core/featuresRedux/slice/equipment";
 import { AppDispatch } from "../../core/featuresRedux/redux";
 
 const EquipList = (): JSX.Element => {

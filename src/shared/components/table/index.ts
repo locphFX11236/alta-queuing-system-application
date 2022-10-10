@@ -1,11 +1,10 @@
 import './table.css';
 import HandleData from '../../../core/api/handleData';
 import TableFC from './table';
-import { accountJSON, accountLogJSON, count_numJSON, reportJSON, roleJSON, serviceJSON } from '../../../core/data/dummy';
+import { accountJSON, accountLogJSON, count_numJSON, reportJSON, roleJSON } from '../../../core/data/dummy';
 import { accountCols, accountLogCols, equipCols, numCouCols, reportCols, roleCols, serviceCols, setNumCols } from './columns';
-import { SelectEquipState } from '../../../core/featuresRedux/hookRedux';
+import { SelectEquipState, SelectServState } from '../../../core/featuresRedux/hookRedux';
 
-const serviceData = HandleData(serviceJSON);
 const numCouData = HandleData(count_numJSON);
 const reportData = HandleData(reportJSON);
 const roleData = HandleData(roleJSON);
@@ -15,6 +14,7 @@ const accountLogData = HandleData(accountLogJSON);
 const D = (s: string): any[] => {
     const state: Record<string, any> = {
         'equip': SelectEquipState(),
+        'serv': SelectServState(),
     };
     const { data, search } = state[s];
 
@@ -23,7 +23,7 @@ const D = (s: string): any[] => {
 };
 
 export const EquipTable: React.FC = () => TableFC(equipCols, D('equip'));
-export const ServiceTable: React.FC = () => TableFC(serviceCols, serviceData);
+export const ServiceTable: React.FC = () => TableFC(serviceCols, D('serv'));
 export const SetNumTable: React.FC = () => TableFC(setNumCols, numCouData, 'setNum');
 export const NumCouTable: React.FC = () => TableFC(numCouCols, numCouData);
 export const ReportTable: React.FC = () => TableFC(reportCols, reportData, 'report');

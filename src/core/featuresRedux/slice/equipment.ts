@@ -59,7 +59,7 @@ const extraReducers = (builder: ActionReducerMapBuilder<EquipState>) => {
 };
 
 const EquipFetchAPI = createAsyncThunk('equip/getDatas', async (params, thunkAPI) => {
-    console.log(params, thunkAPI);
+    // console.log(params, thunkAPI);
     const response = await RequestAPI.getEquipDatas();
     return response;
 });

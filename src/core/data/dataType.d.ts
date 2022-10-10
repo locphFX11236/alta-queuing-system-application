@@ -10,10 +10,12 @@ export type EquipType = {
     usedService: Array<string>
 };
 
-type ServiceType = {
+export type ServiceType = {
     code: string,
     name: string,
     description: string,
+    actionStatus: boolean,
+    time: string,
     setting: {
         mode: Array<string> | [],
         values?: {
@@ -50,6 +52,7 @@ type AccountType = {
 
 export type FetchData = {
     equipDatas: EquipType[],
+    servDatas: ServiceType[]
 }
 
 export type DataType = any | AccountType | RoleType | NuCoType |ServiceType | EquipType;

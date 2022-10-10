@@ -9,7 +9,7 @@ function IndexView () {
     const userState = SelectUserState();
 
     useEffect(() => {
-        if (userState.isLoggedIn) navigate( '/equip' );
+        if (userState.isLoggedIn) navigate( '/service' );
         else navigate( '/login' );
     }, [userState]) // eslint-disable-line react-hooks/exhaustive-deps
     // Đoạn comment cuối Hook này để bỏ qua (ignore) 'eslint's warning'
