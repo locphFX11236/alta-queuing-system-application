@@ -13,7 +13,7 @@ import { AppDispatch } from "../../core/featuresRedux/redux";
 
 const ServiceList = (): JSX.Element => {
     const dispatch: AppDispatch = useDispatch();
-    
+
     useEffect(() => {
         dispatch( ServFetchAPI() );
     }, []) // eslint-disable-line react-hooks/exhaustive-deps

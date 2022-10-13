@@ -1,4 +1,5 @@
 export type EquipType = {
+    key: string,
     code: string,
     name: string,
     IPAddress: string,
@@ -11,6 +12,7 @@ export type EquipType = {
 };
 
 export type ServiceType = {
+    key: string,
     code: string,
     name: string,
     description: string,
@@ -29,8 +31,16 @@ export type ServiceType = {
     }
 };
 
-type NuCoType = {
-    useService: string
+export type NuCoType = {
+    key: string,
+    name: string,
+    useService: string,
+    startTime: string,
+    endTime: string,
+    status: string,
+    source: string,
+    phoneNumber: string,
+    email: string,
 };
 
 type RoleType = {
@@ -52,7 +62,8 @@ type AccountType = {
 
 export type FetchData = {
     equipDatas: EquipType[],
-    servDatas: ServiceType[]
+    servDatas: ServiceType[],
+    numCouDatas: NuCoType[],
 }
 
 export type DataType = any | AccountType | RoleType | NuCoType |ServiceType | EquipType;

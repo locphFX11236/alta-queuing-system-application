@@ -1,6 +1,6 @@
 import { message } from "antd";
 
-import { equipJSON, serviceJSON } from "../dummy";
+import { count_numJSON, equipJSON, serviceJSON } from "../dummy";
 
 const FakeAPI = async (dataJSON: string) => new Promise((resolve, rejects) => {
     try {
@@ -27,5 +27,8 @@ export const RequestAPI = {
     },
     getServDatas: () => {
         return FakeAPI(serviceJSON); // Fake fetch Api
+    },
+    getNCDatas: () => {
+        return FakeAPI(count_numJSON); // Fake fetch Api
     }
 };

@@ -33,6 +33,20 @@ export interface ServState {
     }
 };
 
+export interface NCState {
+    data: Datas,
+    search: {
+        condition: {
+            keyWord: string,
+            useService: string,
+            status: string,
+            source: string,
+            rangeTime: string[],
+        },
+        result: Datas
+    }
+};
+
 export type PayloadUser = {
     userId: string
 } | {};

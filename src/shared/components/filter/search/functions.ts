@@ -3,6 +3,7 @@ import { VoidExpression } from "typescript";
 import { FuncParamType } from "./type";
 import { EquipSearch3 } from "../../../../core/featuresRedux/slice/equipment";
 import { ServSearch3 } from "../../../../core/featuresRedux/slice/service";
+import { NCSearch5 } from "../../../../core/featuresRedux/slice/numberCount";
 
 export const FuncE3 = ({e, dispatch}: FuncParamType): VoidExpression => dispatch( EquipSearch3({ keyWord: e.target.value }) );
 
@@ -12,8 +13,9 @@ export const FuncSI3 = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElem
     console.log('Danh sách dịch vụ, chi tiết, từ khóa: ', e.target.value);
 };
 
-export const FuncNc5 = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
+export const FuncNc5 = ({e, dispatch}: FuncParamType): void => {
     console.log('Danh sách cấp số, từ khóa: ', e.target.value);
+    dispatch( NCSearch5({ keyWord: e.target.value }) );
 };
 
 export const FuncR = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
