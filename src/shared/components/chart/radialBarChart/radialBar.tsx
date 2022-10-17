@@ -1,7 +1,7 @@
 import { ResponsiveRadialBar } from '@nivo/radial-bar';
 
 import './radialBar.css';
-import HandleData from '../../../../core/api/handleData';
+import HandleData from '../../../../core/data/api/handleData';
 import { statisticJSON } from '../../../../core/data/dummy';
 
 const RadialBar = ({choice}: any): JSX.Element => {

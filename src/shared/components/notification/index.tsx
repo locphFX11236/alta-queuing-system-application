@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import './notification.css';
 import { Bell } from "../../assets/icon";
-import HandleData from '../../../core/api/handleData';
+import HandleData from '../../../core/data/api/handleData';
 import { notiJSON } from '../../../core/data/dummy';
 
 type dataNumCount = {

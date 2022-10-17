@@ -1,6 +1,6 @@
 import { message } from "antd";
 
-import { count_numJSON, equipJSON, serviceJSON } from "../dummy";
+import { accountJSON, count_numJSON, equipJSON, reportJSON, roleJSON, serviceJSON, userLogJSON } from "../dummy";
 
 const FakeAPI = async (dataJSON: string) => new Promise((resolve, rejects) => {
     try {
@@ -30,5 +30,17 @@ export const RequestAPI = {
     },
     getNCDatas: () => {
         return FakeAPI(count_numJSON); // Fake fetch Api
-    }
+    },
+    getReportDatas: () => {
+        return FakeAPI(reportJSON); // Fake fetch Api
+    },
+    getRoleDatas: () => {
+        return FakeAPI(roleJSON); // Fake fetch Api
+    },
+    getAccDatas: () => {
+        return FakeAPI(accountJSON); // Fake fetch Api
+    },
+    getUserLogDatas: () => {
+        return FakeAPI(userLogJSON); // Fake fetch Api
+    },
 };

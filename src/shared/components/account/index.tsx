@@ -1,4 +1,4 @@
-import HandleData from '../../../core/api/handleData';
+import HandleData from '../../../core/data/api/handleData';
 import { userJSON } from '../../../core/data/dummy';
 import InforMemberForm from "../form/inforMember";
 

@@ -1,7 +1,7 @@
 import { Badge } from 'antd';
 
 import './statisticOverview.css';
-import HandleData from '../../../../core/api/handleData';
+import HandleData from '../../../../core/data/api/handleData';
 import { statisticJSON } from '../../../../core/data/dummy';
 import RadialBar from '../../chart/radialBarChart/radialBar';
 import { RenderIcon } from './items';

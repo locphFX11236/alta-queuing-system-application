@@ -21,6 +21,17 @@ export interface EquipState {
     }
 };
 
+export interface AccState {
+    data: Datas,
+    search: {
+        condition: {
+            keyWord: string,
+            position: string,
+        },
+        result: Datas
+    }
+};
+
 export interface ServState {
     data: Datas,
     search: {
@@ -42,6 +53,26 @@ export interface NCState {
             status: string,
             source: string,
             rangeTime: string[],
+        },
+        result: Datas
+    }
+};
+
+export interface ReportState {
+    data: Datas,
+    search: {
+        condition: {
+            rangeTime: string[],
+        },
+        result: Datas
+    }
+};
+
+export interface RoleState {
+    data: Datas,
+    search: {
+        condition: {
+            keyWord: string,
         },
         result: Datas
     }

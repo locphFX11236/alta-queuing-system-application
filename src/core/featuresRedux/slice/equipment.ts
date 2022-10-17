@@ -29,7 +29,7 @@ const reducers = {
     },
     EquipSearch3: (state: EquipState, action: AnyAction) => {
         const { keyWord } = action.payload;
-        state.search.condition.keyWord = keyWord;
+        state.search.condition.keyWord = keyWord.toLowerCase();
         reducers.OnResult(state, {...action.payload});
     },
     OnResult: (state: EquipState, action: AnyAction) => {
@@ -38,9 +38,9 @@ const reducers = {
             (search.condition.actionStatus !== 'all' ? d.actionStatus === search.condition.actionStatus : true) &&
             (search.condition.connectStatus !== 'all' ? d.connectStatus === search.condition.connectStatus : true) &&
             (search.condition.keyWord !== '' ? (
-                d.code.includes(search.condition.keyWord) ||
-                d.name.includes(search.condition.keyWord) ||
-                d.IPAddress.includes(search.condition.keyWord)
+                d.code.toLowerCase().includes(search.condition.keyWord) ||
+                d.name.toLowerCase().includes(search.condition.keyWord) ||
+                d.IPAddress.toLowerCase().includes(search.condition.keyWord)
             ) : true )
         ));
         if (search.condition.keyWord !== '' && newResult.length === 0) message.warning('Không tìm thấy');
