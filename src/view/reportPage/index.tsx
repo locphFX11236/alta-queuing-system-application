@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
 import CSVExport from "../../shared/components/csvExport";
-import { AppDispatch } from "../../core/featuresRedux/redux";
+import { AppDispatch } from "../../core/typescript/reduxState";
 import { ReportFetchAPI } from "../../core/featuresRedux/slice/report";
 import { DownReport } from "../../shared/components/affix";
 import { RangeReport } from "../../shared/components/filter/time";

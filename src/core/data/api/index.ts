@@ -7,7 +7,7 @@ const FakeAPI = async (dataJSON: string) => new Promise((resolve, rejects) => {
         return setTimeout(() => {
             const datas = JSON.parse(dataJSON);
             resolve( datas );
-        }, 2000);
+        }, 1000);
     } catch {
         return rejects( () => message.warning('Lỗi fetch api') );
     }

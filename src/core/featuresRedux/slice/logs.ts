@@ -3,7 +3,7 @@ import { message } from 'antd';
 import moment from 'moment';
 
 import { RequestAPI } from '../../data/api';
-import type { ReducerInSlice, Slice, AnyAction, LogsState } from '../redux';
+import type { ReducerInSlice, Slice, AnyAction, LogsState } from '../../typescript/reduxState';
 
 const initialState = {
     data: [],

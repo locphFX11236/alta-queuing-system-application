@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import { AppDispatch } from "../../core/featuresRedux/redux";
+import { AppDispatch } from "../../core/typescript/reduxState";
 import { LogsFetchAPI } from "../../core/featuresRedux/slice/logs";
 import { SearchL2 } from "../../shared/components/filter/search";
 import { RangeUserLog } from "../../shared/components/filter/time";

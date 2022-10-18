@@ -2,14 +2,12 @@ import { Col, Form, Row, Typography } from "antd";
 import { Location, useLocation } from "react-router-dom";
 
 import { StatusTag } from "../../badgeTag";
+import { RenderSources, RenderUseServices } from "./items";
 import { NuCoDataType } from "./NuCoType";
 
 const Information = (): JSX.Element => {
     const location: Location = useLocation();
     const inforRecord: NuCoDataType = location.state;
-
-    inforRecord.phoneNumber = '0123456789 (Add sdt)';
-    inforRecord.emailAddress = 'aaa@axa.com (Add email)';
 
     return (
         <Form
@@ -39,7 +37,7 @@ const Information = (): JSX.Element => {
                         labelCol={{ span: 12 }}
                         wrapperCol={{ span: 12 }}
                     >
-                        <span>{inforRecord.useService}</span>
+                        <span>{ RenderUseServices[inforRecord.useService] }</span>
                     </Form.Item>
 
                     <Form.Item
@@ -80,7 +78,7 @@ const Information = (): JSX.Element => {
                         labelCol={{ span: 12 }}
                         wrapperCol={{ span: 12 }}
                     >
-                        <span>{inforRecord.source}</span>
+                        <span>{ RenderSources[inforRecord.source] }</span>
                     </Form.Item>
 
                     <Form.Item
@@ -110,7 +108,7 @@ const Information = (): JSX.Element => {
                         labelCol={{ span: 12 }}
                         wrapperCol={{ span: 12 }}
                     >
-                        <span>{inforRecord.emailAddress}</span>
+                        <span>{inforRecord.email}</span>
                     </Form.Item>
                 </Col>
             </Row>

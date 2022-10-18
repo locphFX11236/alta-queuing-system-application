@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { AppDispatch } from "../../core/featuresRedux/redux";
+import { AppDispatch } from "../../core/typescript/reduxState";
 import { NCFetchAPI } from "../../core/featuresRedux/slice/numberCount";
 import { AddNum } from "../../shared/components/affix";
 import { SearchNc5 } from "../../shared/components/filter/search";

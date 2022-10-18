@@ -8,7 +8,7 @@ import './rangePicker.css';
 import { RangeCalen } from '../../../assets/icon';
 import { CalendarRange } from '../../calendar';
 import { TimeCustomProps, ValueType } from './type';
-import { AppDispatch } from '../../../../core/featuresRedux/redux';
+import { AppDispatch } from '../../../../core/typescript/reduxState';
 
 const RangePickerCustom = ({functions}: TimeCustomProps): JSX.Element => {
     const [value, setValue] = useState<ValueType>([]);

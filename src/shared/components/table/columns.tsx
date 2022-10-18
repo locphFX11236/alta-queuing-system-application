@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import { ActiveTag, StatusTag } from '../badgeTag';
-import { CustomTag, RenderItem } from './items';
+import { CustomTag, RenderSources, RenderUseServices } from './items';
 import type { ColProps } from './tableType';
 
 export const equipCols: ColProps = [
@@ -18,7 +18,7 @@ export const equipCols: ColProps = [
     },
     {
         title: 'Dịch vụ sử dụng', dataIndex: 'usedService', key: 'usedService', width: 268,
-        render: (u, record) => <p>{RenderItem[u[0]]}, {RenderItem[u[1]]}...<br/><Link to='/equip/equ-infor' state={record}>Xem thêm</Link></p>
+        render: (u, record) => <p>{RenderUseServices[u[0]]}, {RenderUseServices[u[1]]}...<br/><Link to='/equip/equ-infor' state={record}>Xem thêm</Link></p>
     },
     {
         title: '', dataIndex: 'key', key: 'key', width: 82,
@@ -61,7 +61,7 @@ export const numCouCols: ColProps = [
     { title: 'Tên khách hàng', dataIndex: 'name', key: 'name', width: 165 },
     {
         title: 'Tên dịch vụ', dataIndex: 'useService', key: 'useService', width: 170,
-        render: s => RenderItem[s]
+        render: s => RenderUseServices[s]
     },
     { title: 'Thời gian cấp', dataIndex: 'startTime', key: 'startTime', width: 160 },
     { title: 'Hạn sử dụng', dataIndex: 'endTime', key: 'endTime', width: 175 },
@@ -71,7 +71,7 @@ export const numCouCols: ColProps = [
     },
     {
         title: 'Nguồn cấp', dataIndex: 'source', key: 'source', width: 120,
-        render: s => RenderItem[s]
+        render: s => RenderSources[s]
     },
     {
         title: '', dataIndex: 'key', key: 'key', width: 76,

@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice, Reducer, current, ActionReducerMapBuilde
 import moment from 'moment';
 
 import { RequestAPI } from '../../data/api';
-import type { ReducerInSlice, Slice, AnyAction, ReportState } from '../redux';
+import type { ReducerInSlice, Slice, AnyAction, ReportState } from '../../typescript/reduxState';
 
 const initialState = {
     data: [],

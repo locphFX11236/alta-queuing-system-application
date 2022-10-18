@@ -1,6 +1,6 @@
 import { VoidExpression } from "typescript";
 
-import { AnyAction, AppDispatch } from "../../../../core/featuresRedux/redux";
+import { AnyAction, AppDispatch } from "../../../../core/typescript/reduxState";
 
 export type FuncParamType = {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, 

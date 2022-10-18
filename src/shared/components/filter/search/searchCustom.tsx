@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 
 import { SearchIcon } from '../../../assets/icon';
 import { SearchCustomProps } from './type';
-import { AppDispatch } from '../../../../core/featuresRedux/redux';
+import { AppDispatch } from '../../../../core/typescript/reduxState';
 
 const SearchCustom = ({functions}: SearchCustomProps): JSX.Element => {
     const dispatch: AppDispatch = useDispatch();

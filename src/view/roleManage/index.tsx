@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { AppDispatch } from "../../core/featuresRedux/redux";
+import { AppDispatch } from "../../core/typescript/reduxState";
 import { RoleFetchAPI } from "../../core/featuresRedux/slice/role";
 import { AddRole } from "../../shared/components/affix";
 import { SearchR } from "../../shared/components/filter/search";

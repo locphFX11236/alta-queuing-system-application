@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 
 import './formLogin.css';
 import { login } from "../../../../core/featuresRedux/slice/user";
-import type { AppDispatch, PayloadUser } from "../../../../core/featuresRedux/redux";
+import type { AppDispatch, PayloadUser } from "../../../../core/typescript/reduxState";
 
 const FormLogin = (): JSX.Element => {
     const dispatch: AppDispatch = useDispatch();

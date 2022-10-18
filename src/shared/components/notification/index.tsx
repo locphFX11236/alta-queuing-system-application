@@ -1,29 +1,32 @@
 import { Button, Card, Dropdown } from "antd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 import './notification.css';
+import { NCState, NuCoType } from './type';
 import { Bell } from "../../assets/icon";
-import HandleData from '../../../core/data/api/handleData';
-import { notiJSON } from '../../../core/data/dummy';
-
-type dataNumCount = {
-    name: string,
-    time: string
-};
+import { SelectNCState } from "../../../core/featuresRedux/hookRedux";
+import { AppDispatch } from "../../../core/typescript/reduxState";
+import { NCFetchAPI } from "../../../core/featuresRedux/slice/numberCount";
 
 function Render () {
-    const dataObj = HandleData(notiJSON);
+    const dispatch: AppDispatch = useDispatch();
+    const dataObj: NCState = SelectNCState();
+
+    useEffect(() => {
+        dispatch( NCFetchAPI() );
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
     return(
         <Card title='Thông báo' className="noti-list">
-            {dataObj.map((a: dataNumCount, i: number) => {
-                return (
-                    <div className="card-noti" key={i}>
-                        <h4>Người dùng: { a.name }</h4>
-                        <p>Thời gian nhận số: { a.time }</p>
-                        <hr/>
-                    </div>
-                );
-            })}
+            {dataObj.data.map((d: NuCoType) => (
+                <Link to='/number-count/num-infor' state={d} className="card-noti" key={d.key}>
+                    <h4>Người dùng: { d.name }</h4>
+                    <p>Thời gian nhận số: { d.startTime }</p>
+                    <hr/>
+                </Link>
+            ))}
         </Card>
     )
 };

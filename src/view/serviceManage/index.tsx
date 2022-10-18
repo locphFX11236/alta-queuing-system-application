@@ -9,7 +9,7 @@ import { ServiceTable } from "../../shared/components/table";
 import { AddService } from "../../shared/components/affix";
 import { RangeSerList } from "../../shared/components/filter/time";
 import { ServFetchAPI } from "../../core/featuresRedux/slice/service";
-import { AppDispatch } from "../../core/featuresRedux/redux";
+import { AppDispatch } from "../../core/typescript/reduxState";
 
 const ServiceList = (): JSX.Element => {
     const dispatch: AppDispatch = useDispatch();

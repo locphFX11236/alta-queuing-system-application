@@ -3,7 +3,7 @@ import { CaretDownOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
 
 import { OptionItems, SelectCustomProps } from './type';
-import { AppDispatch } from '../../../../core/featuresRedux/redux';
+import { AppDispatch } from '../../../../core/typescript/reduxState';
 
 const { Option } = Select;
 

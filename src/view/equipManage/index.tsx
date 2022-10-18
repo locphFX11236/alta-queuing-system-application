@@ -8,7 +8,7 @@ import { SearchE3 } from "../../shared/components/filter/search";
 import { EquipTable } from "../../shared/components/table";
 import { AddEquip } from "../../shared/components/affix";
 import { EquipFetchAPI } from "../../core/featuresRedux/slice/equipment";
-import { AppDispatch } from "../../core/featuresRedux/redux";
+import { AppDispatch } from "../../core/typescript/reduxState";
 
 const EquipList = (): JSX.Element => {
     const dispatch: AppDispatch = useDispatch();

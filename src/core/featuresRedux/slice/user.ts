@@ -1,6 +1,6 @@
 import { createSlice, Reducer } from '@reduxjs/toolkit';
 
-import type { ReducerInSlice, UserState, Slice, AnyAction } from '../redux';
+import type { ReducerInSlice, UserState, Slice, AnyAction } from '../../typescript/reduxState';
 
 const initialState = {
     userId: 'admin',

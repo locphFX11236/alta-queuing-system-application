@@ -1,6 +1,6 @@
 import { VoidExpression } from "typescript";
 
-import { AnyAction, AppDispatch } from "../../../../core/featuresRedux/redux";
+import { AnyAction, AppDispatch } from "../../../../core/typescript/reduxState";
 
 export type ValueType = string[];
 

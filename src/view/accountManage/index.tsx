@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { AppDispatch } from "../../core/featuresRedux/redux";
+import { AppDispatch } from "../../core/typescript/reduxState";
 import { AccFetchAPI } from "../../core/featuresRedux/slice/account";
 import { AddAcc } from "../../shared/components/affix";
 import { SearchA2 } from "../../shared/components/filter/search";

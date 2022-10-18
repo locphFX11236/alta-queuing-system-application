@@ -1,12 +1,3 @@
-import { Badge } from 'antd';
-import { StringTag } from '../badgeTag/badgeTageType';
-
-export const CustomTag = ({s}: StringTag): JSX.Element => {
-    if(s === 'Đã sử dụng') return <p><Badge color={'#34CD26'} /> Đã hoàn thành</p>;
-    if(s === 'Đang chờ') return <p><Badge color={'#5490EB'} /> Đang thực hiện</p>;
-    else  return <p><Badge color={'#6C7585'} /> Vắng</p>;
-};
-
 export const RenderUseServices: Record<string, string> = {
     'm': 'Khám mắt',
     'rhm': 'Khám răng hàm mặt',

@@ -1,16 +1,16 @@
 import { useSelector } from 'react-redux';
 
-import type { AccState, EquipState, LogsState, NCState, ReportState, RoleState, RootState, ServState, UserState } from './redux';
+import type { AccState, EquipState, LogsState, NCState, ReportState, RoleState, RootState, ServState, UserState } from '../typescript/reduxState';
 
 // Là một hàm hướng dẫn cho Hook 'useSelector' lấy giá trị state theo yêu cầu
-export const SelectUser = (state: RootState): UserState => state.UserState;
-export const SelectEquipment = (state: RootState): EquipState => state.EquipmentState;
-export const SelectService = (state: RootState): ServState => state.ServiceState;
-export const SelectNumCou = (state: RootState): NCState => state.NumCouState;
-export const SelectReport = (state: RootState): ReportState => state.ReportState;
-export const SelectRole = (state: RootState): RoleState => state.RoleState;
-export const SelectAcc = (state: RootState): AccState => state.AccState;
-export const SelectLogs = (state: RootState): LogsState => state.LogsState;
+const SelectUser = (state: RootState): UserState => state.UserState;
+const SelectEquipment = (state: RootState): EquipState => state.EquipmentState;
+const SelectService = (state: RootState): ServState => state.ServiceState;
+const SelectNumCou = (state: RootState): NCState => state.NumCouState;
+const SelectReport = (state: RootState): ReportState => state.ReportState;
+const SelectRole = (state: RootState): RoleState => state.RoleState;
+const SelectAcc = (state: RootState): AccState => state.AccState;
+const SelectLogs = (state: RootState): LogsState => state.LogsState;
 
 export const SelectUserState = (): UserState => useSelector(SelectUser);
 export const SelectEquipState = (): EquipState => useSelector(SelectEquipment);
