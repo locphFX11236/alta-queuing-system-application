@@ -78,6 +78,17 @@ export interface RoleState {
     }
 };
 
+export interface LogsState {
+    data: Datas,
+    search: {
+        condition: {
+            rangeTime: string[],
+            keyWord: string,
+        },
+        result: Datas
+    }
+};
+
 export type PayloadUser = {
     userId: string
 } | {};

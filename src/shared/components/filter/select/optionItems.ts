@@ -19,9 +19,9 @@ export const OptionItemsNc1: OptionItems[] = [
 
 export const OptionItemsSI1: OptionItems[] = [
     { text: 'Tất cả', value: 'all' },
-    { text: 'Đã hoàn thành', value: 'Đã hoàn thành' },
-    { text: 'Đang thực hiện', value: 'Đang thực hiện' },
-    { text: 'Vắng', value: 'Vắng' }
+    { text: 'Đã hoàn thành', value: 'Đã sử dụng' },
+    { text: 'Đang thực hiện', value: 'Đang chờ' },
+    { text: 'Vắng', value: 'Bỏ qua' }
 ];
 
 export const OptionItemsNc2: OptionItems[] = [

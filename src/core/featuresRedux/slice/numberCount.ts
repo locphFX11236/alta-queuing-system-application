@@ -45,14 +45,38 @@ const reducers = {
         state.search.condition.keyWord = keyWord.toLowerCase();
         reducers.OnResult(state, {...action.payload});
     },
+    SISelect1: (state: NCState, action: AnyAction) => {
+        const { status } = action.payload;
+        state.search.condition.status = status;
+        reducers.OnResult(state, {...action.payload});
+    },
+    SITime2: (state: NCState, action: AnyAction) => {
+        const { rangeTime } = action.payload;
+        state.search.condition.rangeTime = rangeTime;
+        reducers.OnResult(state, {...action.payload});
+    },
+    SISearch3: (state: NCState, action: AnyAction) => {
+        const { keyWord } = action.payload;
+        state.search.condition.keyWord = keyWord.toLowerCase();
+        reducers.OnResult(state, {...action.payload});
+    },
     OnResult: (state: NCState, action: AnyAction) => {
         const { data, search } = state;
-        // console.log(data[0].startTime.slice(-10))
         const newResult = data.filter((d: any) => (
             ((search.condition.useService !== 'all') ? (d.useService === search.condition.useService) : true) &&
             ((search.condition.status !== 'all') ? (d.status === search.condition.status) : true) &&
             ((search.condition.source !== 'all') ? (d.source === search.condition.source) : true) &&
-            ((search.condition.rangeTime.length !== 0) ? (moment(d.startTime.slice(-10)).isBetween(search.condition.rangeTime[0], search.condition.rangeTime[1], undefined, '[]')) : true) &&
+            (
+                (search.condition.rangeTime.length !== 0) ? (
+                    moment(d.startTime.slice(-10))
+                    .isBetween(
+                        search.condition.rangeTime[0],
+                        search.condition.rangeTime[1],
+                        undefined,
+                        '[]'
+                    )
+                ) : true
+            ) &&
             ((search.condition.keyWord !== '') ? (
                 (d.key.toLowerCase().includes(search.condition.keyWord)) ||
                 (d.name.toLowerCase().includes(search.condition.keyWord))
@@ -90,6 +114,9 @@ const NumCouReducer: Reducer<NCState> = NumCouSlice.reducer;
 
 export default NumCouReducer;
 
-export const { NCSelect1, NCSelect2, NCSelect3, NCTime4, NCSearch5 } = NumCouSlice.actions as AnyAction;
+export const {
+    NCSelect1, NCSelect2, NCSelect3, NCTime4, NCSearch5,
+    SISelect1, SITime2, SISearch3
+} = NumCouSlice.actions as AnyAction;
 
 export { NCFetchAPI };

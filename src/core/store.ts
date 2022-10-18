@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import AccReducer from './featuresRedux/slice/account'
 
 import EquipmentReducer from './featuresRedux/slice/equipment'
+import LogsReducer from './featuresRedux/slice/logs'
 import NumCouReducer from './featuresRedux/slice/numberCount'
 import ReportReducer from './featuresRedux/slice/report'
 import RoleReducer from './featuresRedux/slice/role'
@@ -17,5 +18,6 @@ export const store = configureStore({
         ReportState: ReportReducer,
         RoleState: RoleReducer,
         AccState: AccReducer,
+        LogsState: LogsReducer,
     },
 })

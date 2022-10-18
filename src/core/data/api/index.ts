@@ -40,7 +40,7 @@ export const RequestAPI = {
     getAccDatas: () => {
         return FakeAPI(accountJSON); // Fake fetch Api
     },
-    getUserLogDatas: () => {
+    getLogsDatas: () => {
         return FakeAPI(userLogJSON); // Fake fetch Api
     },
 };

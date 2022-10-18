@@ -131,7 +131,7 @@ export const accountCols: ColProps = [
 
 export const accountLogCols: ColProps = [
     { title: 'Tên đăng nhập', dataIndex: 'ID', key: 'ID', width: 270 },
-    { title: 'Thời gian tác động', dataIndex: 'timeIn', key: 'timeIn', width: 245 },
+    { title: 'Thời gian tác động', dataIndex: 'time', key: 'time', width: 245 },
     { title: 'IP thực hiện', dataIndex: 'IP', key: 'IP', width: 220 },
     { title: 'Thao tác thực hiện', dataIndex: 'action', key: 'action', width: 376 }
 ];
