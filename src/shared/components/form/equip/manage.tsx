@@ -1,24 +1,28 @@
 import { Button, Col, Form, Input, Row, Select, Typography } from "antd";
 import { CaretDownOutlined } from '@ant-design/icons';
 import { Location, NavigateFunction, useLocation, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import { initAdd, status } from "./items";
 import { EquipDataType } from "./equipType";
+import { AppDispatch } from "../../../../core/typescript/reduxState";
+import { AddEquip } from "../../../../core/featuresRedux/slice/equipment";
 
 const { Option } = Select;
 
 const Manage = (): JSX.Element => {
     const navigate: NavigateFunction = useNavigate();
     const location: Location = useLocation();
+    const dispatch: AppDispatch = useDispatch();
     const statusUrl: string = location.pathname.slice(-3);
     const updRecord: EquipDataType = location.state;
     const initValues: EquipDataType = statusUrl === 'upd' ? updRecord : initAdd;
-    console.log(updRecord);
 
     const onFinish = (values: EquipDataType) => {
-        console.log('Sucess:', values);
-        navigate('/');
-    }
+        // console.log('Sucess:', values);
+        dispatch( AddEquip(values) );
+        navigate('/equip');
+    };
 
     const Cancel = () => {
         console.log('Cancel');

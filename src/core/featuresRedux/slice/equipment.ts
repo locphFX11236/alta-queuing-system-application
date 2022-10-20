@@ -17,22 +17,31 @@ const initialState = {
 } as EquipState;
 
 const reducers = {
+    AddEquip: (state: EquipState, action: AnyAction) => {
+        const data = action.payload;
+        data.key = state.data.length + 1;
+        data.actionStatus = true;
+        data.connectStatus = true;
+        RequestAPI.postEquip(data); // Post data lên backend
+        state.data.unshift(data); // Cập nhật state trong redux
+        return state;
+    },
     EquipSelect1: (state: EquipState, action: AnyAction) => {
         const { actionStatus } = action.payload;
         state.search.condition.actionStatus = actionStatus;
-        reducers.OnResult(state, {...action.payload});
+        return reducers.GetSearchResult(state, {...action.payload});
     },
     EquipSelect2: (state: EquipState, action: AnyAction) => {
         const { connectStatus } = action.payload;
         state.search.condition.connectStatus = connectStatus;
-        reducers.OnResult(state, {...action.payload});
+        return reducers.GetSearchResult(state, {...action.payload});
     },
     EquipSearch3: (state: EquipState, action: AnyAction) => {
         const { keyWord } = action.payload;
         state.search.condition.keyWord = keyWord.toLowerCase();
-        reducers.OnResult(state, {...action.payload});
+        return reducers.GetSearchResult(state, {...action.payload});
     },
-    OnResult: (state: EquipState, action: AnyAction) => {
+    GetSearchResult: (state: EquipState, action: AnyAction) => {
         const { data, search } = state;
         const newResult = data.filter((d: any) => (
             (search.condition.actionStatus !== 'all' ? d.actionStatus === search.condition.actionStatus : true) &&
@@ -46,7 +55,12 @@ const reducers = {
         if (search.condition.keyWord !== '' && newResult.length === 0) message.warning('Không tìm thấy');
         else (state.search.result = newResult);
         console.log('Result search: ', current(state).search.result); // Do có Immer nên ta dung current() mới xem đc state 
-    }
+        return state;
+    },
+    RefreshSearch2: (state: EquipState, action: AnyAction) => {
+        state.search = initialState.search;
+        return state;
+    },
 } as ReducerInSlice;
 
 const extraReducers = (builder: ActionReducerMapBuilder<EquipState>) => {
@@ -62,19 +76,19 @@ const EquipFetchAPI = createAsyncThunk('equip/getDatas', async (params, thunkAPI
     // console.log(params, thunkAPI);
     const response = await RequestAPI.getEquipDatas();
     return response;
-});
+}); // Tạo action không đồng bộ để load data
 
 const EquipmentSlice = createSlice({
     name: 'equip',
     initialState,
     reducers,
-    extraReducers
+    extraReducers // Tạo hiệu ứng chờ loading data
 }) as Slice;
 
 const EquipmentReducer: Reducer<EquipState> = EquipmentSlice.reducer;
 
 export default EquipmentReducer;
 
-export const { EquipSelect1, EquipSelect2, EquipSearch3 } = EquipmentSlice.actions as AnyAction;
+export const { EquipSelect1, EquipSelect2, EquipSearch3, AddEquip, RefreshSearch2 } = EquipmentSlice.actions as AnyAction;
 
 export { EquipFetchAPI };

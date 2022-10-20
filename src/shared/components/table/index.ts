@@ -3,7 +3,7 @@ import TableFC from './table';
 import { accountCols, accountLogCols, equipCols, numCouCols, reportCols, roleCols, serviceCols, setNumCols } from './columns';
 import { SelectAccState, SelectEquipState, SelectLogsState, SelectNCState, SelectReportState, SelectRoleState, SelectServState } from '../../../core/featuresRedux/hookRedux';
 
-const D = (s: string): any[] => {
+const D = (key: string): any[] => {
     const state: Record<string, any> = {
         'equip': SelectEquipState(),
         'serv': SelectServState(),
@@ -13,7 +13,7 @@ const D = (s: string): any[] => {
         'acc': SelectAccState(),
         'logs': SelectLogsState(),
     };
-    const { data, search } = state[s];
+    const { data, search } = state[key];
 
     if (search.result.length === 0) return data;
     else return search.result;

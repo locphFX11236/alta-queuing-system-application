@@ -66,5 +66,5 @@ export type FetchData = {
     numCouDatas: NuCoType[],
 }
 
-export type DataType = any | AccountType | RoleType | NuCoType |ServiceType | EquipType;
-export type Datas = DataType[];
+export type DataType = unknown | AccountType | RoleType | NuCoType |ServiceType | EquipType;
+export type Datas = DataType[] | any;

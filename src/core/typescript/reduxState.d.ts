@@ -1,8 +1,8 @@
 import type { Reducer } from 'redux';
 import type { TypedUseSelectorHook } from 'react-redux';
 import type { store } from '../store';
-import type { AnyAction, CaseReducer, PayloadAction, Slice } from '@reduxjs/toolkit';
-import { Datas } from '../../data/handle/dataType';
+import type { CaseReducer, PayloadAction } from '@reduxjs/toolkit';
+import { Datas } from './data';
 
 export interface UserState {
     userId: string,
@@ -99,4 +99,4 @@ export type AppDispatch = typeof store.dispatch;
 
 export type ReducerInSlice = Record<string, CaseReducer>
 
-export type { AnyAction, Slice, TypedUseSelectorHook }
+export { AnyAction, Slice } from '@reduxjs/toolkit';
