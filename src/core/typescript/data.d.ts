@@ -60,11 +60,11 @@ type AccountType = {
     status: boolean,
 };
 
-export type FetchData = {
-    equipDatas: EquipType[],
-    servDatas: ServiceType[],
-    numCouDatas: NuCoType[],
-}
+// export type FetchData = {
+//     equipDatas: EquipType[],
+//     servDatas: ServiceType[],
+//     numCouDatas: NuCoType[],
+// }
 
 export type DataType = unknown | AccountType | RoleType | NuCoType |ServiceType | EquipType;
 export type Datas = DataType[] | any;

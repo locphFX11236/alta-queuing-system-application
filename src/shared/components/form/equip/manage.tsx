@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { initAdd, status } from "./items";
 import { EquipDataType } from "./equipType";
 import { AppDispatch } from "../../../../core/typescript/reduxState";
-import { AddEquip } from "../../../../core/featuresRedux/slice/equipment";
+import { AddEquip, UpdEquip } from "../../../../core/featuresRedux/slice/equipment";
 
 const { Option } = Select;
 
@@ -19,15 +19,11 @@ const Manage = (): JSX.Element => {
     const initValues: EquipDataType = statusUrl === 'upd' ? updRecord : initAdd;
 
     const onFinish = (values: EquipDataType) => {
-        // console.log('Sucess:', values);
-        dispatch( AddEquip(values) );
+        if (statusUrl !== 'upd') dispatch( AddEquip(values) );
+        else dispatch( UpdEquip({ ...updRecord, ...values }) );
         navigate('/equip');
     };
-
-    const Cancel = () => {
-        console.log('Cancel');
-        navigate('/equip');
-    };
+    const Cancel = () => navigate('/equip');
 
     return (
         <Form

@@ -22,8 +22,15 @@ const reducers = {
         data.key = state.data.length + 1;
         data.actionStatus = true;
         data.connectStatus = true;
-        RequestAPI.postEquip(data); // Post data lên backend
         state.data.unshift(data); // Cập nhật state trong redux
+        RequestAPI.postEquip(data); // Post data lên backend
+        return state;
+    },
+    UpdEquip: (state: EquipState, action: AnyAction) => {
+        const data = action.payload;
+        const index = state.data.findIndex((d: any) => d.key === data.key)
+        state.data[index] = { ...data } ; // Cập nhật state trong redux
+        RequestAPI.patchEquip(data, index); // Patch data lên backend
         return state;
     },
     EquipSelect1: (state: EquipState, action: AnyAction) => {
@@ -57,7 +64,7 @@ const reducers = {
         console.log('Result search: ', current(state).search.result); // Do có Immer nên ta dung current() mới xem đc state 
         return state;
     },
-    RefreshSearch2: (state: EquipState, action: AnyAction) => {
+    RefreshSearch1: (state: EquipState, action: AnyAction) => {
         state.search = initialState.search;
         return state;
     },
@@ -89,6 +96,6 @@ const EquipmentReducer: Reducer<EquipState> = EquipmentSlice.reducer;
 
 export default EquipmentReducer;
 
-export const { EquipSelect1, EquipSelect2, EquipSearch3, AddEquip, RefreshSearch2 } = EquipmentSlice.actions as AnyAction;
+export const { EquipSelect1, EquipSelect2, EquipSearch3, AddEquip, RefreshSearch1, UpdEquip } = EquipmentSlice.actions as AnyAction;
 
 export { EquipFetchAPI };

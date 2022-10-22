@@ -1,27 +1,28 @@
 import { Button, Checkbox, Col, Form, Input, Row, Typography } from 'antd';
+import { useDispatch } from 'react-redux';
 import { Location, NavigateFunction, useLocation, useNavigate } from 'react-router-dom';
 
 import { initAdd, status } from "./items";
 import { ServiceDataType } from './serviceType';
+import { AddServ, UpdServ } from '../../../../core/featuresRedux/slice/service';
+import { AppDispatch } from '../../../../core/typescript/reduxState';
 
 const { TextArea } = Input;
 
 const Manage = (): JSX.Element => {
     const navigate: NavigateFunction = useNavigate();
     const location: Location = useLocation();
+    const dispatch: AppDispatch = useDispatch();
     const statusUrl: string = location.pathname.slice(-3);
     const updRecord: ServiceDataType = location.state;
     const initValues: ServiceDataType = statusUrl === 'upd' ? updRecord : initAdd;
 
     const onFinish = (values: ServiceDataType) => {
-        console.log('Sucess:', values);
-        navigate('/');
-    }
-
-    const Cancel = () => {
-        console.log('Cancel');
+        if (statusUrl !== 'upd') dispatch( AddServ(values) );
+        else dispatch( UpdServ({ ...updRecord, ...values }) );
         navigate('/service');
     };
+    const Cancel = () => navigate('/service');
 
 
     return (

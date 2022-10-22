@@ -1,13 +1,10 @@
 import { Form, Input, Typography } from "antd";
 import { Location, useLocation } from "react-router-dom";
-import { AddSetting } from "./items";
 import { ServiceDataType } from "./serviceType";
 
 const Information = (): JSX.Element => {
     const location: Location = useLocation();
     const inforRecord: ServiceDataType = location.state;
-
-    inforRecord.setting = AddSetting;
 
     const isHidden = (a: string) => {
         if (!inforRecord.setting.mode) return false;
@@ -16,10 +13,7 @@ const Information = (): JSX.Element => {
     };
 
     return (
-        <Form
-            colon
-            className="main-box"
-        >
+        <Form colon className="main-box" >
             <Typography.Title className="title-lv-2">Thông tin dịch vụ</Typography.Title>
             <div className="infor-box">
                 <Form.Item
