@@ -1,3 +1,9 @@
+export const StartCount = (setting: any) => {
+    let count = setting.values.v1.from ?? 1;
+    if (setting.mode.includes('v2')) count = setting.values.v2;
+    return (20100000 + count);
+};
+
 export const RenderUseServices: Record<string, string> = {
     'm': 'Khám mắt',
     'rhm': 'Khám răng hàm mặt',

@@ -28,7 +28,11 @@ const reducers = {
         ));
         state.search.result = newResult;
         console.log('Result search: ', current(state).search.result); // Do có Immer nên ta dung current() mới xem đc state 
-    }
+    },
+    RefreshSearch4: (state: ReportState, action: AnyAction) => {
+        state.search = initialState.search;
+        return state;
+    },
 } as ReducerInSlice;
 
 const extraReducers = (builder: ActionReducerMapBuilder<ReportState>) => {
@@ -57,6 +61,6 @@ const ReportReducer: Reducer<ReportState> = ReportSlice.reducer;
 
 export default ReportReducer;
 
-export const { ReportTime1 } = ReportSlice.actions as AnyAction;
+export const { ReportTime1, RefreshSearch4 } = ReportSlice.actions as AnyAction;
 
 export { ReportFetchAPI };

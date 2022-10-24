@@ -1,29 +1,38 @@
-import { Button, Col, Form, Input, Row, Select, Typography } from "antd";
+import { Button, Col, Form, Input, message, Row, Select, Typography } from "antd";
 import { CaretDownOutlined } from '@ant-design/icons';
 import { Location, NavigateFunction, useLocation, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import { initAdd, status } from "./items";
 import { AccountDataType } from "./accountType";
+import { AddAcc, UpdAcc } from "../../../../core/featuresRedux/slice/account";
+import { AppDispatch } from "../../../../core/typescript/reduxState";
 
 const { Option } = Select;
 
 const Manage = (): JSX.Element => {
     const navigate: NavigateFunction = useNavigate();
     const location: Location = useLocation();
+    const dispatch: AppDispatch = useDispatch();
     const statusUrl: string = location.pathname.slice(-3);
     const updRecord: AccountDataType = location.state;
     const initValues: AccountDataType = statusUrl === 'upd' ? updRecord : initAdd;
-
-    const onFinish = (values: AccountDataType) => {
-        console.log('Sucess:', values);
-    }
 
     const Cancel = () => {
         console.log('Cancel');
         navigate('/setting/account');
     };
 
-    if (statusUrl === 'upd') updRecord.passwordConfirm = updRecord.password;
+    const onFinish = (values: AccountDataType) => {
+        if (values.password === values.passwordConfirm) {
+            if (statusUrl !== 'upd') dispatch( AddAcc(values) );
+            else dispatch( UpdAcc({ ...updRecord, ...values }) );
+            navigate('/setting/account');
+        } else {
+            message.error('Vui lòng nhập lại password confirm');
+            Cancel();
+        }
+    };
 
     return (
         <Form
@@ -84,7 +93,7 @@ const Manage = (): JSX.Element => {
                     <Col span={12} >
                         <Form.Item
                             label="Tên đăng nhập"
-                            name="key"
+                            name="ID"
                             rules={[{ required: true, message: 'Please input your user name!' }]}
                         >
                             <Input placeholder="Nhập tên đăng nhập" />

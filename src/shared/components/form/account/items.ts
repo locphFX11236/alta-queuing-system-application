@@ -1,7 +1,7 @@
 import { AccountDataType } from "./accountType";
 
 export const initAdd: AccountDataType = {
-    key: 'A12345',
+    ID: 'A12345',
     name: 'Nguyễn Văn A',
     phoneNumber: '0912345678',
     email: 'aaa@axaxxx.com',

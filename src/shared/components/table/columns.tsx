@@ -49,7 +49,7 @@ export const serviceCols: ColProps = [
 ];
 
 export const setNumCols: ColProps = [
-    { title: 'STT', dataIndex: 'key', key: 'key', width: 334 },
+    { title: 'STT', dataIndex: 'countNumber', key: 'countNumber', width: 334 },
     {
         title: 'Trạng thái', dataIndex: 'status', key: 'status', width: 335,
         render: s => <CustomTag s={s} />
@@ -57,7 +57,7 @@ export const setNumCols: ColProps = [
 ];
 
 export const numCouCols: ColProps = [
-    { title: 'STT', dataIndex: 'key', key: 'key', width: 95 },
+    { title: 'STT', dataIndex: 'countNumber', key: 'countNumber', width: 95 },
     { title: 'Tên khách hàng', dataIndex: 'name', key: 'name', width: 165 },
     {
         title: 'Tên dịch vụ', dataIndex: 'useService', key: 'useService', width: 170,
@@ -114,7 +114,7 @@ export const roleCols: ColProps = [
 ];
 
 export const accountCols: ColProps = [
-    { title: 'Tên đăng nhập', dataIndex: 'key', key: 'key', width: 150 },
+    { title: 'Tên đăng nhập', dataIndex: 'ID', key: 'ID', width: 150 },
     { title: 'Họ tên', dataIndex: 'name', key: 'name', width: 170 },
     { title: 'Số điện thoại', dataIndex: 'phoneNumber', key: 'phoneNumber', width: 130 },
     { title: 'Email', dataIndex: 'email', key: 'email', width: 255 },

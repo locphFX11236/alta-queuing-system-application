@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice, Reducer, current, ActionReducerMapBuilde
 import { message } from 'antd';
 import moment from 'moment';
 
+import { OpenNotification } from '../../../shared/components/popUp';
 import { RequestAPI } from '../../data/api';
 import type { ReducerInSlice, Slice, AnyAction, NCState } from '../../typescript/reduxState';
 
@@ -20,6 +21,16 @@ const initialState = {
 } as NCState;
 
 const reducers = {
+    AddNC: (state: NCState, action: AnyAction) => {
+        const data = action.payload;
+        data.key = state.data[state.data.length - 1] + 1;
+        data.status = "Đang chờ";
+        data.source = "kio";
+        state.data.unshift(data); // Cập nhật state trong redux
+        RequestAPI.postNC(data); // Post data lên backend
+        OpenNotification(data); // In số
+        return state;
+    },
     NCSelect1: (state: NCState, action: AnyAction) => {
         const { useService } = action.payload;
         state.search.condition.useService = useService;
@@ -85,7 +96,11 @@ const reducers = {
         if ((search.condition.keyWord !== '') && (newResult.length === 0)) message.warning('Không tìm thấy');
         else (state.search.result = newResult);
         console.log('Result search: ', current(state).search.result); // Do có Immer nên ta dung current() mới xem đc state 
-    }
+    },
+    RefreshSearch3: (state: NCState, action: AnyAction) => {
+        state.search = initialState.search;
+        return state;
+    },
 } as ReducerInSlice;
 
 const extraReducers = (builder: ActionReducerMapBuilder<NCState>) => {
@@ -116,7 +131,9 @@ export default NumCouReducer;
 
 export const {
     NCSelect1, NCSelect2, NCSelect3, NCTime4, NCSearch5,
-    SISelect1, SITime2, SISearch3
+    AddNC,
+    SISelect1, SITime2, SISearch3,
+    RefreshSearch3
 } = NumCouSlice.actions as AnyAction;
 
 export { NCFetchAPI };

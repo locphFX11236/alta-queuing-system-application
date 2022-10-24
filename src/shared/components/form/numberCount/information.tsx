@@ -47,7 +47,7 @@ const Information = (): JSX.Element => {
                         labelCol={{ span: 12 }}
                         wrapperCol={{ span: 12 }}
                     >
-                        <span>{inforRecord.key}</span>
+                        <span>{inforRecord.countNumber}</span>
                     </Form.Item>
 
                     <Form.Item

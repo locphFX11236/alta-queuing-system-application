@@ -16,6 +16,20 @@ const initialState = {
 } as AccState;
 
 const reducers = {
+    AddAcc: (state: AccState, action: AnyAction) => {
+        const data = action.payload;
+        data.key = state.data.length + 1;
+        state.data.unshift(data); // Cập nhật state trong redux
+        RequestAPI.postAcc(data); // Post data lên backend
+        return state;
+    },
+    UpdAcc: (state: AccState, action: AnyAction) => {
+        const data = action.payload;
+        const index = state.data.findIndex((d: any) => d.key === data.key)
+        state.data[index] = { ...data } ; // Cập nhật state trong redux
+        RequestAPI.patchAcc(data, index); // Patch data lên backend
+        return state;
+    },
     AccSelect1: (state: AccState, action: AnyAction) => {
         const { position } = action.payload;
         state.search.condition.position = position;
@@ -39,7 +53,11 @@ const reducers = {
         if (search.condition.keyWord !== '' && newResult.length === 0) message.warning('Không tìm thấy');
         else (state.search.result = newResult);
         console.log('Result search: ', current(state).search.result); // Do có Immer nên ta dung current() mới xem đc state 
-    }
+    },
+    RefreshSearch5: (state: AccState, action: AnyAction) => {
+        state.search = initialState.search;
+        return state;
+    },
 } as ReducerInSlice;
 
 const extraReducers = (builder: ActionReducerMapBuilder<AccState>) => {
@@ -68,6 +86,6 @@ const AccReducer: Reducer<AccState> = AccSlice.reducer;
 
 export default AccReducer;
 
-export const { AccSelect1, AccSearch2 } = AccSlice.actions as AnyAction;
+export const { AccSelect1, AccSearch2, RefreshSearch5, AddAcc, UpdAcc } = AccSlice.actions as AnyAction;
 
 export { AccFetchAPI };

@@ -32,7 +32,8 @@ export type ServiceType = {
 };
 
 export type NuCoType = {
-    key: string,
+    key: number,
+    countNumber: number,
     name: string,
     useService: string,
     startTime: string,
@@ -43,14 +44,9 @@ export type NuCoType = {
     email: string,
 };
 
-type RoleType = {
-    position: string,
-    description: string,
-    functions:  Array<string>,
-};
-
-type AccountType = {
-    key: string,
+export type AccountType = {
+    key: number,
+    ID: string,
     name: string,
     phoneNumber: string,
     email: string,
@@ -58,6 +54,12 @@ type AccountType = {
     password: string,
     passwordConfirm: string,
     status: boolean,
+};
+
+type RoleType = {
+    position: string,
+    description: string,
+    functions:  Array<string>,
 };
 
 // export type FetchData = {
