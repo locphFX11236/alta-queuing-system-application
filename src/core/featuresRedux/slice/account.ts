@@ -18,7 +18,6 @@ const initialState = {
 const reducers = {
     AddAcc: (state: AccState, action: AnyAction) => {
         const data = action.payload;
-        data.key = state.data.length + 1;
         state.data.unshift(data); // Cập nhật state trong redux
         RequestAPI.postAcc(data); // Post data lên backend
         return state;

@@ -40,7 +40,11 @@ const reducers = {
         if ((search.condition.keyWord !== '') && (newResult.length === 0)) message.warning('Không tìm thấy');
         else (state.search.result = newResult);
         console.log('Result search: ', current(state).search.result); // Do có Immer nên ta dung current() mới xem đc state 
-    }
+    },
+    RefreshSearch7: (state: LogsState, action: AnyAction) => {
+        state.search = initialState.search;
+        return state;
+    },
 } as ReducerInSlice;
 
 const extraReducers = (builder: ActionReducerMapBuilder<LogsState>) => {
@@ -69,6 +73,6 @@ const LogsReducer: Reducer<LogsState> = LogsSlice.reducer;
 
 export default LogsReducer;
 
-export const { LogsTime1, LogsSearch2 } = LogsSlice.actions as AnyAction;
+export const { LogsTime1, LogsSearch2, RefreshSearch7 } = LogsSlice.actions as AnyAction;
 
 export { LogsFetchAPI };

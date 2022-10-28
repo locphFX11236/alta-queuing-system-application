@@ -22,10 +22,11 @@ const NumberPrint = (): JSX.Element => {
     const today = moment();
     const SetCount = ServState[ServState.length - 1].setting;
     const toDateNC = OldNCState.filter((s: any) => today.isSame(s.startTime.slice(-10)));
-    // const lastNC = 20110000 // Test số cuối được cấp
     const lastNC = SetCount.mode.includes('v4') ? // Nếu có reset mỗi ngày
-        (toDateNC[(toDateNC.length - 1) ?? 0]?.countNumber ?? StartCount(SetCount)) : // Lấy sô thứ tự cuối trước đó, nếu không lấy stt lại từ prefix
-        (OldNCState[OldNCState.length - 1].countNumber + 1); // Lấy số thứ tự từ hôm trước
+    (toDateNC[(toDateNC.length - 1) ?? 0]?.countNumber ?? StartCount(SetCount)) : // Lấy sô thứ tự cuối trước đó, nếu không lấy stt lại từ prefix
+    (OldNCState[OldNCState.length - 1].countNumber + 1)
+    ; // Lấy số thứ tự từ hôm trước
+    // const lastNC = 20110000 // Test số cuối được cấp
     const Cancel = () => {
         console.log('Cancel');
         navigate('/number-count');

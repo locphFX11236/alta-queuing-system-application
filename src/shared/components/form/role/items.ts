@@ -10,7 +10,3 @@ export const status: Record<string, string> = {
     add: 'Thêm',
     upd: 'Cập nhật'
 };
-
-export const addFunc = {
-    functions: ['Ax', 'By'],
-};

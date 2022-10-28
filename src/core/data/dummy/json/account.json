@@ -108,5 +108,35 @@
         "position": "Lễ tân",
         "password": "123456",
         "status": false
+    },
+    {
+        "key": 12,
+        "ID": "Anguyen11",
+        "name": "Nguyễn Văn A",
+        "phoneNumber": "0901234565",
+        "email": "Anguyen03@gmail.com",
+        "position": "Quản lý",
+        "password": "123456",
+        "status": false
+    },
+    {
+        "key": 13,
+        "ID": "Anguyen11",
+        "name": "Nguyễn Văn A",
+        "phoneNumber": "0901234565",
+        "email": "Anguyen03@gmail.com",
+        "position": "Admin",
+        "password": "123456",
+        "status": false
+    },
+    {
+        "key": 14,
+        "ID": "Anguyen11",
+        "name": "Nguyễn Văn A",
+        "phoneNumber": "0901234565",
+        "email": "Anguyen03@gmail.com",
+        "position": "Supper Admin",
+        "password": "123456",
+        "status": false
     }
 ]

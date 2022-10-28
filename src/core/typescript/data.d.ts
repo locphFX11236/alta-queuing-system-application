@@ -56,8 +56,9 @@ export type AccountType = {
     status: boolean,
 };
 
-type RoleType = {
+export type RoleType = {
     position: string,
+    count: number,
     description: string,
     functions:  Array<string>,
 };

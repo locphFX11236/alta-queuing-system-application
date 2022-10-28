@@ -8,7 +8,6 @@ const InforMemberForm = ({data}: any): JSX.Element => (
         colon={true}
         initialValues={data}
         disabled={true}
-        size='large'
     >
         <Row >
             <Col span={12}>

@@ -14,7 +14,7 @@ const D = (key: string): any[] => {
         'logs': SelectLogsState(),
     };
     const { data, search } = state[key];
-
+    
     if (search.result.length === 0) return data;
     else return search.result;
 };

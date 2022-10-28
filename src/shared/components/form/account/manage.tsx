@@ -1,4 +1,4 @@
-import { Button, Col, Form, Input, message, Row, Select, Typography } from "antd";
+import { Button, Col, Form, Input, message, Row, Select, SelectProps, Typography } from "antd";
 import { CaretDownOutlined } from '@ant-design/icons';
 import { Location, NavigateFunction, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -7,6 +7,8 @@ import { initAdd, status } from "./items";
 import { AccountDataType } from "./accountType";
 import { AddAcc, UpdAcc } from "../../../../core/featuresRedux/slice/account";
 import { AppDispatch } from "../../../../core/typescript/reduxState";
+import { SelectAccState, SelectRoleState } from "../../../../core/featuresRedux/hookRedux";
+import { CountUpd } from "../../../../core/featuresRedux/slice/role";
 
 const { Option } = Select;
 
@@ -14,25 +16,38 @@ const Manage = (): JSX.Element => {
     const navigate: NavigateFunction = useNavigate();
     const location: Location = useLocation();
     const dispatch: AppDispatch = useDispatch();
+    const roleState = SelectRoleState().data;
+    const accState = SelectAccState().data;
     const statusUrl: string = location.pathname.slice(-3);
     const updRecord: AccountDataType = location.state;
     const initValues: AccountDataType = statusUrl === 'upd' ? updRecord : initAdd;
-
-    const Cancel = () => {
-        console.log('Cancel');
-        navigate('/setting/account');
-    };
-
+    const options: SelectProps['options'] = [];
+    const Cancel = () => navigate('/setting/account');
     const onFinish = (values: AccountDataType) => {
         if (values.password === values.passwordConfirm) {
-            if (statusUrl !== 'upd') dispatch( AddAcc(values) );
-            else dispatch( UpdAcc({ ...updRecord, ...values }) );
+            const newAccArr = [ ...accState ]
+            if (statusUrl !== 'upd') {
+                values.key = accState.length + 1;
+                newAccArr.push(values)
+                dispatch( AddAcc(values) );
+                dispatch( CountUpd(newAccArr));
+            } else {
+                const index = accState.findIndex((d: any) => d.key === updRecord.key);
+                newAccArr.splice(index, 1, values)
+                dispatch( UpdAcc({ ...updRecord, ...values }) );
+                dispatch( CountUpd(newAccArr));
+            }
             navigate('/setting/account');
         } else {
             message.error('Vui lòng nhập lại password confirm');
             Cancel();
         }
     };
+
+    roleState.forEach((d: any) => options.push({
+        label: d.position,
+        value: d.position,
+    }));
 
     return (
         <Form
@@ -78,14 +93,11 @@ const Manage = (): JSX.Element => {
                             wrapperCol={{ span: 23 }}
                             rules={[{ required: true, message: 'Please input role!' }]}
                         >
-                            <Select placeholder="Nhập loại thiết bị" suffixIcon={<CaretDownOutlined style={{ color: '#FF7506' }}/>} >
-                                <Option value="Kế toán">Kế toán</Option>
-                                <Option value="Bác sĩ">Bác sĩ</Option>
-                                <Option value="Lễ tân">Lễ tân</Option>
-                                <Option value="Quản lý">Quản lý</Option>
-                                <Option value="Admin">Admin</Option>
-                                <Option value="Supper Admin">Supper Admin</Option>
-                            </Select>
+                            <Select
+                                placeholder="Nhập loại thiết bị"
+                                options={options}
+                                suffixIcon={<CaretDownOutlined style={{ color: '#FF7506' }}/>}
+                            />
                         </Form.Item>
 
                         <p><span style={{ color: 'red' }}>*</span> Là trường thông tin bắt buộc</p>

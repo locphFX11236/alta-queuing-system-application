@@ -17,13 +17,12 @@ const Manage = (): JSX.Element => {
     const statusUrl: string = location.pathname.slice(-3);
     const updRecord: EquipDataType = location.state;
     const initValues: EquipDataType = statusUrl === 'upd' ? updRecord : initAdd;
-
+    const Cancel = () => navigate('/equip');
     const onFinish = (values: EquipDataType) => {
         if (statusUrl !== 'upd') dispatch( AddEquip(values) );
         else dispatch( UpdEquip({ ...updRecord, ...values }) );
         navigate('/equip');
     };
-    const Cancel = () => navigate('/equip');
 
     return (
         <Form

@@ -1,28 +1,27 @@
 import { Button, Checkbox, Col, Form, Input, Row, Typography } from "antd";
+import { useDispatch } from "react-redux";
 import { Location, NavigateFunction, useLocation, useNavigate } from "react-router-dom";
 
-import { addFunc, initAdd, status } from "./items";
+import { initAdd, status } from "./items";
 import { RoleDataType } from "./roleType";
+import { AddRole, UpdRole } from "../../../../core/featuresRedux/slice/role";
+import { AppDispatch } from "../../../../core/typescript/reduxState";
 
 const { TextArea } = Input;
 
 const Manage = (): JSX.Element => {
     const navigate: NavigateFunction = useNavigate();
     const location: Location = useLocation();
+    const dispatch: AppDispatch = useDispatch();
     const statusUrl: string = location.pathname.slice(-3);
     const updRecord: RoleDataType = location.state;
     const initValues: RoleDataType = statusUrl === 'upd' ? updRecord : initAdd;
-
+    const Cancel = () => navigate('/setting/role');
     const onFinish = (values: RoleDataType) => {
-        console.log('Sucess:', values);
-    }
-
-    const Cancel = () => {
-        console.log('Cancel');
+        if (statusUrl !== 'upd') dispatch( AddRole(values) );
+        else dispatch( UpdRole({ ...updRecord, ...values }) );
         navigate('/setting/role');
     };
-
-    if (updRecord !== null) updRecord.functions = addFunc.functions;
 
     return (
         <Form
