@@ -105,7 +105,7 @@ const Manage = (): JSX.Element => {
                     <Col span={12} >
                         <Form.Item
                             label="Tên đăng nhập"
-                            name="ID"
+                            name="userID"
                             rules={[{ required: true, message: 'Please input your user name!' }]}
                         >
                             <Input placeholder="Nhập tên đăng nhập" />

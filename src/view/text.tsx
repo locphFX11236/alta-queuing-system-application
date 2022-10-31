@@ -1,96 +1,52 @@
-import { PlusOutlined } from '@ant-design/icons';
-import { Modal, Upload } from 'antd';
-import type { RcFile, UploadProps } from 'antd/es/upload';
-import type { UploadFile } from 'antd/es/upload/interface';
-import React, { useState } from 'react';
+import { Upload, message, Avatar, Button } from 'antd';
+import { useState } from 'react';
+import { CameraOutlined } from '@ant-design/icons';
 
-const getBase64 = (file: RcFile): Promise<string> =>
-  new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result as string);
-    reader.onerror = error => reject(error);
-  });
+import { AvatarUrl } from '../shared/components/account';
+import { UploadChangeParam, UploadFile } from 'antd/lib/upload';
+
+function getBase64Encoder(img: any, callback: any) { // Encoder image vs Base64 -> backend has to decoder
+  const reader = new FileReader();
+  reader.addEventListener('load', () => callback(reader.result) ); // Lấy kết quả file sau encoder
+  reader.readAsDataURL(img);
+};
+
+function checkFile(file: any) {
+  const isMatchType = (file.type === 'image/jpeg' || file.type === 'image/png');
+  const isMatchSize = (file.size / 1024 / 1024) < 2; // Size < 2MB, file.size is byte
+
+  if (!isMatchType) message.error('You can only upload JPG/PNG file!');
+  if (!isMatchSize) message.error('Image must smaller than 2MB!');
+  return (isMatchType && isMatchSize);
+};
 
 const App: React.FC = () => {
-  const [previewOpen, setPreviewOpen] = useState(false);
-  const [previewImage, setPreviewImage] = useState('');
-  const [previewTitle, setPreviewTitle] = useState('');
-  const [fileList, setFileList] = useState<UploadFile[]>([
-    {
-      uid: '-1',
-      name: 'image.png',
-      status: 'done',
-      url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
-    },
-    {
-      uid: '-2',
-      name: 'image.png',
-      status: 'done',
-      url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
-    },
-    {
-      uid: '-3',
-      name: 'image.png',
-      status: 'done',
-      url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
-    },
-    {
-      uid: '-4',
-      name: 'image.png',
-      status: 'done',
-      url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
-    },
-    {
-      uid: '-xxx',
-      percent: 50,
-      name: 'image.png',
-      status: 'uploading',
-      url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
-    },
-    {
-      uid: '-5',
-      name: 'image.png',
-      status: 'error',
-    },
-  ]);
-
-  const handleCancel = () => setPreviewOpen(false);
-
-  const handlePreview = async (file: UploadFile) => {
-    if (!file.url && !file.preview) {
-      file.preview = await getBase64(file.originFileObj as RcFile);
-    }
-
-    setPreviewImage(file.url || (file.preview as string));
-    setPreviewOpen(true);
-    setPreviewTitle(file.name || file.url!.substring(file.url!.lastIndexOf('/') + 1));
+  const [imageUrl, setImageUrl] = useState<string>(AvatarUrl());
+  
+  const handleChange = (info: UploadChangeParam<UploadFile<any>>) => {
+    console.log(info.file.originFileObj)
+    getBase64Encoder(
+      info.file.originFileObj,
+      (imageUrl: any) => setImageUrl(imageUrl))
   };
 
-  const handleChange: UploadProps['onChange'] = ({ fileList: newFileList }) =>
-    setFileList(newFileList);
-
-  const uploadButton = (
-    <div>
-      <PlusOutlined />
-      <div style={{ marginTop: 8 }}>Upload</div>
-    </div>
-  );
-  
   return (
     <>
+      <Avatar className="avatar-member" src={imageUrl} />
       <Upload
-        action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-        listType="picture-card"
-        fileList={fileList}
-        onPreview={handlePreview}
-        onChange={handleChange}
+        name="avatar"
+        listType="picture"
+        showUploadList={false}
+        action="https://www.mocky.io/v2/5cc8019d300000980a055e76" // Post lên đường link
+        beforeUpload={checkFile} // Kiểm tra file update
+        onChange={handleChange} // Hiển thị image trên thẻ img
       >
-        {fileList.length >= 8 ? null : uploadButton}
+        <Button
+          className="avatar-change"
+          icon={<CameraOutlined />}
+          shape='circle'
+        />
       </Upload>
-      <Modal visible={previewOpen} title={previewTitle} footer={null} onCancel={handleCancel}>
-        <img alt="example" style={{ width: '100%' }} src={previewImage} />
-      </Modal>
     </>
   );
 };

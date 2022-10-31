@@ -1,13 +1,12 @@
 import { CSVLink } from 'react-csv';
 
-import HandleData from '../../../core/data/api/handleData';
-import { reportJSON } from '../../../core/data/dummy';
+import { SelectReportState } from '../../../core/featuresRedux/hookRedux';
 
 const CSVExport = ({children}: any) => {
-    const reportData = HandleData(reportJSON);
+    const reportState = SelectReportState().data;
 
     return (
-        <CSVLink data={reportData}>
+        <CSVLink data={reportState}>
             {children}
         </CSVLink>
     );

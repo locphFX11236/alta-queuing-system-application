@@ -46,7 +46,7 @@ export type NuCoType = {
 
 export type AccountType = {
     key: number,
-    ID: string,
+    userID: string,
     name: string,
     phoneNumber: string,
     email: string,
@@ -54,6 +54,18 @@ export type AccountType = {
     password: string,
     passwordConfirm: string,
     status: boolean,
+};
+
+type dataUser = {
+    id: string,
+    fullName: string,
+    phoneNumber: string,
+    email: string,
+    imgUrl: string,
+    userName: string,
+    password: string,
+    position: string,
+    status: boolean
 };
 
 export type RoleType = {

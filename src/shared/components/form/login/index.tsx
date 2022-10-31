@@ -3,19 +3,21 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import './formLogin.css';
-import { login } from "../../../../core/featuresRedux/slice/user";
-import type { AppDispatch, PayloadUser } from "../../../../core/typescript/reduxState";
+import { UserFetchAPI } from "../../../../core/featuresRedux/slice/user";
+import type { AppDispatch } from "../../../../core/typescript/reduxState";
 
 const FormLogin = (): JSX.Element => {
     const dispatch: AppDispatch = useDispatch();
 
-    const logInPayload: PayloadUser = {
-        userId: 'Admin'
+    const initValues = {
+        userID: 'lequynhaivan01',
+        password: '123456'
     };
 
     const onFinish = (values: any) => {
-        console.log('Sucess:', values)
-        dispatch( login( logInPayload ));
+        // console.log('Sucess:', values)
+        // dispatch( login( values.userID ));
+        dispatch( UserFetchAPI(values) );
     }
 
     const onFinishFailed = (errorInfo: any) => {
@@ -29,10 +31,11 @@ const FormLogin = (): JSX.Element => {
             layout='vertical'
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
+            initialValues={initValues}
         >
             <Form.Item
                 label="Tên đăng nhập"
-                name="username"
+                name="userID"
                 rules={[{ required: true, message: 'Please input your username!' }]}
             >
                 <Input />

@@ -2,11 +2,12 @@ import type { Reducer } from 'redux';
 import type { TypedUseSelectorHook } from 'react-redux';
 import type { store } from '../store';
 import type { CaseReducer, PayloadAction } from '@reduxjs/toolkit';
-import { Datas } from './data';
+import { AccountType, Datas } from './data';
 
 export interface UserState {
-    userId: string,
-    isLoggedIn: boolean
+    userID: string,
+    isLoggedIn: boolean,
+    userData: AccountType | {},
 };
 
 export interface EquipState {
@@ -90,7 +91,7 @@ export interface LogsState {
 };
 
 export type PayloadUser = {
-    userId: string
+    userId: string,
 } | {};
 
 export type RootState = ReturnType<typeof store.getState>;

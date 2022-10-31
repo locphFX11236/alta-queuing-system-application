@@ -13,7 +13,7 @@ const InforMemberForm = ({data}: any): JSX.Element => (
             <Col span={12}>
                 <Form.Item
                     label="Tên người dùng:"
-                    name="fullName"
+                    name="name"
                     wrapperCol={{ span: 23 }}
                 >
                     <Input placeholder="input placeholder" />
@@ -36,7 +36,7 @@ const InforMemberForm = ({data}: any): JSX.Element => (
             <Col span={12}>
                 <Form.Item
                     label="Tên đăng nhập:"
-                    name='userName'
+                    name='userID'
                     labelCol={{ span: 23, offset: 1 }}
                     wrapperCol={{ span: 23, offset: 1 }}
                 >

@@ -1,19 +1,11 @@
-import { Avatar, Button, Typography } from "antd";
-import { CameraOutlined } from '@ant-design/icons';
+import { Typography } from "antd";
 
-import { AvatarUrl, HandleChangeAvatar, InforComponent, FullName } from "../../shared/components/account";
+import { InforComponent, FullName } from "../../shared/components/account";
+import UploadImg from "../../shared/components/account/upload";
 
 const InforMember = (): JSX.Element => (
     <div className="main-box infor-member">
-        <div className="left-infor">
-            <Avatar className="avatar-member" src={AvatarUrl()} />
-            <Button
-                className="avatar-change"
-                icon={<CameraOutlined />}
-                shape='circle'
-                onClick={() => HandleChangeAvatar()}
-            />
-        </div>
+        <div className="left-infor"><UploadImg /></div>
         <Typography.Title className="name-infor">{FullName()}</Typography.Title>
         <div className="right-infor"><InforComponent /></div>
     </div>
