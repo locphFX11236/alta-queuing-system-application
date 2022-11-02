@@ -49,6 +49,7 @@ export type AccountType = {
     userID: string,
     name: string,
     phoneNumber: string,
+    imgUrl: string,
     email: string,
     position: string,
     password: string,

@@ -29,6 +29,23 @@ const reducers = {
         RequestAPI.patchAcc(data, index); // Patch data lên backend
         return state;
     },
+    UpdAccRole: (state: AccState, action: AnyAction) => {
+        const positionChange = action.payload;
+        const ArrChange = state.data.filter((d: any) => d.position === positionChange[0]);
+        ArrChange.forEach((a: any, i: number) => {
+            state.data[i].position = positionChange[1];; // Cập nhật state trong redux
+            a.position = positionChange[1];
+            RequestAPI.patchAcc(a, i); // Patch data lên backend
+        })
+        return state;
+    },
+    UpdAccAvatar: (state: AccState, action: AnyAction) => {
+        const { user, imgSrc } = action.payload;
+        const i = state.data.findIndex((d: any) => d.key === user.key);
+        state.data[i].imgUrl = imgSrc;; // Cập nhật state trong redux
+        RequestAPI.patchAcc(user, i); // Patch data lên backend
+        return state;
+    },
     AccSelect1: (state: AccState, action: AnyAction) => {
         const { position } = action.payload;
         state.search.condition.position = position;
@@ -85,6 +102,6 @@ const AccReducer: Reducer<AccState> = AccSlice.reducer;
 
 export default AccReducer;
 
-export const { AccSelect1, AccSearch2, RefreshSearch5, AddAcc, UpdAcc } = AccSlice.actions as AnyAction;
+export const { AccSelect1, AccSearch2, RefreshSearch5, AddAcc, UpdAcc, UpdAccRole, UpdAccAvatar } = AccSlice.actions as AnyAction;
 
 export { AccFetchAPI };

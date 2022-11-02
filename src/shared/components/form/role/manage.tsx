@@ -6,6 +6,7 @@ import { initAdd, status } from "./items";
 import { RoleDataType } from "./roleType";
 import { AddRole, UpdRole } from "../../../../core/featuresRedux/slice/role";
 import { AppDispatch } from "../../../../core/typescript/reduxState";
+import { UpdAccRole } from "../../../../core/featuresRedux/slice/account";
 
 const { TextArea } = Input;
 
@@ -19,7 +20,13 @@ const Manage = (): JSX.Element => {
     const Cancel = () => navigate('/setting/role');
     const onFinish = (values: RoleDataType) => {
         if (statusUrl !== 'upd') dispatch( AddRole(values) );
-        else dispatch( UpdRole({ ...updRecord, ...values }) );
+        else {
+            dispatch( UpdRole({ ...updRecord, ...values }) )
+            if (updRecord.position !== values.position) dispatch(UpdAccRole([
+                updRecord.position,
+                values.position
+            ]));
+        };
         navigate('/setting/role');
     };
 

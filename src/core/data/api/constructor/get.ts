@@ -15,7 +15,7 @@ const Fake = async (dataJSON: string) => new Promise((resolve, rejects) => {
 
 const Really = async (url: string) => fetch(url)
     .then( response => response.json() ) //Trả về danh sách
-    .catch( error => message.error('Lỗi fetch api') )
+    .catch( error => message.error('Lỗi fetch api ', error) )
     .finally( () => console.log('Fetched!!!') )
 ;
 

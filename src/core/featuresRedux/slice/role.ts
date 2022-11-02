@@ -23,7 +23,6 @@ const reducers = {
             data.count = 0;
             state.data.unshift(data); // Cập nhật state trong redux
             RequestAPI.postRole(data); // Post data lên backend
-            console.log('Result search: ', current(state).data); // Do có Immer nên ta dung current() mới xem đc state 
             return state;
         } else message.error('Đã có vai trò này, không cần thêm!');
     },

@@ -2,7 +2,7 @@ import { Upload, message, Avatar, Button } from 'antd';
 import { useState } from 'react';
 import { CameraOutlined } from '@ant-design/icons';
 
-import { AvatarUrl } from '../shared/components/account';
+// import { AvatarUrl } from '../shared/components/account';
 import { UploadChangeParam, UploadFile } from 'antd/lib/upload';
 
 function getBase64Encoder(img: any, callback: any) { // Encoder image vs Base64 -> backend has to decoder
@@ -21,7 +21,7 @@ function checkFile(file: any) {
 };
 
 const App: React.FC = () => {
-  const [imageUrl, setImageUrl] = useState<string>(AvatarUrl());
+  const [imageUrl, setImageUrl] = useState<string>('');
   
   const handleChange = (info: UploadChangeParam<UploadFile<any>>) => {
     console.log(info.file.originFileObj)

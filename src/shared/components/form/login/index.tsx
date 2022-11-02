@@ -3,28 +3,20 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import './formLogin.css';
-import { UserFetchAPI } from "../../../../core/featuresRedux/slice/user";
+import { UserLogIn } from "../../../../core/featuresRedux/slice/user";
 import type { AppDispatch } from "../../../../core/typescript/reduxState";
+
+const initValues = {
+    userID: 'lequynhaivan01',
+    password: '123456'
+};
 
 const FormLogin = (): JSX.Element => {
     const dispatch: AppDispatch = useDispatch();
+    const onFinishFailed = (errorInfo: any) => console.log('Failed:', errorInfo);
+    const onFinish = (values: any) => dispatch( UserLogIn(values) ); // Login
 
-    const initValues = {
-        userID: 'lequynhaivan01',
-        password: '123456'
-    };
-
-    const onFinish = (values: any) => {
-        // console.log('Sucess:', values)
-        // dispatch( login( values.userID ));
-        dispatch( UserFetchAPI(values) );
-    }
-
-    const onFinishFailed = (errorInfo: any) => {
-        console.log('Failed:', errorInfo);
-    };
-
-    return(
+    return (
         <Form
             className='form-login _center'
             name="login"

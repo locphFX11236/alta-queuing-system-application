@@ -7,7 +7,7 @@ import { AccountType, Datas } from './data';
 export interface UserState {
     userID: string,
     isLoggedIn: boolean,
-    userData: AccountType | {},
+    userData: AccountType,
 };
 
 export interface EquipState {

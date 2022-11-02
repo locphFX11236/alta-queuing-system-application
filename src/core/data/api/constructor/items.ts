@@ -23,4 +23,7 @@ export const items: Record<string, any> = {
     'logs': {
         dataJSON: userLogJSON,
     },
+    'imgStore': {
+        url: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+    }
 };

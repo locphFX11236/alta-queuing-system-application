@@ -1,12 +1,11 @@
 import { Badge } from 'antd';
 
 import './statisticOverview.css';
-import HandleData from '../../../../core/data/api/handleData';
 import { statisticJSON } from '../../../../core/data/dummy';
 import RadialBar from '../../chart/radialBarChart/radialBar';
 import { RenderIcon } from './items';
 
-const dataObj = HandleData(statisticJSON);
+const dataObj = JSON.parse(statisticJSON);
 
 const StatisticOverviewComponent: React.FC = () => dataObj.map((D: any, i: number) => (
     <div className="overview" key={`${D.key}_${i}`}>

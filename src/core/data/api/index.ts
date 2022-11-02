@@ -1,4 +1,5 @@
 import GetData from "./constructor/get";
+import { items } from "./constructor/items";
 
 export const RequestAPI = {
     getEquipDatas: () => GetData('equip'),
@@ -20,3 +21,5 @@ export const RequestAPI = {
     patchRole: (data: any, index: number) => console.log('Patch role to backend!'),
     patchAcc: (data: any, index: number) => console.log('Patch account to backend!'),
 };
+
+export const getUrlItem = (type: string) => items[type];

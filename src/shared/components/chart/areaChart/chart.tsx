@@ -1,13 +1,11 @@
 import { ResponsiveLine } from '@nivo/line';
 
-
-import HandleData from '../../../../core/data/api/handleData';
 import { areaJSON } from '../../../../core/data/dummy';
 import { linearGradientDef } from '@nivo/core';
 import TooltipComponent from './tooltip';
 
 const Chart = (): JSX.Element => {
-    const dataOjb = HandleData(areaJSON);
+    const dataOjb = JSON.parse(areaJSON);
     const yScaleValue = [ 0, 1000, 2000, 3000, 4000, 5000, 6000 ];
 
     return(

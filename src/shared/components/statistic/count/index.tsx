@@ -1,9 +1,8 @@
 import './statisticCount.css';
-import HandleData from '../../../../core/data/api/handleData';
 import { statisticJSON } from '../../../../core/data/dummy';
 import { RenderIcon, TagStatus } from './items';
 
-const dataObj = HandleData(statisticJSON)[2];
+const dataObj = JSON.parse(statisticJSON)[2];
 
 const StatisticCountComponent = () => (
     <div className="left-statistic">

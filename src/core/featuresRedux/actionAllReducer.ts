@@ -8,6 +8,7 @@ import { RoleFetchAPI, RefreshSearch6 } from "./slice/role";
 import { LogsFetchAPI, RefreshSearch7 } from "./slice/logs";
 
 export const FetchAll = (dispatch: AppDispatch) => {
+    console.log('Get All Data!');
     dispatch( AccFetchAPI() );
     dispatch( EquipFetchAPI() );
     dispatch( NCFetchAPI() );
@@ -18,6 +19,7 @@ export const FetchAll = (dispatch: AppDispatch) => {
 };
 
 export const RefreshAllSearch = (dispatch: AppDispatch) => {
+    console.log('Refresh All Search!');
     dispatch( RefreshSearch1() );
     dispatch( RefreshSearch2() );
     dispatch( RefreshSearch3() );
