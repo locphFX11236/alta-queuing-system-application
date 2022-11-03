@@ -61,7 +61,7 @@ const reducers = {
         ));
         if (search.condition.keyWord !== '' && newResult.length === 0) message.warning('Không tìm thấy');
         else (state.search.result = newResult);
-        console.log('Result search: ', current(state).search.result); // Do có Immer nên ta dung current() mới xem đc state 
+        console.log({ 'Result search': (current(state).search.result) }); // Do có Immer nên ta dung current() mới xem đc state
         return state;
     },
     RefreshSearch1: (state: EquipState, action: AnyAction) => {
@@ -76,6 +76,7 @@ const extraReducers = (builder: ActionReducerMapBuilder<EquipState>) => {
     builder.addCase(EquipFetchAPI.fulfilled, (state, actions) => {
         // state.loading = false;
         state.data = actions.payload; // payload lấy dữ liệu từ return của createAsyncThunk/async function
+        return state;
     })
 };
 

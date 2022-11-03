@@ -1,8 +1,8 @@
-import { Button, Form, Input } from "antd";
+import { Button, Form, Input, Space } from "antd";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-import './formLogin.css';
+import './style.css';
 import { UserLogIn } from "../../../../core/featuresRedux/slice/user";
 import type { AppDispatch } from "../../../../core/typescript/reduxState";
 
@@ -26,6 +26,7 @@ const FormLogin = (): JSX.Element => {
             initialValues={initValues}
         >
             <Form.Item
+                className="form-login__id-input"
                 label="Tên đăng nhập"
                 name="userID"
                 rules={[{ required: true, message: 'Please input your username!' }]}
@@ -34,6 +35,7 @@ const FormLogin = (): JSX.Element => {
             </Form.Item>
 
             <Form.Item
+                className="form-login__pass-input"
                 label="Mật khẩu"
                 name="password"
                 rules={[{ required: true, message: 'Please input your password!' }]}
@@ -41,13 +43,15 @@ const FormLogin = (): JSX.Element => {
                 <Input.Password />
             </Form.Item>
 
-            <Form.Item>
-                <Button type="primary" htmlType="submit">
-                    Đăng nhập
-                </Button>
-            </Form.Item>
-            
-            <Link to='/forget'>Quên mật khẩu?</Link>
+            <Space className="form-login__button-group">
+                <Form.Item className="form-login__button-group__button">
+                    <Button type="primary" htmlType="submit">
+                        Đăng nhập
+                    </Button>
+                </Form.Item>
+                
+                <Link className="form-login__button-group__link" to='/forget'>Quên mật khẩu?</Link>
+            </Space>
 
         </Form>
     );

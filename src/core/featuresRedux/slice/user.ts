@@ -20,14 +20,13 @@ const reducers = {
     avatarChangeUser: (state: UserState, action: AnyAction) => {
         const img = action.payload;
         state.userData.imgUrl = img;
-        console.log(current(state));
         return state;
     }
 } as ReducerInSlice;
 
 const UserLogIn = createAsyncThunk('auth/getDatas', async (params, thunkAPI) => {
     return RequestAPI.getAccDatas()
-        .then((AccArr: unknown | any) => {
+        .then((AccArr: (unknown | any)) => {
             const i = AccArr.findIndex((r: any) => r.userID === params.userID);
             if (i !== -1) {
                 if (AccArr[i].password === params.password) return AccArr[i];
@@ -49,7 +48,7 @@ const extraReducers = (builder: ActionReducerMapBuilder<any>) => {
         state.isLoggedIn = true;
         state.userID = actions.payload.userID;
         state.userData = actions.payload; // payload lấy dữ liệu từ return của createAsyncThunk/async function
-        console.log('Login!', current(state));
+        console.log({ 'LogIn! Infor': (current(state)) });
         return state;
     })
 };

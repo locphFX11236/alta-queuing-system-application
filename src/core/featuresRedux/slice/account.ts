@@ -49,12 +49,12 @@ const reducers = {
     AccSelect1: (state: AccState, action: AnyAction) => {
         const { position } = action.payload;
         state.search.condition.position = position;
-        reducers.OnResult(state, {...action.payload});
+        return reducers.OnResult(state, {...action.payload});
     },
     AccSearch2: (state: AccState, action: AnyAction) => {
         const { keyWord } = action.payload;
         state.search.condition.keyWord = keyWord.toLowerCase();
-        reducers.OnResult(state, {...action.payload});
+        return reducers.OnResult(state, {...action.payload});
     },
     OnResult: (state: AccState, action: AnyAction) => {
         const { data, search } = state;
@@ -68,7 +68,8 @@ const reducers = {
         ));
         if (search.condition.keyWord !== '' && newResult.length === 0) message.warning('Không tìm thấy');
         else (state.search.result = newResult);
-        console.log('Result search: ', current(state).search.result); // Do có Immer nên ta dung current() mới xem đc state 
+        console.log({ 'Result search': (current(state).search.result) }); // Do có Immer nên ta dung current() mới xem đc state
+        return state;
     },
     RefreshSearch5: (state: AccState, action: AnyAction) => {
         state.search = initialState.search;
@@ -82,6 +83,7 @@ const extraReducers = (builder: ActionReducerMapBuilder<AccState>) => {
     builder.addCase(AccFetchAPI.fulfilled, (state, actions) => {
         // state.loading = false;
         state.data = actions.payload; // payload lấy dữ liệu từ return của createAsyncThunk/async function
+        return state;
     })
 };
 

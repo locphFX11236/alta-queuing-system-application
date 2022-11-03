@@ -27,7 +27,8 @@ const reducers = {
             ((search.condition.rangeTime.length !== 0) ? (moment(d.time.slice(-10)).isBetween(search.condition.rangeTime[0], search.condition.rangeTime[1], undefined, '[]')) : true)
         ));
         state.search.result = newResult;
-        console.log('Result search: ', current(state).search.result); // Do có Immer nên ta dung current() mới xem đc state 
+        console.log({ 'Result search': (current(state).search.result) }); // Do có Immer nên ta dung current() mới xem đc state
+        return state;
     },
     RefreshSearch4: (state: ReportState, action: AnyAction) => {
         state.search = initialState.search;
@@ -41,6 +42,7 @@ const extraReducers = (builder: ActionReducerMapBuilder<ReportState>) => {
     builder.addCase(ReportFetchAPI.fulfilled, (state, actions) => {
         // state.loading = false;
         state.data = actions.payload; // payload lấy dữ liệu từ return của createAsyncThunk/async function
+        return state;
     })
 };
 
