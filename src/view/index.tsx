@@ -16,7 +16,7 @@ function IndexView () {
         FetchAll(dispatch);
         if (userState.isLoggedIn) navigate( '/equip' );
         else navigate( '/login' );
-    }, [userState]) // eslint-disable-line react-hooks/exhaustive-deps
+    }, [ userState.isLoggedIn ]) // eslint-disable-line react-hooks/exhaustive-deps
     // Đoạn comment cuối Hook này để bỏ qua (ignore) 'eslint's warning'
 
     return <MainRouter IsLogin={userState.isLoggedIn} />;

@@ -6,6 +6,7 @@ import { AccountType, Datas } from './data';
 
 export interface UserState {
     userID: string,
+    checkEmail: boolean,
     isLoggedIn: boolean,
     userData: AccountType,
 };

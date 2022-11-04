@@ -6,7 +6,7 @@ import { UploadChangeParam, UploadFile } from 'antd/lib/upload';
 import { checkFile, getBase64Encoder } from './items';
 import { SelectUserState } from '../../../core/featuresRedux/hookRedux';
 import { AppDispatch } from '../../../core/typescript/reduxState';
-import { avatarChangeUser } from '../../../core/featuresRedux/slice/user';
+import { avatarChange } from '../../../core/featuresRedux/slice/user';
 import { UpdAccAvatar } from '../../../core/featuresRedux/slice/account';
 import { getUrlItem } from '../../../core/data/api';
 
@@ -18,7 +18,7 @@ const UploadImg = (): JSX.Element => {
         getBase64Encoder(
             info.file.originFileObj, // File img đang upload
             (imageUrl: any) => {
-                dispatch(avatarChangeUser(imageUrl));
+                dispatch(avatarChange(imageUrl));
                 dispatch(UpdAccAvatar({user: userState, imgSrc: imageUrl}));
             } // Calback thay đổi avatar
         )

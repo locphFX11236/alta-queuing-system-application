@@ -24,17 +24,18 @@ const Manage = (): JSX.Element => {
     const options: SelectProps['options'] = [];
     const Cancel = () => navigate('/setting/account');
     const onFinish = (values: AccountDataType) => {
-        if (values.password === values.passwordConfirm) {
+        const { passwordConfirm, ...rest } = values;
+        if (rest.password === passwordConfirm) {
             const newAccArr = [ ...accState ]
             if (statusUrl !== 'upd') {
-                values.key = accState.length + 1;
-                newAccArr.push(values)
-                dispatch( AddAcc(values) );
+                rest.key = accState.length + 1;
+                newAccArr.push(rest)
+                dispatch( AddAcc(rest) );
                 dispatch( CountUpd(newAccArr));
             } else {
                 const index = accState.findIndex((d: any) => d.key === updRecord.key);
-                newAccArr.splice(index, 1, values)
-                dispatch( UpdAcc({ ...updRecord, ...values }) );
+                newAccArr.splice(index, 1, rest)
+                dispatch( UpdAcc({ ...updRecord, ...rest }) );
                 dispatch( CountUpd(newAccArr));
             }
             navigate('/setting/account');

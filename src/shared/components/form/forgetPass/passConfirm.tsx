@@ -1,17 +1,23 @@
-import { Button, Form, Input } from "antd";
+import { Button, Form, Input, message } from "antd";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+
+import { changePassword } from "../../../../core/featuresRedux/slice/user";
+import { AppDispatch } from "../../../../core/typescript/reduxState";
 
 const PassConfirm = (): JSX.Element => {
     const navigate = useNavigate();
-
+    const dispatch: AppDispatch = useDispatch();
+    const onFinishFailed = (errorInfo: any) => console.log('Failed:', errorInfo);
     const onFinish = (values: any) => {
-        console.log('Sucess:', values)
-        navigate('/login')
+        const { password, passwordConfirm } = values;
+        if (password !== passwordConfirm) return message.warning('Password confirm không phù hợp với password!');
+        else {
+            dispatch(changePassword(password));
+            navigate('/login');
+        }
     }
 
-    const onFinishFailed = (errorInfo: any) => {
-        console.log('Failed:', errorInfo);
-    };
 
     return(
         <Form

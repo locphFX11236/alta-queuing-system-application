@@ -3,18 +3,14 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import './style.css';
-import { UserLogIn } from "../../../../core/featuresRedux/slice/user";
+import { initValues } from "./item";
+import { UserHandle } from "../../../../core/featuresRedux/slice/user";
 import type { AppDispatch } from "../../../../core/typescript/reduxState";
-
-const initValues = {
-    userID: 'lequynhaivan01',
-    password: '123456'
-};
 
 const FormLogin = (): JSX.Element => {
     const dispatch: AppDispatch = useDispatch();
     const onFinishFailed = (errorInfo: any) => console.log('Failed:', errorInfo);
-    const onFinish = (values: any) => dispatch( UserLogIn(values) ); // Login
+    const onFinish = (values: any) => dispatch( UserHandle({ ...values, status: 'login'}) ); // Login
 
     return (
         <Form

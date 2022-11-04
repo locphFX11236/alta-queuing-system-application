@@ -1,18 +1,22 @@
-@import './dashboard/dashboard.css';
-@import './loginPage/login.css';
-@import './inforMember/inforMember.css';
-@import './equipManage/equipManage.css';
-@import './serviceManage/serviceManage.css';
-@import './numCouManage/numCouManage.css';
-@import './reportPage/report.css';
-@import './roleManage/roleManage.css';
-@import './accountManage/accountManage.css';
-@import './userLog/userLog.css';
+@import '../dashboard/dashboard.css';
+@import '../loginPage/login.css';
+@import '../inforMember/inforMember.css';
+@import '../equipManage/equipManage.css';
+@import '../serviceManage/serviceManage.css';
+@import '../numCouManage/numCouManage.css';
+@import '../reportPage/report.css';
+@import '../roleManage/roleManage.css';
+@import '../accountManage/accountManage.css';
+@import '../userLog/userLog.css';
 
 .ant-typography {
     position: absolute;
     font-family: 'Nunito';
     font-style: normal;
+}
+
+.ant-form-vertical .ant-form-item-label {
+    padding: 0 0 4px;
 }
 
 .title-lv-1 {

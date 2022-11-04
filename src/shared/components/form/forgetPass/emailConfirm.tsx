@@ -1,22 +1,17 @@
 import { Button, Form, Input } from "antd";
-
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-const EmailConfirm = ({onOk}: any): JSX.Element => {
+import { UserHandle } from "../../../../core/featuresRedux/slice/user";
+import { AppDispatch } from "../../../../core/typescript/reduxState";
+import { Acc } from "./item";
+
+const EmailConfirm = (): JSX.Element => {
     const navigate = useNavigate();
-
-    const onFinish = (values: any) => {
-        console.log('Sucess:', values)
-        onOk(true);
-    }
-
-    const onFinishFailed = (errorInfo: any) => {
-        console.log('Failed:', errorInfo);
-    };
-
-    const Cancel = () => {
-        navigate('/login');
-    };
+    const dispatch: AppDispatch = useDispatch();
+    const Cancel = () => navigate('/login');
+    const onFinishFailed = (errorInfo: any) => console.log('Failed:', errorInfo);
+    const onFinish = (values: any) => dispatch(UserHandle({...values, status: 'emailConfirm'}));
 
     return(
         <Form
@@ -26,6 +21,7 @@ const EmailConfirm = ({onOk}: any): JSX.Element => {
             size='large'
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
+            initialValues={{email: Acc.email}}
         >
             <h3>Đặt lại mật khẩu</h3>
 

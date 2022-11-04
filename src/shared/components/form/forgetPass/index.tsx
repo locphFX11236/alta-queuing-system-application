@@ -1,13 +1,13 @@
 import './forget.css';
 import EmailConfirm from './emailConfirm';
-import { useState } from 'react';
 import PassConfirm from './passConfirm';
+import { SelectUserState } from '../../../../core/featuresRedux/hookRedux';
 
 const FormForget = (): JSX.Element => {
-    const [isPassConfirm, setIsPassConfirm] = useState<boolean>(false);
+    const checkEmail = SelectUserState().checkEmail;
 
-    if (isPassConfirm) return <PassConfirm />;
-    else return <EmailConfirm onOk={setIsPassConfirm}/>;
+    if (checkEmail) return <PassConfirm />;
+    else return <EmailConfirm />;
 };
 
 export default FormForget;

@@ -2,11 +2,6 @@
   position: static;
 }
 .form-login .form-login__id-input {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 4px;
   position: absolute;
   width: 400px;
   height: 75px;
@@ -14,6 +9,10 @@
   top: 293px;
 }
 .form-login .form-login__id-input div div label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  gap: 4px;
   width: 133px;
   height: 27px;
   font-family: "Nunito";
@@ -43,12 +42,6 @@
   flex-grow: 0;
 }
 .form-login .form-login__pass-input {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 4px;
   position: absolute;
   width: 400px;
   height: 75px;
@@ -56,6 +49,10 @@
   top: 384px;
 }
 .form-login .form-login__pass-input div div label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  gap: 4px;
   width: 88px;
   height: 27px;
   font-family: "Nunito";
