@@ -1,9 +1,8 @@
-import { ActionReducerMapBuilder, AsyncThunk, createAsyncThunk, createSlice, current, Reducer } from '@reduxjs/toolkit';
+import { AsyncThunk, createAsyncThunk, createSlice, current, Reducer } from '@reduxjs/toolkit';
 import { message } from 'antd';
 
-import { RequestAPI } from '../../data/api';
-
 import type { ReducerInSlice, UserState, Slice, AnyAction } from '../../typescript/reduxState';
+import { UpdAcc } from './account';
 
 const initialState = {
     userID: '',
@@ -14,78 +13,67 @@ const initialState = {
 
 const reducers = {
     login: (state: UserState, action: AnyAction) => {
-        state.userID = action.payload;
+        state.userID = action.payload.userID;
+        state.userData = action.payload;
         state.isLoggedIn = true;
-        console.log({ 'LogIn! Infor': (current(state)) });
+        console.log('Login, Infor: ', current(state));
         return state; // Đối với phiên bản có thể chỉnh sửa trực tiếp state, nên không cần return state
     },
-    logout: (state: UserState) => {
-        console.log('Logout!');
-        state = initialState;
-        return state;
-    },
     emailConfirm: (state: UserState, action: AnyAction) => {
-        state.userID = action.payload;
+        state.userID = action.payload.userID;
         state.checkEmail = true;
-        return state;
-    },
-    changePassword: (state: UserState, action: AnyAction) => {
-        state.checkEmail = false;
-        state.userData.password = action.payload; // Cập nhật state trong redux
-        RequestAPI.patchAcc(state.userData, (state.userData.key - 1)); // Patch data lên backend
         return state;
     },
     avatarChange: (state: UserState, action: AnyAction) => {
         const img = action.payload;
         state.userData.imgUrl = img;
         return state;
-    }
+    },
+    logout: (state: UserState) => {
+        state = initialState;
+        console.log('Refersh User!');
+        return state;
+    },
 } as ReducerInSlice;
 
 const UserHandle = createAsyncThunk('auth/getDatas', async (params, thunkAPI) => {
-    const AccArr: (unknown | any) = await RequestAPI.getAccDatas()
+    const store: any = await thunkAPI.getState();
+    const AccArr: any[] = store.AccState.data;
     const { status, ...rest } = params;
     if (status === 'login') {
         const { userID, password } = rest;
         const i = AccArr.findIndex((r: any) => r.userID === userID);
         if (i !== -1) {
-            if (AccArr[i].password === password) {
-                thunkAPI.dispatch(login(userID))
-                return AccArr[i];
-            }
-            else throw message.error('Not match this pass');
+            if (password === AccArr[i].password) {
+                return thunkAPI.dispatch(login(AccArr[i]));
+            } else throw message.error('Not match this pass');
         } else throw message.error('Not match this ID');
-    } else {
+    } else if (status === 'emailConfirm') {
         const { email } = rest;
         const i = AccArr.findIndex((r: any) => r.email === email);
         if (i !== -1) {
-            thunkAPI.dispatch(emailConfirm(AccArr[i].userID))
-            return AccArr[i];
+            return thunkAPI.dispatch(emailConfirm(AccArr[i]))
         } else throw message.error('Email không phù hợp, vui lòng thử lại!');
+    } else {
+        const { password, passwordConfirm, userID } = rest;
+        const i = AccArr.findIndex((r: any) => r.userID === userID);
+        if (password === passwordConfirm) {
+            thunkAPI.dispatch(UpdAcc({ ...AccArr[i], password }));
+            return thunkAPI.dispatch(logout());
+        } else throw message.warning('Password confirm không phù hợp với password!');
     }
 }) as AsyncThunk<any, any, {}>;
-
-const extraReducers = (builder: ActionReducerMapBuilder<any>) => {
-    // builder.addCase(FetchGetDatas.pending, (state: AccState) => state.loading = true),
-    // builder.addCase(FetchGetDatas.rejected, (state: AccState, actions: AnyAction) => { state.loading = false; state.error = action.error;}),
-    builder.addCase(UserHandle.fulfilled, (state, action) => {
-        // state.loading = false;
-        state.userData = action.payload; // payload lấy dữ liệu từ return của createAsyncThunk/async function
-        return state;
-    })
-};
 
 const UserSlice = createSlice({
     name: 'User',
     initialState,
     reducers,
-    extraReducers
 }) as Slice;
 
 const UserReducer: Reducer<UserState> = UserSlice.reducer;
 
 export default UserReducer;
 
-export const { login, logout, emailConfirm, changePassword, avatarChange } = UserSlice.actions as AnyAction;
+export const { login, logout, emailConfirm, avatarChange } = UserSlice.actions as AnyAction;
 
 export { UserHandle };

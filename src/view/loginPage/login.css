@@ -9,10 +9,9 @@
 }
 
 .left-login {
-    position: absolute;
+    position: static;
     width: 592px !important;
     height: 100%;
-    border-radius: 16px 0 0 16px;
 }
 
 .logo-login {

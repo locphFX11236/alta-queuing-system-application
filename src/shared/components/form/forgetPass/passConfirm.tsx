@@ -1,21 +1,23 @@
-import { Button, Form, Input, message } from "antd";
+import { Button, Form, Input, Typography } from "antd";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { SelectUserState } from "../../../../core/featuresRedux/hookRedux";
 
-import { changePassword } from "../../../../core/featuresRedux/slice/user";
+import { UserHandle } from "../../../../core/featuresRedux/slice/user";
 import { AppDispatch } from "../../../../core/typescript/reduxState";
 
 const PassConfirm = (): JSX.Element => {
     const navigate = useNavigate();
     const dispatch: AppDispatch = useDispatch();
+    const user = SelectUserState();
     const onFinishFailed = (errorInfo: any) => console.log('Failed:', errorInfo);
     const onFinish = (values: any) => {
-        const { password, passwordConfirm } = values;
-        if (password !== passwordConfirm) return message.warning('Password confirm không phù hợp với password!');
-        else {
-            dispatch(changePassword(password));
-            navigate('/login');
-        }
+        dispatch(UserHandle({
+            status: 'changePassword',
+            ...values ,
+            userID: user.userID
+        }));
+        navigate('/login');
     }
 
 
@@ -25,30 +27,39 @@ const PassConfirm = (): JSX.Element => {
             name="login"
             layout='vertical'
             size='large'
+            requiredMark={false}
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
         >
-            <h3>Đặt lại mật khẩu mới</h3>
+            <Typography.Title className="pass-forget__h">
+                Đặt lại mật khẩu mới
+            </Typography.Title>
 
             <Form.Item
+                className="pass-forget__pass"
                 label="Mật khẩu"
                 name="password"
+                required={true}
+            >
+                <Input.Password />
+            </Form.Item>
+
+            <Form.Item
+                className="pass-forget__confi"
+                label="Nhập lại mật khẩu"
+                name="passwordConfirm"
                 rules={[{ required: true, message: 'Please input your password!' }]}
             >
                 <Input.Password />
             </Form.Item>
 
-            <Form.Item
-                label="Nhập lại mật khẩu"
-                name="passwordConfirm"
-                rules={[{ required: true, message: 'Please input confirm password!' }]}
+            <Button
+                className="pass-forget__button"
+                type="primary"
+                htmlType="submit"
             >
-                <Input.Password />
-            </Form.Item>
-
-            <Form.Item>
-                <Button type="primary" htmlType="submit">Xác nhận</Button>
-            </Form.Item>
+                Xác nhận
+            </Button>
         </Form>
     );
 };

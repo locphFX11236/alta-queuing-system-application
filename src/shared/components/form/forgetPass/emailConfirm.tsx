@@ -1,4 +1,4 @@
-import { Button, Form, Input } from "antd";
+import { Button, Form, Input, Typography } from "antd";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -23,9 +23,12 @@ const EmailConfirm = (): JSX.Element => {
             onFinishFailed={onFinishFailed}
             initialValues={{email: Acc.email}}
         >
-            <h3>Đặt lại mật khẩu</h3>
+            <Typography.Title className="email-forget__h">
+                Đặt lại mật khẩu
+            </Typography.Title>
 
             <Form.Item
+                className="email-forget__form"
                 label="Vui lòng nhập email để đặt lại mật khẩu của bạn"
                 name="email"
                 rules={[{ required: true, message: 'Please input your email!' }]}
@@ -33,9 +36,21 @@ const EmailConfirm = (): JSX.Element => {
                 <Input />
             </Form.Item>
 
-            <Form.Item>
-                <Button type="primary" onClick={Cancel}>Hủy</Button>
-                <Button type="primary" htmlType="submit">Tiếp tục</Button>
+            <Form.Item className="email-forget__button-group">
+                <Button
+                    className="email-forget__button-group__cancel"
+                    type="primary"
+                    onClick={Cancel}
+                >
+                    Hủy
+                </Button>
+                <Button
+                    className="email-forget__button-group__submit"
+                    type="primary"
+                    htmlType="submit"
+                >
+                    Tiếp tục
+                </Button>
             </Form.Item>
         </Form>
     );
