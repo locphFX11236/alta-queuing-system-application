@@ -1,0 +1,55 @@
+.range-picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px;
+  width: 100%;
+  height: 44px;
+}
+.range-picker .ant-input-affix-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  width: 150px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1.5px solid #D4D4D7;
+  border-radius: 8px;
+}
+.range-picker .ant-input-affix-wrapper .ant-input-prefix {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+}
+.range-picker .ant-input-affix-wrapper .ant-input-prefix .anticon {
+  width: 20px;
+  height: 20px;
+}
+.range-picker .ant-input-affix-wrapper .ant-input-prefix .anticon svg {
+  width: 20px;
+  height: 20px;
+}
+.range-picker .ant-input-affix-wrapper input {
+  width: 86px;
+  height: 24px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #A9A9B0;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.range-picker .anticon {
+  width: 12px;
+  height: 10px;
+}
+.range-picker .anticon svg {
+  height: 10px;
+}/*# sourceMappingURL=style.css.map */

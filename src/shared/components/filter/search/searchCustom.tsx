@@ -11,6 +11,7 @@ const SearchCustom = ({functions}: SearchCustomProps): JSX.Element => {
 
     return (
         <Input
+            className='custom-search-input'
             allowClear
             placeholder="Nhập từ khóa"
             style={{ width: '100%' }}

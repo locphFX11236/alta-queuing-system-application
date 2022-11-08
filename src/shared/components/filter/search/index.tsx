@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './style.css';
 import SearchCustom from './searchCustom';
 import { FuncA2, FuncE3, FuncL2, FuncNc5, FuncR, FuncS3, FuncSI3 } from './functions';
 

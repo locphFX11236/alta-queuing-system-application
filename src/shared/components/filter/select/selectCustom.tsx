@@ -12,6 +12,7 @@ const SelectCustom = ({optionItems, functions}: SelectCustomProps): JSX.Element 
 
     return (
         <Select
+            className='custom-select-input'
             defaultValue='all'
             suffixIcon={<CaretDownOutlined style={{ color: '#FF7506' }}/>}
             style={{ width: '100%' }}

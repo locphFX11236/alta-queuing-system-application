@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './style.css'
 import RangePickerCustom from './rangePickerCustom';
 import { FuncNumCou, FuncReport, FuncSerInfo, FuncSerList, FuncUserLog } from './functions';
 

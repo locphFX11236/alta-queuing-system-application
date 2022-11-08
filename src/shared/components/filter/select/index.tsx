@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './style.css';
 import SelectCustom from './selectCustom';
 import { FuncA1, FuncE1, FuncE2, FuncNc1, FuncNc2, FuncNc3, FuncS1, FuncSI1 } from './functions';
 import { OptionItemsA1, OptionItemsE1E2S1, OptionItemsNc1, OptionItemsNc2, OptionItemsNc3, OptionItemsSI1 } from './optionItems';

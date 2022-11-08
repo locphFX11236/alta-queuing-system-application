@@ -1,0 +1,25 @@
+.custom-search-input {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px 10px 12px;
+  gap: 10px;
+  width: 100%;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1.5px solid #D4D4D7;
+  border-radius: 8px;
+}
+.custom-search-input span {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+.custom-search-input span span {
+  margin: 0 0;
+}
+.custom-search-input span span span {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

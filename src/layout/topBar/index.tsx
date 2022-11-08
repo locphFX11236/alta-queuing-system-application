@@ -17,7 +17,7 @@ const TopBar = (): JSX.Element => {
                 to='/infor'
                 replace={true}
             >
-                <Avatar className="avatar-bar" src={userState.imgUrl} />;
+                <Avatar className="avatar-bar" src={userState.imgUrl} />
                 <div className="acc-bar">
                     <p className="text">Xin Chào</p>
                     <Typography.Title className="name-bar" level={5}>{userState.name}</Typography.Title>

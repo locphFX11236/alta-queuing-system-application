@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import moment from 'moment';
 
-import './rangePicker.css';
 import { RangeCalen } from '../../../assets/icon';
 import { CalendarRange } from '../../calendar';
 import { TimeCustomProps, ValueType } from './type';
