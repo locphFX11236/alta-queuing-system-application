@@ -26,8 +26,14 @@
                     flex: none;
                     order: 0;
                     flex-grow: 0;
-                }
-            }
+
+                    &::before {
+                        position: relative;
+                        bottom: 15%;
+                        color: #37474F !important;
+                    };
+                };
+            };
     
             div {
                 div {
@@ -47,6 +53,12 @@
                             flex: none;
                             order: 1;
                             flex-grow: 0;
+                            font-family: 'Nunito';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 27px;
+                            color: #535261;
                         }
                     }
                 }
@@ -79,8 +91,14 @@
                     flex: none;
                     order: 0;
                     flex-grow: 0;
-                }
-            }
+
+                    &::before {
+                        position: relative;
+                        bottom: 15%;
+                        color: #37474F !important;
+                    };
+                };
+            };
     
             div {
                 div {
@@ -106,6 +124,10 @@
                                 flex: none;
                                 order: 1;
                                 flex-grow: 0;
+                                font-family: 'Nunito';
+                                font-size: 18px;
+                                color: #535261;
+                                letter-spacing: 4px;
                             }
                             
                             span {

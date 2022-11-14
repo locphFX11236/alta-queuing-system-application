@@ -21,7 +21,7 @@ const UploadImg = (): JSX.Element => {
                 dispatch(avatarChange(imageUrl));
                 dispatch(UpdAccAvatar({user: userState, imgSrc: imageUrl}));
             } // Calback thay đổi avatar
-        )
+        );
   };
 
     return (

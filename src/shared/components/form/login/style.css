@@ -25,6 +25,11 @@
   order: 0;
   flex-grow: 0;
 }
+.form-login .form-login__id-input div div label::before {
+  position: relative;
+  bottom: 15%;
+  color: #37474F !important;
+}
 .form-login .form-login__id-input div div div div input {
   box-sizing: border-box;
   display: flex;
@@ -40,6 +45,12 @@
   flex: none;
   order: 1;
   flex-grow: 0;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #535261;
 }
 .form-login .form-login__pass-input {
   position: absolute;
@@ -65,6 +76,11 @@
   order: 0;
   flex-grow: 0;
 }
+.form-login .form-login__pass-input div div label::before {
+  position: relative;
+  bottom: 15%;
+  color: #37474F !important;
+}
 .form-login .form-login__pass-input div div div div span {
   padding: 0;
   border: none;
@@ -86,6 +102,10 @@
   flex: none;
   order: 1;
   flex-grow: 0;
+  font-family: "Nunito";
+  font-size: 18px;
+  color: #535261;
+  letter-spacing: 4px;
 }
 .form-login .form-login__pass-input div div div div span span {
   margin: 0;
