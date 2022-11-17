@@ -36,9 +36,9 @@
     width: 147px;
     color: #FFFFFF;
     background: #FF9138;
+    border: 1.5px solid #FF9138;
 }
 
-.manage-equip .main-box .form-box,
 .infor-equip .infor-box {
     position: absolute;
     top: 58px;

@@ -1,4 +1,5 @@
 import './equip.css';
+import './style.css';
 import Information from './information';
 import Manage from './manage';
 

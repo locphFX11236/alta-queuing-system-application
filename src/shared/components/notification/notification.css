@@ -6,13 +6,13 @@
     height: 32px;
     padding: 6px;
     border-radius: 32px;
-    background: #FFAC6A;
+    background: #FFF2E7;
 }
 
 .noti svg {
     width: 20px;
     height: 20px;
-    color: #FFF2E7;
+    color: #FFAC6A;
 }
 
 .noti:hover, .noti:active,

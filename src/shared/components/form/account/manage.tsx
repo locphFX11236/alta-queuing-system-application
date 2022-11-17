@@ -101,7 +101,8 @@ const Manage = (): JSX.Element => {
                             />
                         </Form.Item>
 
-                        <p><span style={{ color: 'red' }}>*</span> Là trường thông tin bắt buộc</p>
+                        <p className="note">Là trường thông tin bắt buộc</p>
+
                     </Col>
                     <Col span={12} >
                         <Form.Item

@@ -58,7 +58,7 @@ const Manage = (): JSX.Element => {
                             <TextArea rows={7} placeholder="Nhập mô tả" />
                         </Form.Item>
 
-                        <p><span style={{ color: 'red' }}>*</span> Là trường thông tin bắt buộc</p>
+                        <p className="note">Là trường thông tin bắt buộc</p>
 
                     </Col>
                     <Col span={12} >

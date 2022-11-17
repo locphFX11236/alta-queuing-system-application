@@ -1,0 +1,176 @@
+@mixin Text--font-weight ($fontWeight)
+    font-family: 'Nunito'
+    font-style: normal
+    font-weight: $fontWeight
+    font-size: 16px
+    line-height: 24px
+
+@mixin Label
+    label
+        display: flex
+        flex-direction: row-reverse
+        justify-content: left
+        gap: 4px
+        height: 24px
+        @include Text--font-weight (600)
+        color: #282739
+
+@mixin Input--width ($width)
+    input
+        box-sizing: border-box
+        padding: 10px 270px 10px 12px
+        height: 44px
+        width: $width
+        background: #FFFFFF    
+        border: 1.5px solid #D4D4D7
+        border-radius: 8px
+        @include Text--font-weight (400)
+
+@mixin Select--width ($width)
+    .ant-select-in-form-item
+        width: $width
+        height: 44px
+        
+        .ant-select-selector
+            height: 100%
+            padding: 10px 12px
+            border: none
+            border-radius: 8px
+            
+            .ant-select-selection-search
+                width: 100%
+                left: 0
+
+                input
+                    @include Input--width (100%)
+                    opacity: 1 !important
+
+            .ant-select-selection-item 
+                width: 100%
+                @include Text--font-weight (400)
+                &::after
+                    display: none
+
+        .ant-select-arrow
+            .anticon-caret-down
+                position: relative
+                width: 24px
+                height: 24px
+
+                svg
+                    position: absolute
+                    top: 20%
+                    left: 20%
+                    width: 16px
+                    height: 16px
+
+@mixin SelectMultiple--width ($width)
+    .ant-select-multiple
+        width: $width
+        
+        .ant-select-selector
+            box-sizing: border-box
+            min-height: 80px
+            padding: 5px 12px
+            background: #FFFFFF
+            border: 1.5px solid #FFAC6A
+            border-radius: 8px
+            
+            .ant-select-selection-overflow
+                display: flex
+                flex-direction: row
+                flex-wrap: wrap
+                align-content: flex-start
+                min-height: 80px
+                gap: 10px
+
+                .ant-select-selection-overflow-item
+                    height: 28px
+
+                    .ant-select-selection-item
+                        display: flex
+                        flex-direction: row
+                        justify-content: center
+                        align-items: center
+                        height: 100%
+                        padding: 4.5px 12px
+                        margin: 0
+                        gap: 10px
+                        background: #FFAC6A
+                        box-shadow: 0px 0px 6px #E7E9F2
+                        border: none
+                        border-radius: 9px
+
+                        .ant-select-selection-item-content
+                            height: 19px
+                            @include Text--font-weight (700)
+                            line-height: 19px
+                            color: #FFFFFF
+
+                        .ant-select-selection-item-remove
+                            .anticon-close
+                                position: relative
+                                width: 20px
+                                height: 20px
+
+                                svg
+                                    position: absolute
+                                    top: 10%
+                                    left: 15%
+                                    width: 15px
+                                    height: 15px
+                                    color: #FFFFFF
+
+                .ant-select-selection-overflow-item-suffix
+                    display: none
+
+            &::after
+                display: none
+
+@mixin FormItem__Input
+    .ant-form-item
+        margin: 0 0
+        width: 540px
+
+        .ant-form-item-row
+            gap: 4px
+
+            .ant-form-item-label
+                @include Label
+
+            .ant-form-item-control
+                .ant-form-item-control-input
+                    .ant-form-item-control-input-content
+                        @include Input--width (540px)
+
+@mixin FormItem__Select
+    .ant-form-item
+        margin: 0 0
+
+        .ant-form-item-row
+            height: 100%
+            gap: 4px
+
+            .ant-form-item-label
+                @include Label
+
+            .ant-form-item-control
+                .ant-form-item-control-input
+                    .ant-form-item-control-input-content
+                        @include Select--width (540px)
+
+@mixin FormItem__SelectMultiple
+    .ant-form-item
+        margin: 0 0
+
+        .ant-form-item-row
+            height: 100%
+            gap: 4px
+
+            .ant-form-item-label
+                @include Label
+
+            .ant-form-item-control
+                .ant-form-item-control-input
+                    .ant-form-item-control-input-content
+                        @include SelectMultiple--width (1104px)

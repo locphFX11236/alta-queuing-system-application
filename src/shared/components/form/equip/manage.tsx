@@ -34,73 +34,64 @@ const Manage = (): JSX.Element => {
             <Row className="main-box">
                 <Typography.Title className="title-lv-2">Thông tin thiết bị</Typography.Title>
 
-                <div className="form-box">
-                    <Row>
-                        <Col span={12}>
-                            <Form.Item
-                                label="Mã thiết bị:"
-                                name='code'
-                                wrapperCol={{ span: 23 }}
-                                rules={[{ required: true, message: 'Please input code!' }]}
-                            >
-                                <Input placeholder="Nhập mã thiết bị" />
-                            </Form.Item>
+                <Row className="mana-equ-form__row1">
+                    <Col className="mana-equ-form__row1__col1">
+                        <Form.Item
+                            label="Mã thiết bị:"
+                            name='code'
+                            rules={[{ required: true, message: 'Please input code!' }]}
+                        >
+                            <Input placeholder="Nhập mã thiết bị" />
+                        </Form.Item>
 
-                            <Form.Item
-                                label="Tên thiết bị:"
-                                name='name'
-                                wrapperCol={{ span: 23 }}
-                                rules={[{ required: true, message: 'Please input name!' }]}
-                            >
-                                <Input placeholder="Nhập tên thiết bị" />
-                            </Form.Item>
+                        <Form.Item
+                            label="Tên thiết bị:"
+                            name='name'
+                            rules={[{ required: true, message: 'Please input name!' }]}
+                        >
+                            <Input placeholder="Nhập tên thiết bị" />
+                        </Form.Item>
 
-                            <Form.Item
-                                label="Địa chỉ IP:"
-                                name='IPAddress'
-                                wrapperCol={{ span: 23 }}
-                                rules={[{ required: true, message: 'Please input IP address!' }]}
-                            >
-                                <Input placeholder="Nhập địa chỉ IP" />
-                            </Form.Item>
-                        </Col>
+                        <Form.Item
+                            label="Địa chỉ IP:"
+                            name='IPAddress'
+                            rules={[{ required: true, message: 'Please input IP address!' }]}
+                        >
+                            <Input placeholder="Nhập địa chỉ IP" />
+                        </Form.Item>
+                    </Col>
 
-                        <Col span={12}>
-                            <Form.Item
-                                label="Loại thiết bị:"
-                                name='type'
-                                labelCol={{ span: 23, offset: 1 }}
-                                wrapperCol={{ span: 23, offset: 1 }}
-                                rules={[{ required: true, message: 'Please select type!' }]}
-                            >
-                                <Select placeholder="Nhập loại thiết bị" suffixIcon={<CaretDownOutlined style={{ color: '#FF7506' }}/>} >
-                                    <Option value="kiosk">Kiosk</Option>
-                                    <Option value="counter">Display counter</Option>
-                                </Select>
-                            </Form.Item>
+                    <Col className="mana-equ-form__row1__col2">
+                        <Form.Item
+                            label="Loại thiết bị:"
+                            name='type'
+                            rules={[{ required: true, message: 'Please select type!' }]}
+                        >
+                            <Select placeholder="Nhập loại thiết bị" showAction={['click']} suffixIcon={<CaretDownOutlined style={{ color: '#FF7506' }}/>} >
+                                <Option value="kiosk">Kiosk</Option>
+                                <Option value="counter">Display counter</Option>
+                            </Select>
+                        </Form.Item>
 
-                            <Form.Item
-                                label="Tên đăng nhập:"
-                                name='userId'
-                                labelCol={{ span: 23, offset: 1 }}
-                                wrapperCol={{ span: 23, offset: 1 }}
-                                rules={[{ required: true, message: 'Please input userId!' }]}
-                            >
-                                <Input placeholder="Nhập tên đăng nhập" />
-                            </Form.Item>
+                        <Form.Item
+                            label="Tên đăng nhập:"
+                            name='userId'
+                            rules={[{ required: true, message: 'Please input userId!' }]}
+                        >
+                            <Input placeholder="Nhập tên đăng nhập" />
+                        </Form.Item>
 
-                            <Form.Item
-                                label="Mật khẩu:"
-                                name='password'
-                                labelCol={{ span: 23, offset: 1 }}
-                                wrapperCol={{ span: 23, offset: 1 }}
-                                rules={[{ required: true, message: 'Please input password!' }]}
-                            >
-                                <Input placeholder="Nhập mật khẩu" />
-                            </Form.Item>
-                        </Col>
-                    </Row>
+                        <Form.Item
+                            label="Mật khẩu:"
+                            name='password'
+                            rules={[{ required: true, message: 'Please input password!' }]}
+                        >
+                            <Input placeholder="Nhập mật khẩu" />
+                        </Form.Item>
+                    </Col>
+                </Row>
 
+                <Row className="mana-equ-form__row2">
                     <Form.Item
                         label="Dịch vụ sử dụng:"
                         name='usedService'
@@ -110,6 +101,7 @@ const Manage = (): JSX.Element => {
                             mode="multiple"
                             placeholder="Nhập dịch vụ sử dụng"
                         >
+                            <Option key="all" value="all">Tất cả</Option>
                             <Option key="rhm" value="rhm">Khám răng hàm mặt</Option>
                             <Option key="m" value="m">Khám mắt</Option>
                             <Option key="tmh" value="tmh">Khám tai mũi họng</Option>
@@ -119,10 +111,10 @@ const Manage = (): JSX.Element => {
                             <Option key="tq" value="tq">Khám tổng quát</Option>
                         </Select>
                     </Form.Item>
+                </Row>
 
-                    <p><span style={{ color: 'red' }}>*</span> Là trường thông tin bắt buộc</p>
-                </div>
-            </Row>
+                <p className="note">Là trường thông tin bắt buộc</p>
+            </Row>  
             <Row className="button-group">
                 <Button className="button button-1" type="primary" onClick={Cancel}>Hủy bỏ</Button>
                 <Button className="button button-2" type="primary" htmlType="submit">{status[statusUrl]}</Button>
