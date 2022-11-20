@@ -38,11 +38,3 @@
     background: #FF9138;
     border: 1.5px solid #FF9138;
 }
-
-.infor-equip .infor-box {
-    position: absolute;
-    top: 58px;
-    left: 24px;
-    right: 24px;
-    background-color: antiquewhite; /* x */
-} /* x */

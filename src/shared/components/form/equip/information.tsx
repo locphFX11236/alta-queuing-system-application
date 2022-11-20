@@ -16,76 +16,62 @@ const Information = (): JSX.Element => {
             <Row className="main-box">
                 <Typography.Title className="title-lv-2">Thông tin thiết bị</Typography.Title>
 
-                <div className="infor-box">
-                    <Row>
-                        <Col span={12}>
-                            <Form.Item
-                                label="Mã thiết bị"
-                                name='code'
-                                labelAlign='left'
-                                labelCol={{ span: 12 }}
-                                wrapperCol={{ span: 12 }}
-                            >
-                                <span>{inforRecord.code}</span>
-                            </Form.Item>
+                <Row className="infor-equ-form__row1">
+                    <Col className="infor-equ-form__row1__col1" span={12}>
+                        <Form.Item
+                            label="Mã thiết bị"
+                            name='code'
+                            labelAlign='left'
+                        >
+                            <span>{inforRecord.code}</span>
+                        </Form.Item>
 
-                            <Form.Item
-                                label="Tên thiết bị"
-                                name='name'
-                                labelAlign='left'
-                                labelCol={{ span: 12 }}
-                                wrapperCol={{ span: 12 }}
-                            >
-                                <span>{inforRecord.name}</span>
-                            </Form.Item>
+                        <Form.Item
+                            label="Tên thiết bị"
+                            name='name'
+                            labelAlign='left'
+                        >
+                            <span>{inforRecord.name}</span>
+                        </Form.Item>
 
-                            <Form.Item
-                                label="Địa chỉ IP"
-                                name='IPAddress'
-                                labelAlign='left'
-                                labelCol={{ span: 12 }}
-                                wrapperCol={{ span: 12 }}
-                            >
-                                <span>{inforRecord.IPAddress}</span>
-                            </Form.Item>
-                        </Col>
+                        <Form.Item
+                            label="Địa chỉ IP"
+                            name='IPAddress'
+                            labelAlign='left'
+                        >
+                            <span>{inforRecord.IPAddress}</span>
+                        </Form.Item>
+                    </Col>
 
-                        <Col span={12}>
-                            <Form.Item
-                                label="Loại thiết bị"
-                                name='type'
-                                labelAlign='left'
-                                labelCol={{ span: 12 }}
-                                wrapperCol={{ span: 12 }}
-                            >
-                                <span>{ RenderValue[inforRecord.type] }</span>
-                            </Form.Item>
+                    <Col className="infor-equ-form__row1__col2" span={12}>
+                        <Form.Item
+                            label="Loại thiết bị"
+                            name='type'
+                            labelAlign='left'
+                        >
+                            <span>{ RenderValue[inforRecord.type] }</span>
+                        </Form.Item>
 
-                            <Form.Item
-                                label="Tên đăng nhập"
-                                name='userId'
-                                labelAlign='left'
-                                labelCol={{ span: 12 }}
-                                wrapperCol={{ span: 12 }}
-                            >
-                                <span>{inforRecord.userId}</span>
-                            </Form.Item>
+                        <Form.Item
+                            label="Tên đăng nhập"
+                            name='userId'
+                            labelAlign='left'
+                        >
+                            <span>{inforRecord.userId}</span>
+                        </Form.Item>
 
-                            <Form.Item
-                                label="Mật khẩu"
-                                name='password'
-                                labelAlign='left'
-                                labelCol={{ span: 12 }}
-                                wrapperCol={{ span: 12 }}
-                            >
-                                <span>{inforRecord.password}</span>
-                            </Form.Item>
-                        </Col>
-                    </Row>
+                        <Form.Item
+                            label="Mật khẩu"
+                            name='password'
+                            labelAlign='left'
+                        >
+                            <span>{inforRecord.password}</span>
+                        </Form.Item>
+                    </Col>
+                </Row>
 
-                    <label>Dịch vụ sử dụng:</label>
-                    <p>{inforRecord.usedService.map((a: any) => RenderValue[a]).join(', ')}.</p>
-                </div>
+                <label className="infor-equ-form__row2">Dịch vụ sử dụng:</label>
+                <p className="infor-equ-form__row3">{inforRecord.usedService.map((a: any) => RenderValue[a]).join(', ')}.</p>
             </Row>
         </Form>
     );

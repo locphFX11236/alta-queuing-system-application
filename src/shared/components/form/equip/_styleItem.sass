@@ -70,7 +70,6 @@
         
         .ant-select-selector
             box-sizing: border-box
-            min-height: 80px
             padding: 5px 12px
             background: #FFFFFF
             border: 1.5px solid #FFAC6A
@@ -81,7 +80,7 @@
                 flex-direction: row
                 flex-wrap: wrap
                 align-content: flex-start
-                min-height: 80px
+                min-height: 44px
                 gap: 10px
 
                 .ant-select-selection-overflow-item
@@ -174,3 +173,30 @@
                 .ant-form-item-control-input
                     .ant-form-item-control-input-content
                         @include SelectMultiple--width (1104px)
+
+@mixin FormItem__Infor
+    .ant-form-item
+        margin: 0 0
+
+        .ant-form-item-row
+            height: 24px
+
+            .ant-form-item-label
+                height: 100%
+                width: calc(148px - 24px)
+
+                label
+                    height: 100%
+                    @include Text--font-weight (600)
+                    color: #282739
+
+            .ant-form-item-control
+                height: 100%
+
+                .ant-form-item-control-input
+                    min-height: 100%
+
+                    .ant-form-item-control-input-content
+                        span
+                            @include Text--font-weight (400)
+                            color: #535261

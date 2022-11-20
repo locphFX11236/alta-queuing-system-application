@@ -1,4 +1,4 @@
-.main-box .mana-equ-form__row1 {
+form#mana-equ-form .main-box .mana-equ-form__row1 {
   display: flex;
   flex-direction: row;
   gap: 24px;
@@ -8,19 +8,19 @@
   right: 24px;
   height: 260px;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col1 {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col1 {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col1 .ant-form-item {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col1 .ant-form-item {
   margin: 0 0;
   width: 540px;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col1 .ant-form-item .ant-form-item-row {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col1 .ant-form-item .ant-form-item-row {
   gap: 4px;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col1 .ant-form-item .ant-form-item-row .ant-form-item-label label {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col1 .ant-form-item .ant-form-item-row .ant-form-item-label label {
   display: flex;
   flex-direction: row-reverse;
   justify-content: left;
@@ -33,7 +33,7 @@
   line-height: 24px;
   color: #282739;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col1 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content input {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col1 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content input {
   box-sizing: border-box;
   padding: 10px 270px 10px 12px;
   height: 44px;
@@ -47,19 +47,19 @@
   font-size: 16px;
   line-height: 24px;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item {
   margin: 0 0;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row {
   height: 100%;
   gap: 4px;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-label label {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-label label {
   display: flex;
   flex-direction: row-reverse;
   justify-content: left;
@@ -72,24 +72,24 @@
   line-height: 24px;
   color: #282739;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item {
   width: 540px;
   height: 44px;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector {
   height: 100%;
   padding: 10px 12px;
   border: none;
   border-radius: 8px;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector .ant-select-selection-search {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector .ant-select-selection-search {
   width: 100%;
   left: 0;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector .ant-select-selection-search input {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector .ant-select-selection-search input {
   opacity: 1 !important;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector .ant-select-selection-search input input {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector .ant-select-selection-search input input {
   box-sizing: border-box;
   padding: 10px 270px 10px 12px;
   height: 44px;
@@ -103,7 +103,7 @@
   font-size: 16px;
   line-height: 24px;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector .ant-select-selection-item {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector .ant-select-selection-item {
   width: 100%;
   font-family: "Nunito";
   font-style: normal;
@@ -111,29 +111,29 @@
   font-size: 16px;
   line-height: 24px;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector .ant-select-selection-item::after {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector .ant-select-selection-item::after {
   display: none;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-arrow .anticon-caret-down {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-arrow .anticon-caret-down {
   position: relative;
   width: 24px;
   height: 24px;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-arrow .anticon-caret-down svg {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-arrow .anticon-caret-down svg {
   position: absolute;
   top: 20%;
   left: 20%;
   width: 16px;
   height: 16px;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item {
   margin: 0 0;
   width: 540px;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row {
   gap: 4px;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-label label {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-label label {
   display: flex;
   flex-direction: row-reverse;
   justify-content: left;
@@ -146,7 +146,7 @@
   line-height: 24px;
   color: #282739;
 }
-.main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content input {
+form#mana-equ-form .main-box .mana-equ-form__row1 .mana-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content input {
   box-sizing: border-box;
   padding: 10px 270px 10px 12px;
   height: 44px;
@@ -160,21 +160,20 @@
   font-size: 16px;
   line-height: 24px;
 }
-.main-box .mana-equ-form__row2 {
+form#mana-equ-form .main-box .mana-equ-form__row2 {
   position: absolute;
   top: 342px;
   left: 24px;
   width: 1104px;
-  height: 112px;
 }
-.main-box .mana-equ-form__row2 .ant-form-item {
+form#mana-equ-form .main-box .mana-equ-form__row2 .ant-form-item {
   margin: 0 0;
 }
-.main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row {
+form#mana-equ-form .main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row {
   height: 100%;
   gap: 4px;
 }
-.main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-label label {
+form#mana-equ-form .main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-label label {
   display: flex;
   flex-direction: row-reverse;
   justify-content: left;
@@ -187,29 +186,28 @@
   line-height: 24px;
   color: #282739;
 }
-.main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple {
+form#mana-equ-form .main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple {
   width: 1104px;
 }
-.main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector {
+form#mana-equ-form .main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector {
   box-sizing: border-box;
-  min-height: 80px;
   padding: 5px 12px;
   background: #FFFFFF;
   border: 1.5px solid #FFAC6A;
   border-radius: 8px;
 }
-.main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector .ant-select-selection-overflow {
+form#mana-equ-form .main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector .ant-select-selection-overflow {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: flex-start;
-  min-height: 80px;
+  min-height: 44px;
   gap: 10px;
 }
-.main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item {
+form#mana-equ-form .main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item {
   height: 28px;
 }
-.main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item .ant-select-selection-item {
+form#mana-equ-form .main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item .ant-select-selection-item {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -223,7 +221,7 @@
   border: none;
   border-radius: 9px;
 }
-.main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item .ant-select-selection-item .ant-select-selection-item-content {
+form#mana-equ-form .main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item .ant-select-selection-item .ant-select-selection-item-content {
   height: 19px;
   font-family: "Nunito";
   font-style: normal;
@@ -233,12 +231,12 @@
   line-height: 19px;
   color: #FFFFFF;
 }
-.main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item .ant-select-selection-item .ant-select-selection-item-remove .anticon-close {
+form#mana-equ-form .main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item .ant-select-selection-item .ant-select-selection-item-remove .anticon-close {
   position: relative;
   width: 20px;
   height: 20px;
 }
-.main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item .ant-select-selection-item .ant-select-selection-item-remove .anticon-close svg {
+form#mana-equ-form .main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item .ant-select-selection-item .ant-select-selection-item-remove .anticon-close svg {
   position: absolute;
   top: 10%;
   left: 15%;
@@ -246,47 +244,159 @@
   height: 15px;
   color: #FFFFFF;
 }
-.main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item-suffix {
+form#mana-equ-form .main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item-suffix {
   display: none;
 }
-.main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector::after {
+form#mana-equ-form .main-box .mana-equ-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-multiple .ant-select-selector::after {
   display: none;
 }
-.main-box .note {
+form#mana-equ-form .main-box .note {
   position: absolute;
   top: 466px;
   left: 24px;
   width: 232px;
   height: 24px;
 }
-
-.ant-select-dropdown {
+form#mana-equ-form .ant-select-dropdown {
   padding: 8px 0px;
   background: #FFFFFF;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   max-height: 152px;
 }
-.ant-select-dropdown > div {
+form#mana-equ-form .ant-select-dropdown > div {
   width: 100%;
 }
-.ant-select-dropdown > div .ant-select-item-option {
+form#mana-equ-form .ant-select-dropdown > div .ant-select-item-option {
   background: #FFFFFF;
   padding: 10px 12px;
 }
-.ant-select-dropdown > div .ant-select-item-option .ant-select-item-option-content {
+form#mana-equ-form .ant-select-dropdown > div .ant-select-item-option .ant-select-item-option-content {
   font-family: "Nunito";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
 }
-.ant-select-dropdown > div .ant-select-item-option-selected {
+form#mana-equ-form .ant-select-dropdown > div .ant-select-item-option-selected {
   background: #FFF2E7;
 }
-.ant-select-dropdown > div .rc-virtual-list-scrollbar-thumb {
+form#mana-equ-form .ant-select-dropdown > div .rc-virtual-list-scrollbar-thumb {
   width: 4px !important;
   height: 75px !important;
   background: #FFAC6A !important;
   border-radius: 14px !important;
+}
+
+form#infor-equ-form .main-box .infor-equ-form__row1 {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 66px;
+  left: 24px;
+  right: 24px;
+  width: 100%;
+  height: 104px;
+}
+form#infor-equ-form .main-box .infor-equ-form__row1 .infor-equ-form__row1__col1 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+form#infor-equ-form .main-box .infor-equ-form__row1 .infor-equ-form__row1__col1 .ant-form-item {
+  margin: 0 0;
+}
+form#infor-equ-form .main-box .infor-equ-form__row1 .infor-equ-form__row1__col1 .ant-form-item .ant-form-item-row {
+  height: 24px;
+}
+form#infor-equ-form .main-box .infor-equ-form__row1 .infor-equ-form__row1__col1 .ant-form-item .ant-form-item-row .ant-form-item-label {
+  height: 100%;
+  width: 124px;
+}
+form#infor-equ-form .main-box .infor-equ-form__row1 .infor-equ-form__row1__col1 .ant-form-item .ant-form-item-row .ant-form-item-label label {
+  height: 100%;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282739;
+}
+form#infor-equ-form .main-box .infor-equ-form__row1 .infor-equ-form__row1__col1 .ant-form-item .ant-form-item-row .ant-form-item-control {
+  height: 100%;
+}
+form#infor-equ-form .main-box .infor-equ-form__row1 .infor-equ-form__row1__col1 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input {
+  min-height: 100%;
+}
+form#infor-equ-form .main-box .infor-equ-form__row1 .infor-equ-form__row1__col1 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content span {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #535261;
+}
+form#infor-equ-form .main-box .infor-equ-form__row1 .infor-equ-form__row1__col2 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+form#infor-equ-form .main-box .infor-equ-form__row1 .infor-equ-form__row1__col2 .ant-form-item {
+  margin: 0 0;
+}
+form#infor-equ-form .main-box .infor-equ-form__row1 .infor-equ-form__row1__col2 .ant-form-item .ant-form-item-row {
+  height: 24px;
+}
+form#infor-equ-form .main-box .infor-equ-form__row1 .infor-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-label {
+  height: 100%;
+  width: 124px;
+}
+form#infor-equ-form .main-box .infor-equ-form__row1 .infor-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-label label {
+  height: 100%;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282739;
+}
+form#infor-equ-form .main-box .infor-equ-form__row1 .infor-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control {
+  height: 100%;
+}
+form#infor-equ-form .main-box .infor-equ-form__row1 .infor-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input {
+  min-height: 100%;
+}
+form#infor-equ-form .main-box .infor-equ-form__row1 .infor-equ-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content span {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #535261;
+}
+form#infor-equ-form .main-box .infor-equ-form__row2 {
+  position: absolute;
+  top: 186px;
+  left: 24px;
+  width: 100%;
+  height: 24px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282739;
+}
+form#infor-equ-form .main-box .infor-equ-form__row3 {
+  position: absolute;
+  top: 218px;
+  left: 24px;
+  width: 100%;
+  min-height: 24px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #535261;
 }/*# sourceMappingURL=style.css.map */
