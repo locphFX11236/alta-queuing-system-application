@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   gap: 4px;
   width: 100%;
   height: 44px;
@@ -11,9 +11,10 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 8px 16px;
+  padding: 8px 0;
+  gap: 4px;
   width: 150px;
   height: 44px;
   background: #FFFFFF;
@@ -23,7 +24,7 @@
 .range-picker .ant-input-affix-wrapper .ant-input-prefix {
   width: 20px;
   height: 20px;
-  margin-right: 12px;
+  margin: 0 4px 0 8px;
 }
 .range-picker .ant-input-affix-wrapper .ant-input-prefix .anticon {
   width: 20px;
@@ -36,12 +37,12 @@
 .range-picker .ant-input-affix-wrapper input {
   width: 86px;
   height: 24px;
+  margin: 0 8px 0 4px;
   font-family: "Nunito";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #A9A9B0;
   flex: none;
   order: 0;
   flex-grow: 0;

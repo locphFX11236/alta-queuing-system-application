@@ -13,15 +13,18 @@ const Information = (): JSX.Element => {
     };
 
     return (
-        <Form colon className="main-box" >
+        <Form
+            className="main-box"
+            name='infor-serv-form'
+            colon={true}
+        >
             <Typography.Title className="title-lv-2">Thông tin dịch vụ</Typography.Title>
+
             <div className="infor-box">
                 <Form.Item
                     label="Mã dịch vụ"
                     name='code'
                     labelAlign='left'
-                    labelCol={{ span: 12 }}
-                    wrapperCol={{ span: 12 }}
                 >
                     <span>{inforRecord.code}</span>
                 </Form.Item>
@@ -29,8 +32,6 @@ const Information = (): JSX.Element => {
                 <Form.Item
                     label="Tên dịch vụ"
                     labelAlign='left'
-                    labelCol={{ span: 12 }}
-                    wrapperCol={{ span: 12 }}
                 >
                     <span>{inforRecord.name}</span>
                 </Form.Item>
@@ -38,29 +39,27 @@ const Information = (): JSX.Element => {
                     label="Mô tả"
                     name='description'
                     labelAlign='left'
-                    labelCol={{ span: 12 }}
-                    wrapperCol={{ span: 12 }}
                 >
                     <span>{inforRecord.description}</span>
                 </Form.Item>
             </div>
+
             <Typography.Title className="title-lv-2">Quy tắc cấp số</Typography.Title>
+
             <div className="infor-box">
                 <Form.Item
                     label="Tăng tự động từ"
                     hidden={isHidden('v1')}
                     labelAlign='left'
-                    labelCol={{ span: 12 }}
-                    wrapperCol={{ span: 12 }}
                 >
                     <Input
-                        style={{ width: '35%', margin: 5 }}
                         value={inforRecord.setting.values.v1.from}
                         readOnly
                     />
+
                     <span>đến</span>
+
                     <Input
-                        style={{ width: '35%', margin: 5 }}
                         value={inforRecord.setting.values.v1.to}
                         readOnly
                         
@@ -71,11 +70,8 @@ const Information = (): JSX.Element => {
                     label="Prefix"
                     hidden={isHidden('v2')}
                     labelAlign='left'
-                    labelCol={{ span: 12 }}
-                    wrapperCol={{ span: 12 }}
                 >
                     <Input
-                        style={{ width: '35%', margin: 5 }}
                         value={inforRecord.setting.values.v2}
                         readOnly
                     />
@@ -85,11 +81,8 @@ const Information = (): JSX.Element => {
                     label="Surfix"
                     hidden={isHidden('v3')}
                     labelAlign='left'
-                    labelCol={{ span: 12 }}
-                    wrapperCol={{ span: 12 }}
                 >
                     <Input
-                        style={{ width: '35%', margin: 5 }}
                         value={inforRecord.setting.values.v3}
                         readOnly
                     />
@@ -100,7 +93,6 @@ const Information = (): JSX.Element => {
                     label="Reset mỗi ngày"
                     hidden={isHidden('v4')}
                     labelAlign='left'
-                    labelCol={{ span: 12 }}
                 />
             </div>
         </Form>

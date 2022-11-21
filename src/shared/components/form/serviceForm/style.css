@@ -1,0 +1,247 @@
+form#mana-serv-form .main-box .mana-serv-form__row1 {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+  position: absolute;
+  top: 58px;
+  left: 24px;
+}
+form#mana-serv-form .main-box .mana-serv-form__row1 .mana-serv-form__row1__col1 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 553px;
+}
+form#mana-serv-form .main-box .mana-serv-form__row1 .mana-serv-form__row1__col1 .ant-form-item {
+  margin: 0 0;
+  width: 553px;
+  height: 76px;
+}
+form#mana-serv-form .main-box .mana-serv-form__row1 .mana-serv-form__row1__col1 .ant-form-item .ant-form-item-row {
+  gap: 4px;
+}
+form#mana-serv-form .main-box .mana-serv-form__row1 .mana-serv-form__row1__col1 .ant-form-item .ant-form-item-row .ant-form-item-label label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  gap: 4px;
+  height: 24px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282739;
+}
+form#mana-serv-form .main-box .mana-serv-form__row1 .mana-serv-form__row1__col1 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content input {
+  box-sizing: border-box;
+  padding: 10px 270px 10px 12px;
+  height: 44px;
+  width: 553px;
+  background: #FFFFFF;
+  border: 1.5px solid #D4D4D7;
+  border-radius: 8px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+form#mana-serv-form .main-box .mana-serv-form__row1 .mana-serv-form__row1__col2 {
+  width: 553px;
+}
+form#mana-serv-form .main-box .mana-serv-form__row1 .mana-serv-form__row1__col2 .ant-form-item {
+  margin: 0 0;
+  width: 553px;
+  height: 164px;
+}
+form#mana-serv-form .main-box .mana-serv-form__row1 .mana-serv-form__row1__col2 .ant-form-item .ant-form-item-row {
+  gap: 4px;
+}
+form#mana-serv-form .main-box .mana-serv-form__row1 .mana-serv-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-label label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  gap: 4px;
+  height: 24px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282739;
+}
+form#mana-serv-form .main-box .mana-serv-form__row1 .mana-serv-form__row1__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content textarea {
+  box-sizing: border-box;
+  padding: 10px 270px 10px 12px;
+  height: 132px;
+  width: 553px;
+  background: #FFFFFF;
+  border: 1.5px solid #D4D4D7;
+  border-radius: 8px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 {
+  position: absolute;
+  top: 222px;
+  left: 24px;
+  width: 100%;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item {
+  margin: 0 0;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-label {
+  padding: 0;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-label label {
+  width: 136px;
+  height: 30px;
+  margin: 16px 0 12px 0;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FF7506;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control {
+  width: 337px;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-checkbox-group .ant-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  width: 337px;
+  height: 44px;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-checkbox-group .ant-row .ant-col:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 4px;
+  width: 148px;
+  height: 24px;
+  line-height: 24px;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-checkbox-group .ant-row .ant-col:nth-child(1) label {
+  height: 20px;
+  margin: 0;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-checkbox-group .ant-row .ant-col:nth-child(1) label span.ant-checkbox {
+  top: 0;
+  width: 20px;
+  height: 20px;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-checkbox-group .ant-row .ant-col:nth-child(1) label span.ant-checkbox input.ant-checkbox-input {
+  width: 100%;
+  height: 100%;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-checkbox-group .ant-row .ant-col:nth-child(1) label span.ant-checkbox span.ant-checkbox-inner {
+  width: 100%;
+  height: 100%;
+  border: 1.5px solid #4277FF;
+  border-radius: 4px;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-checkbox-group .ant-row .ant-col:nth-child(1) label span.ant-checkbox span.ant-checkbox-inner::after {
+  top: 45%;
+  left: 25%;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-checkbox-group .ant-row .ant-col:nth-child(1) label::after {
+  display: none;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-checkbox-group .ant-row .ant-col:nth-child(1) > span {
+  width: 120px;
+  height: 24px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282739;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-checkbox-group .ant-row .ant-col:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  width: 174px;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-checkbox-group .ant-row .ant-col:nth-child(2) input {
+  width: 61px;
+  height: 44px;
+  padding: 10px 12px;
+  background: #FFFFFF;
+  border: 1.5px solid #D4D4D7;
+  border-radius: 8px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  color: #535261;
+}
+form#mana-serv-form .main-box .mana-serv-form__row2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-checkbox-group .ant-row .ant-col:nth-child(2) span {
+  width: 28px;
+  height: 24px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282739;
+}
+form#mana-serv-form .main-box .note {
+  position: absolute;
+  width: 232px;
+  height: 24px;
+  left: 24px;
+  top: 494px;
+}
+
+form#infor-serv-form.main-box .infor-box:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(2) .ant-form-item {
+  width: 100%;
+  height: 24px;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(2) .ant-form-item .ant-form-item-row {
+  height: 100%;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(2) .ant-form-item .ant-form-item-row .ant-form-item-label {
+  height: 100%;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(2) .ant-form-item .ant-form-item-row .ant-form-item-label label {
+  height: 24px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282739;
+}/*# sourceMappingURL=style.css.map */

@@ -34,93 +34,106 @@ const Manage = (): JSX.Element => {
         >
             <Row className="main-box">
                 <Typography.Title className="title-lv-2">Thông tin dịch vụ</Typography.Title>
-                <div className="form-box">
-                    <Row>
-                        <Col span={12} >
-                            <Form.Item
-                                label="Mã dịch vụ:"
-                                name='code'
-                                wrapperCol={{ span: 23 }}
-                                rules={[{ required: true, message: 'Please input code!' }]}
-                            >
-                                <Input placeholder="Nhập mã dịch vụ" />
-                            </Form.Item>
-
-                            <Form.Item
-                                label="Tên dịch vụ:"
-                                name='name'
-                                wrapperCol={{ span: 23 }}
-                                rules={[{ required: true, message: 'Please input name!' }]}
-                            >
-                                <Input placeholder="Nhập tên dịch vụ" />
-                            </Form.Item>
-                        </Col>
-                        <Col span={12} >
-                            <Form.Item
-                                label="Mô tả:"
-                                name='description'
-                                labelCol={{ span: 23, offset: 1 }}
-                                wrapperCol={{ span: 23, offset: 1 }}
-                            >
-                                <TextArea rows={5} placeholder="Mô tả dịch vụ" />
-                            </Form.Item>
-                        </Col>
-                    </Row>
-
-                    <Row>
+                
+                <Row className='mana-serv-form__row1'>
+                    <Col className='mana-serv-form__row1__col1'>
                         <Form.Item
-                            label={<h2>Quy tắc cấp số</h2>}
-                            name={[ 'setting', 'mode' ]}
+                            label="Mã dịch vụ:"
+                            name='code'
+                            rules={[{ required: true, message: 'Please input code!' }]}
                         >
-                            <Checkbox.Group >
-                                <Row>
-                                    <Col span={8}>
-                                        <Checkbox value="v1" style={{ lineHeight: '32px', margin: 5 }} />
-                                        <span>Tăng tự động từ:</span>
-                                    </Col>
-                                    <Col span={16}>
-                                        <Form.Item noStyle name={['setting', 'values', 'v1', 'from']} >
-                                            <Input style={{ width: '20%', margin: '0 5px' }} type='number' />
-                                        </Form.Item>
-                                        <span>đến</span>
-                                        <Form.Item noStyle name={['setting', 'values', 'v1', 'to']} >
-                                            <Input style={{ width: '20%', margin: '0 5px' }} type='number' />
-                                        </Form.Item>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col span={8}>
-                                        <Checkbox value="v2" style={{ lineHeight: '32px', margin: 5 }} />
-                                        <span>Prefix:</span>
-                                    </Col>
-                                    <Col span={16}>
-                                        <Form.Item noStyle name={['setting', 'values', 'v2']} >
-                                            <Input style={{ width: '20%', margin: '0 5px' }} type='number' />
-                                        </Form.Item>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col span={8}>
-                                        <Checkbox value="v3" style={{ lineHeight: '32px', margin: 5 }} />
-                                        <span>Surfix:</span>
-                                    </Col>
-                                    <Col span={16}>
-                                        <Form.Item noStyle name={['setting', 'values', 'v3']} >
-                                            <Input style={{ width: '20%', margin: '0 5px' }} type='number' />
-                                        </Form.Item>
-                                    </Col>
-                                </Row>
-                                <Col span={8}>
-                                    <Checkbox value="v4" style={{ lineHeight: '32px', margin: 5 }} />
-                                    <span>Reset mỗi ngày</span>
-                                </Col>
-                            </Checkbox.Group>
+                            <Input placeholder="Nhập mã dịch vụ" />
                         </Form.Item>
-                    </Row>
 
-                    <p className="note">Là trường thông tin bắt buộc</p>
+                        <Form.Item
+                            label="Tên dịch vụ:"
+                            name='name'
+                            rules={[{ required: true, message: 'Please input name!' }]}
+                        >
+                            <Input placeholder="Nhập tên dịch vụ" />
+                        </Form.Item>
+                    </Col>
+                    <Col className='mana-serv-form__row1__col2'>
+                        <Form.Item
+                            label="Mô tả:"
+                            name='description'
+                        >
+                            <TextArea rows={5} placeholder="Mô tả dịch vụ" />
+                        </Form.Item>
+                    </Col>
+                </Row>
 
-                </div>
+                <Row className='mana-serv-form__row2'>
+                    <Form.Item
+                        label='Quy tắc cấp số'
+                        name={[ 'setting', 'mode' ]}
+                    >
+                        <Checkbox.Group >
+                            <Row>
+                                <Col>
+                                    <Checkbox value="v1"/>
+                                    <span>Tăng tự động từ:</span>
+                                </Col>
+                                <Col>
+                                    <Form.Item
+                                        noStyle
+                                        rules={[{ type: 'number', message: '' }]}
+                                        name={['setting', 'values', 'v1', 'from']}
+                                    >
+                                        <Input />
+                                    </Form.Item>
+                                    <span>đến</span>
+                                    <Form.Item
+                                        noStyle
+                                        rules={[{ type: 'number', message: '' }]}
+                                        name={['setting', 'values', 'v1', 'to']}
+                                    >
+                                        <Input />
+                                    </Form.Item>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Checkbox value="v2"/>
+                                    <span>Prefix:</span>
+                                </Col>
+                                <Col>
+                                    <Form.Item
+                                        noStyle
+                                        rules={[{ type: 'number', message: '' }]}
+                                        name={['setting', 'values', 'v2']}
+                                    >
+                                        <Input />
+                                    </Form.Item>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Checkbox value="v3"/>
+                                    <span>Surfix:</span>
+                                </Col>
+                                <Col>
+                                    <Form.Item
+                                        noStyle
+                                        rules={[{ type: 'number', message: '' }]}
+                                        name={['setting', 'values', 'v3']}
+                                    >
+                                        <Input />
+                                    </Form.Item>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Checkbox value="v4"/>
+                                    <span>Reset mỗi ngày.</span>
+                                </Col>
+                            </Row>
+                        </Checkbox.Group>
+                    </Form.Item>
+                </Row>
+
+                <p className="note">Là trường thông tin bắt buộc</p>
+
             </Row>
             <Row className="button-group">
                 <Button className="button button-1" type="primary" onClick={Cancel}>Hủy bỏ</Button>

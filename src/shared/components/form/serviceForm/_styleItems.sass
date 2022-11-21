@@ -1,0 +1,187 @@
+@mixin Text--font-weight ($fontWeight)
+    font-family: 'Nunito'
+    font-style: normal
+    font-weight: $fontWeight
+    font-size: 16px
+    line-height: 24px
+
+@mixin Label
+    label
+        display: flex
+        flex-direction: row-reverse
+        justify-content: left
+        gap: 4px
+        height: 24px
+        @include Text--font-weight (600)
+        color: #282739
+
+@mixin Input--width ($width)
+    input
+        box-sizing: border-box
+        padding: 10px 270px 10px 12px
+        height: 44px
+        width: $width
+        background: #FFFFFF    
+        border: 1.5px solid #D4D4D7
+        border-radius: 8px
+        @include Text--font-weight (400)
+
+@mixin TextArea--width-height ($width, $height)
+    textarea
+        box-sizing: border-box
+        padding: 10px 270px 10px 12px
+        height: $height
+        width: $width
+        background: #FFFFFF    
+        border: 1.5px solid #D4D4D7
+        border-radius: 8px
+        @include Text--font-weight (400)
+
+@mixin Checkbox-input
+    span.ant-checkbox
+        top: 0
+        width: 20px
+        height: 20px
+
+        input.ant-checkbox-input
+            width: 100%
+            height: 100%
+
+        span.ant-checkbox-inner
+            width: 100%
+            height: 100%
+            border: 1.5px solid #4277FF
+            border-radius: 4px
+
+            &::after
+                top: 45%
+                left: 25%
+
+@mixin Checkbox-label
+    width: 120px
+    height: 24px
+    @include Text--font-weight (600)
+    color: #282739
+
+@mixin Checkbox-item
+    input
+        width: 61px
+        height: 44px
+        padding: 10px 12px
+        background: #FFFFFF
+        border: 1.5px solid #D4D4D7
+        border-radius: 8px
+        @include Text--font-weight (400)
+        text-align: right
+        color: #535261
+
+    span
+        width: 28px
+        height: 24px
+        @include Text--font-weight (600)
+        color: #282739
+
+@mixin FormItem__Input--width-height ($width, $height)
+    .ant-form-item
+        margin: 0 0
+        width: $width
+        height: $height
+
+        .ant-form-item-row
+            gap: 4px
+
+            .ant-form-item-label
+                @include Label
+
+            .ant-form-item-control
+                .ant-form-item-control-input
+                    .ant-form-item-control-input-content
+                        @include Input--width ($width)
+
+@mixin FormItem__TextArea--width-height ($width, $height)
+    .ant-form-item
+        margin: 0 0
+        width: $width
+        height: $height
+
+        .ant-form-item-row
+            gap: 4px
+
+            .ant-form-item-label
+                @include Label
+
+            .ant-form-item-control
+                .ant-form-item-control-input
+                    .ant-form-item-control-input-content
+                        @include TextArea--width-height ($width, 132px)
+
+@mixin FormItem__Checkbox
+    .ant-form-item
+        margin: 0 0
+
+        .ant-form-item-row
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+
+            .ant-form-item-label
+                padding: 0
+                
+                label
+                    width: 136px
+                    height: 30px
+                    margin: 16px 0 12px 0
+                    @include Text--font-weight (700)
+                    font-size: 20px
+                    line-height: 30px
+                    color: #FF7506
+
+            .ant-form-item-control
+                width: 337px
+
+                .ant-form-item-control-input
+                    .ant-form-item-control-input-content
+                        .ant-checkbox-group
+                            display: flex
+                            flex-direction: column
+                            gap: 12px
+                            width: 100%
+                            
+                            .ant-row
+                                display: flex
+                                flex-direction: row
+                                align-items: center
+                                gap: 15px
+                                width: 337px
+                                height: 44px
+
+                                .ant-col:nth-child(1)
+                                    display: flex
+                                    flex-direction: row
+                                    justify-content: space-between
+                                    align-items: center
+                                    padding: 0px
+                                    gap: 4px
+                                    width: 148px
+                                    height: 24px
+                                    line-height: 24px
+
+                                    label
+                                        height: 20px
+                                        margin: 0
+                                        @include Checkbox-input
+
+                                        &::after
+                                            display: none
+
+                                    & > span
+                                        @include Checkbox-label
+
+                                .ant-col:nth-child(2)
+                                    display: flex
+                                    flex-direction: row
+                                    justify-content: flex-start
+                                    align-items: center
+                                    gap: 12px
+                                    width: 174px
+                                    @include Checkbox-item

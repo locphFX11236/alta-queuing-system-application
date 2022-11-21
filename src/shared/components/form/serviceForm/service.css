@@ -67,6 +67,7 @@
     width: 147px;
     color: #FFFFFF;
     background: #FF9138;
+    border: 1.5px solid #FF9138;
 }
 
 .manage-service .main-box .form-box,
