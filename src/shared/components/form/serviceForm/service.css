@@ -70,15 +70,13 @@
     border: 1.5px solid #FF9138;
 }
 
-.manage-service .main-box .form-box,
 .infor-service .main-box .infor-box:nth-child(2) {
     position: absolute;
     top: 58px;
     left: 24px;
     right: 24px;
     bottom: 452px;
-    background-color: antiquewhite; /* x */
-} /* x */
+}
 
 .manage-service .main-box .form-box { bottom: 17px; }
 
@@ -88,8 +86,7 @@
     left: 24px;
     right: 24px;
     bottom: 222px;
-    background-color: antiquewhite; /* x */
-} /* x */
+}
 
 .infor-box .ant-form-item {
     margin-bottom: 0;

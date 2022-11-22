@@ -48,7 +48,7 @@ const Information = (): JSX.Element => {
 
             <div className="infor-box">
                 <Form.Item
-                    label="Tăng tự động từ"
+                    label="Tăng tự động"
                     hidden={isHidden('v1')}
                     labelAlign='left'
                 >
@@ -90,7 +90,7 @@ const Information = (): JSX.Element => {
                 
                 <Form.Item
                     colon={false}
-                    label="Reset mỗi ngày"
+                    label="Reset mỗi ngày."
                     hidden={isHidden('v4')}
                     labelAlign='left'
                 />

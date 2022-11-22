@@ -234,6 +234,7 @@ form#infor-serv-form.main-box .infor-box:nth-child(2) .ant-form-item .ant-form-i
   height: 100%;
 }
 form#infor-serv-form.main-box .infor-box:nth-child(2) .ant-form-item .ant-form-item-row .ant-form-item-label {
+  width: 109px;
   height: 100%;
 }
 form#infor-serv-form.main-box .infor-box:nth-child(2) .ant-form-item .ant-form-item-row .ant-form-item-label label {
@@ -241,6 +242,87 @@ form#infor-serv-form.main-box .infor-box:nth-child(2) .ant-form-item .ant-form-i
   font-family: "Nunito";
   font-style: normal;
   font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282739;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(2) .ant-form-item .ant-form-item-row .ant-form-item-control {
+  height: 100%;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(2) .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input {
+  min-height: 100%;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(2) .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content span {
+  height: 24px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282739;
+  font-weight: 400;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(4) .ant-form-item {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(4) .ant-form-item .ant-form-item-row {
+  height: 100%;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(4) .ant-form-item .ant-form-item-row .ant-form-item-label {
+  width: 109px;
+  height: 100%;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(4) .ant-form-item .ant-form-item-row .ant-form-item-label label {
+  height: 24px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282739;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(4) .ant-form-item .ant-form-item-row .ant-form-item-control {
+  height: 100%;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(4) .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input {
+  min-height: 100%;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(4) .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  width: 174px;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(4) .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content input {
+  width: 61px;
+  height: 44px;
+  padding: 10px 12px;
+  background: #FFFFFF;
+  border: 1.5px solid #D4D4D7;
+  border-radius: 8px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  color: #535261;
+}
+form#infor-serv-form.main-box .infor-box:nth-child(4) .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content span {
+  width: 28px;
+  height: 24px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #282739;
