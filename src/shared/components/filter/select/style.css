@@ -46,4 +46,33 @@
   top: 37.5%;
   bottom: 37.5%;
   width: 12px;
+}
+
+.ant-select-dropdown {
+  padding: 8px 0px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+.ant-select-dropdown > div {
+  width: 100%;
+}
+.ant-select-dropdown > div .ant-select-item-option {
+  background: #FFFFFF;
+  padding: 10px 12px;
+}
+.ant-select-dropdown > div .ant-select-item-option .ant-select-item-option-content {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.ant-select-dropdown > div .ant-select-item-option-selected {
+  background: #FFF2E7;
+}
+.ant-select-dropdown > div .rc-virtual-list-scrollbar-thumb {
+  width: 4px !important;
+  background: #FFAC6A !important;
+  border-radius: 14px !important;
 }/*# sourceMappingURL=style.css.map */

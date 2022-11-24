@@ -1,0 +1,23 @@
+@import 'styleItems';
+
+form#mana-role-form {
+    .main-box {
+        .form-box {
+            .mana-role-form__col1 {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                width: 560px;
+                margin-right: 24px;
+                @include FormItem__Input--width-height (560px, 76px);
+                @include FormItem__TextArea--width-height (560px, 192px);
+            };
+
+            .mana-role-form__col2 {
+                width: 560px;
+                @include FormItem__Checkbox;
+            };
+        };
+    };
+};

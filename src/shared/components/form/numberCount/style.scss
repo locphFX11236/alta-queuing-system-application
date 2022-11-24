@@ -1,0 +1,28 @@
+@import 'styleItems';
+
+form#add-num-form.main-box {
+    @include FormItem__Select;
+};
+
+form#infor-num-form.main-box {
+    .infor-box {
+        display: flex;
+        flex-direction: row;
+
+        .infor-box__col1 {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: calc(568px - 24px);
+            @include FormItem__Infor;
+        };
+    
+        .infor-box__col2 {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: calc(461px + 83px - 24px);
+            @include FormItem__Infor;
+        };
+    };
+};

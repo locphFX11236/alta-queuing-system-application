@@ -19,13 +19,11 @@ const Information = (): JSX.Element => {
             <Typography.Title className="title-lv-2">Thông tin cấp số</Typography.Title>
 
             <Row className="infor-box">
-                <Col span={12}>
+                <Col className="infor-box__col1">
                     <Form.Item
                         label="Họ tên"
                         name='name'
                         labelAlign='left'
-                        labelCol={{ span: 12 }}
-                        wrapperCol={{ span: 12 }}
                     >
                         <span>{inforRecord.name}</span>
                     </Form.Item>
@@ -34,8 +32,6 @@ const Information = (): JSX.Element => {
                         label="Tên dịch vụ"
                         name='useService'
                         labelAlign='left'
-                        labelCol={{ span: 12 }}
-                        wrapperCol={{ span: 12 }}
                     >
                         <span>{ RenderUseServices[inforRecord.useService] }</span>
                     </Form.Item>
@@ -44,8 +40,6 @@ const Information = (): JSX.Element => {
                         label="Số thứ tự"
                         name='key'
                         labelAlign='left'
-                        labelCol={{ span: 12 }}
-                        wrapperCol={{ span: 12 }}
                     >
                         <span>{inforRecord.countNumber}</span>
                     </Form.Item>
@@ -54,8 +48,6 @@ const Information = (): JSX.Element => {
                         label="Thời gian cấp"
                         name='startTime'
                         labelAlign='left'
-                        labelCol={{ span: 12 }}
-                        wrapperCol={{ span: 12 }}
                     >
                         <span>{inforRecord.startTime}</span>
                     </Form.Item>
@@ -64,19 +56,15 @@ const Information = (): JSX.Element => {
                         label="Hạn sử dụng"
                         name='endTime'
                         labelAlign='left'
-                        labelCol={{ span: 12 }}
-                        wrapperCol={{ span: 12 }}
                     >
                         <span>{inforRecord.endTime}</span>
                     </Form.Item>
                 </Col>
-                <Col span={12}>
+                <Col className="infor-box__col2">
                     <Form.Item
                         label="Nguồn cấp"
                         name='source'
                         labelAlign='left'
-                        labelCol={{ span: 12 }}
-                        wrapperCol={{ span: 12 }}
                     >
                         <span>{ RenderSources[inforRecord.source] }</span>
                     </Form.Item>
@@ -85,8 +73,6 @@ const Information = (): JSX.Element => {
                         label="Trạng thái"
                         name='status'
                         labelAlign='left'
-                        labelCol={{ span: 12 }}
-                        wrapperCol={{ span: 12 }}
                     >
                         <span><StatusTag s={inforRecord.status} /></span>
                     </Form.Item>
@@ -95,8 +81,6 @@ const Information = (): JSX.Element => {
                         label="Số điện thoại"
                         name='phoneNumber'
                         labelAlign='left'
-                        labelCol={{ span: 12 }}
-                        wrapperCol={{ span: 12 }}
                     >
                         <span>{inforRecord.phoneNumber}</span>
                     </Form.Item>
@@ -105,8 +89,6 @@ const Information = (): JSX.Element => {
                         label="Địa chỉ Email"
                         name='emailAddress'
                         labelAlign='left'
-                        labelCol={{ span: 12 }}
-                        wrapperCol={{ span: 12 }}
                     >
                         <span>{inforRecord.email}</span>
                     </Form.Item>

@@ -1,0 +1,169 @@
+form#add-num-form.main-box .ant-form-item {
+  position: absolute;
+  top: 92px;
+  left: 396px;
+  width: 400px;
+  height: 86px;
+  margin: 0 0;
+}
+form#add-num-form.main-box .ant-form-item .ant-form-item-row {
+  height: 100%;
+  gap: 12px;
+}
+form#add-num-form.main-box .ant-form-item .ant-form-item-row .ant-form-item-label {
+  padding: 0 0;
+  margin: 0 auto;
+}
+form#add-num-form.main-box .ant-form-item .ant-form-item-row .ant-form-item-label label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  gap: 4px;
+  height: 24px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282739;
+}
+form#add-num-form.main-box .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item {
+  width: 100%;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1.5px solid #D4D4D7;
+  border-radius: 8px;
+}
+form#add-num-form.main-box .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector {
+  height: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+}
+form#add-num-form.main-box .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector .ant-select-selection-search {
+  width: 100%;
+  left: 0;
+}
+form#add-num-form.main-box .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector .ant-select-selection-search input {
+  opacity: 1 !important;
+}
+form#add-num-form.main-box .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector .ant-select-selection-search input input {
+  box-sizing: border-box;
+  padding: 10px 270px 10px 12px;
+  height: 44px;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1.5px solid #D4D4D7;
+  border-radius: 8px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+form#add-num-form.main-box .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector .ant-select-selection-item {
+  width: 100%;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+form#add-num-form.main-box .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-selector .ant-select-selection-item::after {
+  display: none;
+}
+form#add-num-form.main-box .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-arrow .anticon-caret-down {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+form#add-num-form.main-box .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content .ant-select-in-form-item .ant-select-arrow .anticon-caret-down svg {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 16px;
+  height: 16px;
+}
+
+form#infor-num-form.main-box .infor-box {
+  display: flex;
+  flex-direction: row;
+}
+form#infor-num-form.main-box .infor-box .infor-box__col1 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 544px;
+}
+form#infor-num-form.main-box .infor-box .infor-box__col1 .ant-form-item {
+  margin: 0 0;
+}
+form#infor-num-form.main-box .infor-box .infor-box__col1 .ant-form-item .ant-form-item-row {
+  height: 24px;
+}
+form#infor-num-form.main-box .infor-box .infor-box__col1 .ant-form-item .ant-form-item-row .ant-form-item-label {
+  height: 100%;
+  width: 124px;
+}
+form#infor-num-form.main-box .infor-box .infor-box__col1 .ant-form-item .ant-form-item-row .ant-form-item-label label {
+  height: 100%;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282739;
+}
+form#infor-num-form.main-box .infor-box .infor-box__col1 .ant-form-item .ant-form-item-row .ant-form-item-control {
+  height: 100%;
+}
+form#infor-num-form.main-box .infor-box .infor-box__col1 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input {
+  min-height: 100%;
+}
+form#infor-num-form.main-box .infor-box .infor-box__col1 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content span {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #535261;
+}
+form#infor-num-form.main-box .infor-box .infor-box__col2 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 520px;
+}
+form#infor-num-form.main-box .infor-box .infor-box__col2 .ant-form-item {
+  margin: 0 0;
+}
+form#infor-num-form.main-box .infor-box .infor-box__col2 .ant-form-item .ant-form-item-row {
+  height: 24px;
+}
+form#infor-num-form.main-box .infor-box .infor-box__col2 .ant-form-item .ant-form-item-row .ant-form-item-label {
+  height: 100%;
+  width: 124px;
+}
+form#infor-num-form.main-box .infor-box .infor-box__col2 .ant-form-item .ant-form-item-row .ant-form-item-label label {
+  height: 100%;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282739;
+}
+form#infor-num-form.main-box .infor-box .infor-box__col2 .ant-form-item .ant-form-item-row .ant-form-item-control {
+  height: 100%;
+}
+form#infor-num-form.main-box .infor-box .infor-box__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input {
+  min-height: 100%;
+}
+form#infor-num-form.main-box .infor-box .infor-box__col2 .ant-form-item .ant-form-item-row .ant-form-item-control .ant-form-item-control-input .ant-form-item-control-input-content span {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #535261;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,131 @@
+@mixin Text--font-weight ($fontWeight)
+    font-family: 'Nunito'
+    font-style: normal
+    font-weight: $fontWeight
+    font-size: 16px
+    line-height: 24px
+
+@mixin Label
+    label
+        display: flex
+        flex-direction: row-reverse
+        justify-content: left
+        gap: 4px
+        height: 24px
+        @include Text--font-weight (600)
+        color: #282739
+
+@mixin Checkbox-input
+    span.ant-checkbox
+        top: 0
+        width: 20px
+        height: 20px
+
+        input.ant-checkbox-input
+            width: 100%
+            height: 100%
+
+        span.ant-checkbox-inner
+            width: 100%
+            height: 100%
+            border: 1.5px solid #4277FF
+            border-radius: 4px
+
+            &::after
+                top: 45%
+                left: 25%
+
+@mixin Input--width ($width)
+    input
+        box-sizing: border-box
+        padding: 10px 270px 10px 12px
+        height: 44px
+        width: $width
+        background: #FFFFFF    
+        border: 1.5px solid #D4D4D7
+        border-radius: 8px
+        @include Text--font-weight (400)
+
+@mixin TextArea--width-height ($width, $height)
+    textarea
+        box-sizing: border-box
+        padding: 10px 270px 10px 12px
+        height: $height
+        width: $width
+        background: #FFFFFF    
+        border: 1.5px solid #D4D4D7
+        border-radius: 8px
+        @include Text--font-weight (400)
+
+@mixin FormItem__Input--width-height ($width, $height)
+    .ant-form-item
+        margin: 0 0
+
+        .ant-form-item-row
+            gap: 4px
+
+            .ant-form-item-label
+                @include Label
+
+            .ant-form-item-control
+                .ant-form-item-control-input
+                    .ant-form-item-control-input-content
+                        @include Input--width ($width)
+
+@mixin FormItem__TextArea--width-height ($width, $height)
+    .ant-form-item
+        margin: 0 0
+
+        .ant-form-item-row
+            gap: 4px
+
+            .ant-form-item-label
+                @include Label
+
+            .ant-form-item-control
+                .ant-form-item-control-input
+                    .ant-form-item-control-input-content
+                        @include TextArea--width-height ($width, 160px)
+
+@mixin FormItem__Checkbox
+    .ant-form-item
+        .ant-form-item-row
+            .ant-form-item-label
+                @include Label
+
+            .ant-form-item-control
+                .ant-form-item-control-input
+                    .ant-form-item-control-input-content
+                        .check-box
+                            display: flex
+                            flex-direction: column
+                            align-items: flex-start
+                            gap: 24px
+                            padding: 16px 24px
+
+                            .group
+                                h2
+                                    width: 177px
+                                    height: 30px
+                                    @include Text--font-weight (700)
+                                    font-size: 20px
+                                    color: #FF7506
+                                    margin: 0 0 12px
+
+                                .ant-row
+                                    display: flex
+                                    flex-direction: row
+                                    align-items: center
+                                    gap: 8px
+                                    height: 24px
+                                    margin-top: 12px
+
+                                    label
+                                        height: 20px
+                                        margin: 0
+                                        @include Checkbox-input
+
+                                    span
+                                        height: 24px
+                                        @include Text--font-weight (600)
+                                        color: #535261

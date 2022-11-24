@@ -1,0 +1,21 @@
+@import 'styleItems';
+
+form#man-acc-form {
+    .main-box {
+        .form-box {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+
+            .man-acc-form__col {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 16px;
+                @include FormItem__Input--width (560px);
+                @include FormItem__Select--width (560px);
+                @include FormItem__Password--width (560px);
+            };
+        };
+    };
+};

@@ -185,3 +185,60 @@
                                     gap: 12px
                                     width: 174px
                                     @include Checkbox-item__span--font-weight (600)
+
+@mixin FormItem__Infor
+    .ant-form-item
+        width: 100%
+        height: 24px
+
+        .ant-form-item-row
+            height: 100%
+
+            .ant-form-item-label
+                width: calc(87px + 22px)
+                height: 100%
+
+                label
+                    @include Checkbox-label
+
+            .ant-form-item-control
+                height: 100%
+
+                .ant-form-item-control-input
+                    min-height: 100%
+
+                    .ant-form-item-control-input-content
+                        span
+                            @include Checkbox-label
+                            font-weight: 400
+
+@mixin FormItem__Checkbox__Infor
+    .ant-form-item
+        width: 100%
+        height: 44px
+        line-height: 44px
+
+        .ant-form-item-row
+            height: 100%
+
+            .ant-form-item-label
+                width: calc(87px + 22px)
+                height: 100%
+
+                label
+                    @include Checkbox-label
+
+            .ant-form-item-control
+                height: 100%
+
+                .ant-form-item-control-input
+                    min-height: 100%
+
+                    .ant-form-item-control-input-content
+                        display: flex
+                        flex-direction: row
+                        justify-content: flex-start
+                        align-items: center
+                        gap: 12px
+                        width: 174px
+                        @include Checkbox-item__span--font-weight (400)

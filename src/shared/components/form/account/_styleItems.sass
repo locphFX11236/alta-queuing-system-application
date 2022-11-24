@@ -1,0 +1,137 @@
+@mixin Text--font-weight ($fontWeight)
+    font-family: 'Nunito'
+    font-style: normal
+    font-weight: $fontWeight
+    font-size: 16px
+    line-height: 24px
+
+@mixin Label
+    label
+        display: flex
+        flex-direction: row-reverse
+        justify-content: left
+        gap: 4px
+        height: 24px
+        @include Text--font-weight (600)
+        color: #282739
+
+@mixin Input--width ($width)
+    input
+        box-sizing: border-box
+        padding: 10px 270px 10px 12px
+        height: 44px
+        width: $width
+        background: #FFFFFF    
+        border: 1.5px solid #D4D4D7
+        border-radius: 8px
+        @include Text--font-weight (400)
+
+@mixin Select--width ($width)
+    .ant-select-in-form-item
+        width: $width
+        height: 44px
+        
+        .ant-select-selector
+            height: 100%
+            padding: 10px 12px
+            border: none
+            border-radius: 8px
+            
+            .ant-select-selection-search
+                width: 100%
+                left: 0
+
+                input
+                    @include Input--width (100%)
+                    opacity: 1 !important
+
+            .ant-select-selection-item 
+                width: 100%
+                @include Text--font-weight (400)
+                &::after
+                    display: none
+
+        .ant-select-arrow
+            .anticon-caret-down
+                position: relative
+                width: 24px
+                height: 24px
+
+                svg
+                    position: absolute
+                    top: 20%
+                    left: 20%
+                    width: 16px
+                    height: 16px
+
+@mixin FormItem__Input--width ($width)
+    .ant-form-item
+        margin: 0 0
+        width: $width
+
+        .ant-form-item-row
+            gap: 4px
+
+            .ant-form-item-label
+                @include Label
+
+            .ant-form-item-control
+                .ant-form-item-control-input
+                    .ant-form-item-control-input-content
+                        @include Input--width ($width)
+
+@mixin FormItem__Select--width ($width)
+    .ant-form-item
+        margin: 0 00
+        width: $width
+
+        .ant-form-item-row
+            gap: 4px
+
+            .ant-form-item-label
+                @include Label
+
+            .ant-form-item-control
+                .ant-form-item-control-input
+                    .ant-form-item-control-input-content
+                        @include Select--width ($width)
+
+@mixin FormItem__Password--width ($width)
+    .ant-form-item
+        .ant-form-item-row
+            .ant-form-item-label
+                label
+                    @include Label
+
+        .ant-form-item-control
+            .ant-form-item-control-input
+                .ant-form-item-control-input-content
+                    span.ant-input-password
+                        padding: 0
+                        border: none
+                        background: none
+
+                        input
+                            @include Input--width ($width)
+                            color: #535261
+                            letter-spacing: 2px
+                            
+                        span.ant-input-suffix
+                            margin: 0
+
+                            span.ant-input-password-icon
+                                position: absolute
+                                top: 12px
+                                right: 12px
+                                width: 20px
+                                height: 20px
+
+                                svg
+                                    box-sizing: border-box
+                                    position: absolute
+                                    left: 8.32%
+                                    right: 8.31%
+                                    top: 8.32%
+                                    bottom: 8.31%
+                                    width: 16.67px
+                                    height: 16.67px

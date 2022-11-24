@@ -60,11 +60,10 @@ const Manage = (): JSX.Element => {
             <div className="main-box">
                 <Typography.Title className="title-lv-2">Thông tin tài khoản</Typography.Title>
                 <Row className="form-box">
-                    <Col span={12} >
+                    <Col className="man-acc-form__col">
                         <Form.Item
                             label="Họ tên"
                             name='name'
-                            wrapperCol={{ span: 23 }}
                             rules={[{ required: true, message: 'Please input your name!' }]}
                         >
                             <Input placeholder="Nhập họ tên" />
@@ -73,7 +72,6 @@ const Manage = (): JSX.Element => {
                         <Form.Item
                             label="Số điện thoại"
                             name='phoneNumber'
-                            wrapperCol={{ span: 23 }}
                             rules={[{ required: true, message: 'Please input your phone number!' }]}
                         >
                             <Input placeholder="Nhập số điện thoại" />
@@ -82,7 +80,6 @@ const Manage = (): JSX.Element => {
                         <Form.Item
                             label="Email"
                             name='email'
-                            wrapperCol={{ span: 23 }}
                             rules={[{ required: true, message: 'Please input your email!' }]}
                         >
                             <Input placeholder="Nhập email" />
@@ -91,7 +88,6 @@ const Manage = (): JSX.Element => {
                         <Form.Item
                             label="Tên vai trò"
                             name='position'
-                            wrapperCol={{ span: 23 }}
                             rules={[{ required: true, message: 'Please input role!' }]}
                         >
                             <Select
@@ -104,7 +100,7 @@ const Manage = (): JSX.Element => {
                         <p className="note">Là trường thông tin bắt buộc</p>
 
                     </Col>
-                    <Col span={12} >
+                    <Col className="man-acc-form__col">
                         <Form.Item
                             label="Tên đăng nhập"
                             name="userID"

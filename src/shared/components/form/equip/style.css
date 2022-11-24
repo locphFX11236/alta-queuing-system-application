@@ -257,36 +257,6 @@ form#mana-equ-form .main-box .note {
   width: 232px;
   height: 24px;
 }
-form#mana-equ-form .ant-select-dropdown {
-  padding: 8px 0px;
-  background: #FFFFFF;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  max-height: 152px;
-}
-form#mana-equ-form .ant-select-dropdown > div {
-  width: 100%;
-}
-form#mana-equ-form .ant-select-dropdown > div .ant-select-item-option {
-  background: #FFFFFF;
-  padding: 10px 12px;
-}
-form#mana-equ-form .ant-select-dropdown > div .ant-select-item-option .ant-select-item-option-content {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-}
-form#mana-equ-form .ant-select-dropdown > div .ant-select-item-option-selected {
-  background: #FFF2E7;
-}
-form#mana-equ-form .ant-select-dropdown > div .rc-virtual-list-scrollbar-thumb {
-  width: 4px !important;
-  height: 75px !important;
-  background: #FFAC6A !important;
-  border-radius: 14px !important;
-}
 
 form#infor-equ-form .main-box .infor-equ-form__row1 {
   display: flex;

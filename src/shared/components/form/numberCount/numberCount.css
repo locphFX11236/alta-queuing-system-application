@@ -47,14 +47,7 @@
     width: 115px;
     color: #FFFFFF;
     background: #FF9138;
-}
-
-.manage-numberCount .main-box .form-box {
-    position: absolute;
-    top: 92px;
-    left: 396px;
-    right: 396px;
-    bottom: 426px;
+    border: 1.5px solid #FF9138;
 }
 
 .infor-numberCount .infor-box {

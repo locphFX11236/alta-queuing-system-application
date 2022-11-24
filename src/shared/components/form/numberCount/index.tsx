@@ -1,4 +1,5 @@
 import './numberCount.css';
+import './style.css';
 import NumberPrint from "./add&print";
 import Information from './information';
 

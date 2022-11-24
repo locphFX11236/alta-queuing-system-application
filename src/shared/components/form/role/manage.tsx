@@ -40,11 +40,10 @@ const Manage = (): JSX.Element => {
             <div className="main-box">
                 <Typography.Title className="title-lv-2">Thông tin vai trò</Typography.Title>
                 <Row className="form-box">
-                    <Col span={12} >
+                    <Col className="mana-role-form__col1">
                         <Form.Item
                             label="Tên vai trò"
                             name='position'
-                            wrapperCol={{ span: 23 }}
                             rules={[{ required: true, message: 'Please input role!' }]}
                         >
                             <Input placeholder="Nhập tên vai trò" />
@@ -53,7 +52,6 @@ const Manage = (): JSX.Element => {
                         <Form.Item
                             label="Mô tả:"
                             name='description'
-                            wrapperCol={{ span: 23 }}
                         >
                             <TextArea rows={7} placeholder="Nhập mô tả" />
                         </Form.Item>
@@ -61,50 +59,49 @@ const Manage = (): JSX.Element => {
                         <p className="note">Là trường thông tin bắt buộc</p>
 
                     </Col>
-                    <Col span={12} >
+                    <Col className="mana-role-form__col2">
                         <Form.Item
                             name='functions'
                             label='Phân quyền chức năng'
-                            labelCol={{ span: 23, offset: 1 }}
                             rules={[{ required: true, message: 'Please check below!' }]}
                         >
                             <Checkbox.Group className="check-box" >
-                                <div style={{ margin: 24 }} >
-                                    <h3>Nhóm chức năng A</h3>
-                                    <Row style={{ lineHeight: '24px', margin: '12px 0' }} >
-                                        <Checkbox value="A" style={{ marginRight: 5 }} />
-                                        Tất cả
+                                <div className="group">
+                                    <h2>Nhóm chức năng A</h2>
+                                    <Row  >
+                                        <Checkbox value="A" />
+                                        <span>Tất cả</span>
                                     </Row>
-                                    <Row style={{ lineHeight: '24px', margin: '12px 0' }} >
-                                        <Checkbox value="Ax" style={{ marginRight: 5 }} />
-                                        Chức năng x
+                                    <Row  >
+                                        <Checkbox value="Ax" />
+                                        <span>Chức năng x</span>
                                     </Row>
-                                    <Row style={{ lineHeight: '24px', margin: '12px 0' }} >
-                                        <Checkbox value="Ay" style={{ marginRight: 5 }} />
-                                        Chức năng y
+                                    <Row  >
+                                        <Checkbox value="Ay" />
+                                        <span>Chức năng y</span>
                                     </Row>
-                                    <Row style={{ lineHeight: '24px', margin: '12px 0' }} >
-                                        <Checkbox value="Az" style={{ marginRight: 5 }} />
-                                        Chức năng z
+                                    <Row  >
+                                        <Checkbox value="Az" />
+                                        <span>Chức năng z</span>
                                     </Row>
                                 </div>
-                                <div style={{ margin: 24 }} >
-                                    <h3>Nhóm chức năng B</h3>
-                                    <Row style={{ lineHeight: '24px', margin: '12px 0' }} >
-                                        <Checkbox value="B" style={{ marginRight: 5 }} />
-                                        Tất cả
+                                <div className="group">
+                                    <h2>Nhóm chức năng B</h2>
+                                    <Row  >
+                                        <Checkbox value="B" />
+                                        <span>Tất cả</span>
                                     </Row>
-                                    <Row style={{ lineHeight: '24px', margin: '12px 0' }} >
-                                        <Checkbox value="Bx" style={{ marginRight: 5 }} />
-                                        Chức năng x
+                                    <Row  >
+                                        <Checkbox value="Bx" />
+                                        <span>Chức năng x</span>
                                     </Row>
-                                    <Row style={{ lineHeight: '24px', margin: '12px 0' }} >
-                                        <Checkbox value="By" style={{ marginRight: 5 }} />
-                                        Chức năng y
+                                    <Row  >
+                                        <Checkbox value="By" />
+                                        <span>Chức năng y</span>
                                     </Row>
-                                    <Row style={{ lineHeight: '24px', margin: '12px 0' }} >
-                                        <Checkbox value="Cz" style={{ marginRight: 5 }} />
-                                        Chức năng z
+                                    <Row  >
+                                        <Checkbox value="Cz" />
+                                        <span>Chức năng z</span>
                                     </Row>
                                 </div>
                             </Checkbox.Group>

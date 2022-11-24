@@ -19,9 +19,6 @@
 }
 
 .manage-role .main-box .form-box .check-box {
-    position: absolute;
-    right: 0px;
-    top: 2px;
     width: 560px;
     height: 420px;
     background: #FFF2E7;
@@ -54,15 +51,4 @@
     left: 30px;
     bottom: 30px;
     z-index: 1;
-}
-
-.check-box div h3 {
-    width: 177px;
-    height: 30px;
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
-    color: #FF7506;
 }
