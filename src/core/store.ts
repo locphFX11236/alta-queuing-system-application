@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import AccReducer from './featuresRedux/slice/account'
+import DashboardReducer from './featuresRedux/slice/dashboard'
 
 import EquipmentReducer from './featuresRedux/slice/equipment'
 import LogsReducer from './featuresRedux/slice/logs'
@@ -19,5 +20,6 @@ export const store = configureStore({
         RoleState: RoleReducer,
         AccState: AccReducer,
         LogsState: LogsReducer,
+        DashboardState: DashboardReducer,
     },
 })

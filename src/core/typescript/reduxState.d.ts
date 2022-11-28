@@ -11,6 +11,12 @@ export interface UserState {
     userData: AccountType,
 };
 
+export interface DashboardState {
+    showStatistic: any,
+    showChart: any,
+    refreshTime: number
+}
+
 export interface EquipState {
     data: Datas,
     search: {

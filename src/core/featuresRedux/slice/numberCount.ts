@@ -3,7 +3,7 @@ import { message } from 'antd';
 import moment from 'moment';
 
 import { OpenNotification } from '../../../shared/components/popUp';
-import { RequestAPI } from '../../data/api';
+import { RequestAPI } from '../../data';
 import type { ReducerInSlice, Slice, AnyAction, NCState } from '../../typescript/reduxState';
 
 const initialState = {

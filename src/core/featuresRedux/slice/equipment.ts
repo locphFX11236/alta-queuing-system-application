@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice, Reducer, current, ActionReducerMapBuilder } from '@reduxjs/toolkit';
 import { message } from 'antd';
 
-import { RequestAPI } from '../../data/api';
+import { RequestAPI } from '../../data';
 import type { ReducerInSlice, Slice, AnyAction, EquipState } from '../../typescript/reduxState';
 
 const initialState = {
@@ -30,7 +30,7 @@ const reducers = {
         const data = action.payload;
         const index = state.data.findIndex((d: any) => d.key === data.key)
         state.data[index] = { ...data } ; // Cập nhật state trong redux
-        RequestAPI.patchEquip(data, index); // Patch data lên backend
+        RequestAPI.putEquip(data, data.key); // Patch data lên backend
         return state;
     },
     EquipSelect1: (state: EquipState, action: AnyAction) => {

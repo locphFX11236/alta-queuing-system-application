@@ -8,7 +8,6 @@ import { SelectUserState } from '../../../core/featuresRedux/hookRedux';
 import { AppDispatch } from '../../../core/typescript/reduxState';
 import { avatarChange } from '../../../core/featuresRedux/slice/user';
 import { UpdAccAvatar } from '../../../core/featuresRedux/slice/account';
-import { getUrlItem } from '../../../core/data/api';
 
 const UploadImg = (): JSX.Element => {
     const userState = SelectUserState().userData;
@@ -31,7 +30,6 @@ const UploadImg = (): JSX.Element => {
                 name="avatar"
                 listType="picture"
                 showUploadList={false}
-                action={ getUrlItem('imgStore').url } // Post lên đường link
                 beforeUpload={checkFile} // Kiểm tra file update
                 onChange={handleChange} // Hiển thị image trên thẻ img
             >

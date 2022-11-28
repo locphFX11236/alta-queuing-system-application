@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice, Reducer, current, ActionReducerMapBuilder } from '@reduxjs/toolkit';
 import { message } from 'antd';
 
-import { RequestAPI } from '../../data/api';
+import { RequestAPI } from '../../data';
 import type { ReducerInSlice, Slice, AnyAction, RoleState } from '../../typescript/reduxState';
 
 const initialState = {
@@ -32,7 +32,7 @@ const reducers = {
         if (index === -1) {
             const i = state.data.findIndex((d: any) => d.key === data.key)
             state.data[i] = { ...data } ; // Cập nhật state trong redux
-            RequestAPI.patchRole(data, i); // Patch data lên backend
+            RequestAPI.putRole(data, i); // Patch data lên backend
             return state;
         } else message.error('Đã có vai trò này, không cần thêm!');
     },

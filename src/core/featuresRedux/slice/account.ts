@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice, Reducer, current, ActionReducerMapBuilder } from '@reduxjs/toolkit';
 import { message } from 'antd';
 
-import { RequestAPI } from '../../data/api';
+import { PostImg, RequestAPI } from '../../data';
 import type { ReducerInSlice, Slice, AnyAction, AccState } from '../../typescript/reduxState';
 
 const initialState = {
@@ -26,7 +26,7 @@ const reducers = {
         const data = action.payload;
         const index = state.data.findIndex((d: any) => d.key === data.key)
         state.data[index] = { ...data } ; // Cập nhật state trong redux
-        RequestAPI.patchAcc(data, index); // Patch data lên backend
+        RequestAPI.putAcc(data, index); // Patch data lên backend
         return state;
     },
     UpdAccRole: (state: AccState, action: AnyAction) => {
@@ -35,7 +35,7 @@ const reducers = {
         ArrChange.forEach((a: any, i: number) => {
             state.data[i].position = positionChange[1];; // Cập nhật state trong redux
             a.position = positionChange[1];
-            RequestAPI.patchAcc(a, i); // Patch data lên backend
+            RequestAPI.putAcc(a, i); // Patch data lên backend
         })
         return state;
     },
@@ -43,7 +43,8 @@ const reducers = {
         const { user, imgSrc } = action.payload;
         const i = state.data.findIndex((d: any) => d.key === user.key);
         state.data[i].imgUrl = imgSrc;; // Cập nhật state trong redux
-        RequestAPI.patchAcc(user, i); // Patch data lên backend
+        RequestAPI.putAcc(user, i); // Patch data lên backend
+        PostImg(imgSrc, 'imgStore');
         return state;
     },
     AccSelect1: (state: AccState, action: AnyAction) => {

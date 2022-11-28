@@ -14,7 +14,7 @@ const MenuComponent: React.FC = () => {
     const selectedPath = useLocation().pathname; // 'react-router-dom v6' dùng 'Hook' này để truy cập 'path' hiện tại
     const selectedArray = selectedPath.split('/').filter((_, i) => i !== 0); // Chuyển 'path' sang 'array'
     let navigate = useNavigate(); // 'react-router-dom v6' dùng 'Hook' này để chuyển trang
-    const { UserState, ...allState } = useSelector((state: any) => state);
+    const { UserState, DashboardState, ...allState } = useSelector((state: any) => state);
     const checkSearch = Object
         .values(allState)
         .map((s: any) => s.search.result.length === 0)

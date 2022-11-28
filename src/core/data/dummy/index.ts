@@ -1,21 +1,24 @@
-import statistic from './json/statistic.json';
-import area from './json/areaChartText.json';
-import account from './json/account.json';
-import userLog from './json/userLog.json';
-import count_num from './json/count_num.json';
-import equip from './json/equip.json';
-import report from './json/report.json';
-import role from './json/role.json';
-import service from './json/service.json';
+import { message } from "antd";
 
-function JsonString (data: Array<any>): string { return JSON.stringify(data) }; // Fake JSON String
+import { Keys } from "./items";
 
-export const statisticJSON = JsonString(statistic);
-export const areaJSON = JsonString(area);
-export const accountJSON = JsonString(account);
-export const userLogJSON = JsonString(userLog);
-export const count_numJSON = JsonString(count_num);
-export const equipJSON = JsonString(equip);
-export const reportJSON = JsonString(report);
-export const roleJSON = JsonString(role);
-export const serviceJSON = JsonString(service);
+export const GetData = async (key: string) => new Promise((resolve, rejects) => {
+    const datas = Keys[key];
+
+    try {
+        setTimeout(() => {
+            resolve( datas );
+        }, 1000);
+    } catch(err) {
+        console.log(err);
+        return rejects( () => message.error('Lỗi fetch api') );
+    }
+});
+
+export const PostData = (data: any, key: string) => {
+    console.log(`Post ${key} to backend! With data: `, data);
+};
+
+export const PutData = (data: any, index: number, key: string) => {
+    console.log(`Put ${key} to backend! At position ${index} with data: `, data);
+};

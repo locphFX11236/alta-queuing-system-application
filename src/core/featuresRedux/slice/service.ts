@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice, Reducer, current, ActionReducerMapBuilde
 import { message } from 'antd';
 import moment from 'moment';
 
-import { RequestAPI } from '../../data/api';
+import { RequestAPI } from '../../data';
 import type { ReducerInSlice, Slice, AnyAction, ServState } from '../../typescript/reduxState';
 
 const initialState = {
@@ -31,7 +31,7 @@ const reducers = {
         const data = action.payload;
         const index = state.data.findIndex((d: any) => d.key === data.key)
         state.data[index] = { ...data } ; // Cập nhật state trong redux
-        RequestAPI.patchServ(data, index); // Patch data lên backend
+        RequestAPI.putServ(data, index); // Patch data lên backend
         return state;
     },
     ServSelect1: (state: ServState, action: AnyAction) => {

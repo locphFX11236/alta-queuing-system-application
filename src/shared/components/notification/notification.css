@@ -95,3 +95,20 @@
 .card-noti:hover {
     background: #FFF2E7;
 }
+
+/** Custom scrollbar */
+
+/*
+Vùng nền chứa thanh cuộn.
+*/
+.noti-list ::-webkit-scrollbar {
+    width: 4px;
+}
+
+/*
+Nút cuộn có thể kéo.
+*/
+.noti-list ::-webkit-scrollbar-thumb {
+    background: #FFAC6A;
+    border-radius: 14px;
+}

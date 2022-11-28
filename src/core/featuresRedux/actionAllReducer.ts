@@ -6,6 +6,7 @@ import { ReportFetchAPI, RefreshSearch4 } from "./slice/report";
 import { AccFetchAPI, RefreshSearch5 } from "./slice/account";
 import { RoleFetchAPI, RefreshSearch6 } from "./slice/role";
 import { LogsFetchAPI, RefreshSearch7 } from "./slice/logs";
+import { DashboardFetchAPI } from "./slice/dashboard";
 
 export const FetchAll = (dispatch: AppDispatch) => {
     console.log('Get All Data!');
@@ -16,6 +17,7 @@ export const FetchAll = (dispatch: AppDispatch) => {
     dispatch( RoleFetchAPI() );
     dispatch( ServFetchAPI() );
     dispatch( LogsFetchAPI() );
+    dispatch( DashboardFetchAPI() );
 };
 
 export const RefreshAllSearch = (dispatch: AppDispatch) => {

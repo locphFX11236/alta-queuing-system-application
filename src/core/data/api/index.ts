@@ -1,25 +1,49 @@
-import GetData from "./constructor/get";
-import { items } from "./constructor/items";
+import { message } from "antd";
 
-export const RequestAPI = {
-    getEquipDatas: () => GetData('equip'),
-    getServDatas: () => GetData('serv'),
-    getNCDatas: () => GetData('numCou'),
-    getReportDatas: () => GetData('report'),
-    getRoleDatas: () => GetData('role'),
-    getAccDatas: () => GetData('acc'),
-    getLogsDatas: () => GetData('logs'),
+import { endPoints } from "./items";
 
-    postEquip: (data: any) => console.log('Post equip to backend!'),
-    postServ: (data: any) => console.log('Post serv to backend!'),
-    postNC: (data: any) => console.log('Post numCou to backend!'),
-    postRole: (data: any) => console.log('Post role to backend!'),
-    postAcc: (data: any) => console.log('Post account to backend!'),
+export const GetData = async (key: string) => fetch(endPoints[key])
+    .then( response => response.json() ) //Trả về danh sách
+    .catch( error => message.error('Lỗi fetch api ', error) )
+    .finally( () => console.log('Fetched!!!') )
+;
 
-    patchEquip: (data: any, index: number) => console.log('Patch equip to backend!'),
-    patchServ: (data: any, index: number) => console.log('Patch serv to backend!'),
-    patchRole: (data: any, index: number) => console.log('Patch role to backend!'),
-    patchAcc: (data: any, index: number) => console.log('Patch account to backend!'),
-};
+export const PostData = (data: any, key: string) => fetch(
+    endPoints[key],
+    {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    }
+)
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(`Post ${key} to backend! With data: `, data);
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    })
+;
 
-export const getUrlItem = (type: string) => items[type];
+export const PutData = (data: any, index: number, key: string) => fetch(
+    endPoints[key],
+    {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    }
+)
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(`Put ${key} to backend! At position ${index} with data: `, data);
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    })
+;

@@ -1,17 +1,17 @@
 import { ResponsiveLine } from '@nivo/line';
-
-import { areaJSON } from '../../../../core/data/dummy';
 import { linearGradientDef } from '@nivo/core';
+
 import TooltipComponent from './tooltip';
+import { SelectDashState } from '../../../../core/featuresRedux/hookRedux';
 
 const Chart = (): JSX.Element => {
-    const dataOjb = JSON.parse(areaJSON);
+    const dataObj: any = SelectDashState().showChart;
     const yScaleValue = [ 0, 1000, 2000, 3000, 4000, 5000, 6000 ];
 
     return(
             <ResponsiveLine
-                data={dataOjb}
-                colors={dataOjb[0].color}
+                data={dataObj}
+                colors={dataObj[0].color}
                 margin={{ top: 50, right: 30, bottom: 60, left: 65 }}
                 curve="monotoneX"
                 axisBottom={{
