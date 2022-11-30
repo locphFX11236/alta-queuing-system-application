@@ -33,5 +33,5 @@ export const PostImg = (file: any, key: string) => {
 export const Clone = (key: string) => {
     const { PostData } = Methods('firebase');
     if (key === 'dashboard') return PostData(Keys[key], key); // key: dashboard
-    else return Keys[key].forEach((d: any) => PostData(d, key)); // key: other
+    else return Keys[key].forEach((d: any) => PostData(d, key)); // key: <other>
 };

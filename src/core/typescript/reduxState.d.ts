@@ -97,10 +97,6 @@ export interface LogsState {
     }
 };
 
-export type PayloadUser = {
-    userId: string,
-} | {};
-
 export type RootState = ReturnType<typeof store.getState>;
 
 export type AppDispatch = typeof store.dispatch;

@@ -1,4 +1,6 @@
 import { notification } from "antd";
+
+import './style.css';
 import { DescriptionPop, MessagePop } from "./items";
  
 export const OpenNotification = (values: any): void => notification.open({

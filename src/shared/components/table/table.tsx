@@ -16,7 +16,7 @@ const TableFC = (
         hideOnSinglePage: true,
         itemRender: (_, type, originalElement) => {
             if (type === 'prev') return <CaretLeftOutlined />;
-            if (type === 'next') return <CaretRightOutlined />;
+            else if (type === 'next') return <CaretRightOutlined />;
             else return originalElement;
         }
     });

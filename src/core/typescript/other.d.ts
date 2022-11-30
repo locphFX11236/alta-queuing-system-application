@@ -1,0 +1,1 @@
+export type SBFProps = 'dummy' | 'firebase' | 'api';

@@ -1,14 +1,15 @@
-import React from 'react';
 import { Select } from 'antd';
 import { CaretDownOutlined } from '@ant-design/icons';
 
 const { Option } = Select;
 
-const handleChange = (value: string) => {
-  console.log(`selected ${value}`);
-};
+export const render: Record<string, string> = {
+    'date': 'Ngày',
+    'week': 'Tuần',
+    'month': 'Tháng'
+}
 
-const SelectBtn: React.FC = () => (
+const SelectBtn = ({handleChange}: any): JSX.Element => (
     <Select
         className='select-btn'
         defaultValue="month"

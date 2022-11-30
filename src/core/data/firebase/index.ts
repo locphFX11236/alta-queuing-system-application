@@ -20,6 +20,7 @@ export const PostData = async (file: any, key: string) => {
     try {
         const docRef = await addDoc(collection(db, key), file);
         console.log("Document written with ID: ", docRef.id);
+        console.log(`Post ${key} to backend! With data: `, file);
     } catch (err) {
         console.error("Error adding document: ", err);
     }
@@ -29,7 +30,8 @@ export const PutData = async (data: any, index: number, key: string) => {
     const collRef = collection(db, key); // Truy cập vào collection
     const q = query(collRef, where("key", "==", index));
     const querySnapshot = await getDocs(q);
-    querySnapshot.docs.forEach((d) => (updateDoc( doc( collRef, d.id ), data)) );
+    querySnapshot.docs.forEach((d) => updateDoc( doc( collRef, d.id ), data) );
+    console.log(`Put ${key} to backend! At position ${index} with data: `, data);
 };
 
 /**

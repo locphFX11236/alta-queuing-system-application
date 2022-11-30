@@ -6,6 +6,7 @@ import MainRouter from "../routes";
 import { SelectUserState } from "../core/featuresRedux/hookRedux";
 import { AppDispatch } from "../core/typescript/reduxState";
 import { FetchAll } from "../core/featuresRedux/actionAllReducer";
+// import { Clone } from "../core/data";
 
 function IndexView () {
     const navigate = useNavigate();
@@ -13,6 +14,7 @@ function IndexView () {
     const dispatch: AppDispatch = useDispatch();
 
     useEffect(() => {
+        // Clone('numCou'); // Tắt strict mode
         FetchAll(dispatch);
         if (userState.isLoggedIn) navigate( '/' );
         else navigate( '/login' );

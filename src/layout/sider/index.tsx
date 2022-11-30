@@ -12,9 +12,7 @@ const { Sider } = Layout;
 
 const SiderLayout = (): JSX.Element => {
     const Dispatch: AppDispatch = useDispatch()
-    const HandleClick = () => {
-        Dispatch(logout(''));
-    }
+    const HandleClick = () => Dispatch(logout());
     
     return (
         <Sider theme='light' className='sider'>

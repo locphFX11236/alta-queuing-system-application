@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import App from './App';
 import { store } from './core/store';
 
-// import App from './_text';
+// import App from './view/text';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -25,3 +25,4 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+// Author: Phan Huynh Loc FX11236

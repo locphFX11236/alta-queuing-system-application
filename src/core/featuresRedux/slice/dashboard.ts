@@ -9,15 +9,15 @@ const initialState = {
         color: []
     }],
     showChart: [],
-    refreshTime: 50000,
+    refreshTime: 0,
 } as DashboardState;
 
 const reducers = {
     SetTimeRefresh: (state: DashboardState, action: AnyAction) => {
-        console.log('Real Time Refresh Dashboard for', action.payload, 'ms')
+        console.log('Real Time Refresh Dashboard for', action.payload, 'ms');
         state.refreshTime = action.payload;
         return state; // Đối với phiên bản có thể chỉnh sửa trực tiếp state, nên không cần return state
-    },
+    }
 } as ReducerInSlice;
 
 const extraReducers = (builder: ActionReducerMapBuilder<DashboardState>) => {

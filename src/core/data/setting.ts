@@ -1,8 +1,7 @@
 import * as Local from "./dummy";
 import * as RestAPI from './api';
 import * as Firebase from './firebase';
-
-type SBFProps = 'dummy' | 'firebase' | 'api';
+import { SBFProps } from "../typescript/other";
 
 const Methods = (storeBackendFrom: SBFProps) => {
     switch (storeBackendFrom) {

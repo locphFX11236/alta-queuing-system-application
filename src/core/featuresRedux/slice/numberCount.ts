@@ -23,11 +23,12 @@ const initialState = {
 const reducers = {
     AddNC: (state: NCState, action: AnyAction) => {
         const data = action.payload;
-        data.key = state.data[state.data.length - 1] + 1;
+        data.key = state.data.length + 1;
         data.status = "Đang chờ";
         data.source = "kio";
         state.data.unshift(data); // Cập nhật state trong redux
-        RequestAPI.postNC(data); // Post data lên backend
+        console.log(current(state.data));
+        // RequestAPI.postNC(data); // Post data lên backend
         OpenNotification(data); // In số
         return state;
     },

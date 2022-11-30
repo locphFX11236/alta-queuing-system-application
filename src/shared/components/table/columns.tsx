@@ -31,7 +31,7 @@ export const equipCols: ColProps = [
 ];
 
 export const serviceCols: ColProps = [
-    { title: 'Mã dịch vụ', dataIndex: 'code', key: 'code', width: 150 },
+    { title: 'Mã dịch vụ', dataIndex: 'code', key: 'code', width: 152 },
     { title: 'Tên dịch vụ', dataIndex: 'name', key: 'name', width: 225 },
     { title: 'Mô tả', dataIndex: 'description', key: 'description', width: 230 },
     {
@@ -43,7 +43,7 @@ export const serviceCols: ColProps = [
         render: (_, record) => <Link to='/service/ser-infor' state={record}>Chi tiết</Link>
     },
     {
-        title: '', dataIndex: 'code', key: 'code', width: 126,
+        title: '', dataIndex: 'code', key: 'code', width: 125,
         render: (_, record) => <Link to='/service/ser-manage-upd' state={record}>Cập nhật</Link>
     }
 ];
@@ -58,7 +58,7 @@ export const setNumCols: ColProps = [
 
 export const numCouCols: ColProps = [
     { title: 'STT', dataIndex: 'countNumber', key: 'countNumber', width: 95 },
-    { title: 'Tên khách hàng', dataIndex: 'name', key: 'name', width: 165 },
+    { title: 'Tên khách hàng', dataIndex: 'name', key: 'name', width: 167 },
     {
         title: 'Tên dịch vụ', dataIndex: 'useService', key: 'useService', width: 170,
         render: s => RenderUseServices[s]
@@ -74,18 +74,18 @@ export const numCouCols: ColProps = [
         render: s => RenderSources[s]
     },
     {
-        title: '', dataIndex: 'key', key: 'key', width: 76,
+        title: '', dataIndex: 'key', key: 'key', width: 75,
         render: (_, record) => <Link to='/number-count/num-infor' state={record}>Chi tiết</Link>
     }
 ];
 
 export const reportCols: ColProps = [
     {
-        title: 'Số thứ tự', dataIndex: 'key', key: 'key', width: 226,
+        title: 'Số thứ tự', dataIndex: 'key', key: 'key', width: 225,
         sorter: (a, b) => a.key - b.key // Sort theo số
     },
     {
-        title: 'Tên dịch vụ', dataIndex: 'serviceName', key: 'serviceName', width: 235,
+        title: 'Tên dịch vụ', dataIndex: 'serviceName', key: 'serviceName', width: 237,
         sorter: (a, b) => a.serviceName.localeCompare(b.serviceName) // Sort theo alphabet
     },
     {
@@ -106,9 +106,9 @@ export const reportCols: ColProps = [
 export const roleCols: ColProps = [
     { title: 'Tên vai trò', dataIndex: 'position', key: 'position', width: 225 },
     { title: 'Số người dùng', dataIndex: 'count', key: 'count', width: 225 },
-    { title: 'Mô tả', dataIndex: 'description', key: 'description', width: 535 },
+    { title: 'Mô tả', dataIndex: 'description', key: 'description', width: 537 },
     {
-        title: '', dataIndex: 'key', key: 'key', width: 126,
+        title: '', dataIndex: 'key', key: 'key', width: 125,
         render: (_, record) => <Link to='/setting/role/rol-manage-upd' state={record}>Cập nhật</Link>
     }
 ];
@@ -117,8 +117,8 @@ export const accountCols: ColProps = [
     { title: 'Tên đăng nhập', dataIndex: 'userID', key: 'userID', width: 150 },
     { title: 'Họ tên', dataIndex: 'name', key: 'name', width: 170 },
     { title: 'Số điện thoại', dataIndex: 'phoneNumber', key: 'phoneNumber', width: 130 },
-    { title: 'Email', dataIndex: 'email', key: 'email', width: 255 },
-    { title: 'Vai trò', dataIndex: 'position', key: 'position', width: 116 },
+    { title: 'Email', dataIndex: 'email', key: 'email', width: 257 },
+    { title: 'Vai trò', dataIndex: 'position', key: 'position', width: 115 },
     {
         title: 'Trạng thái hoạt động', dataIndex: 'status', key: 'status', width: 190,
         render: a => <ActiveTag a={a} />
@@ -133,5 +133,5 @@ export const accountLogCols: ColProps = [
     { title: 'Tên đăng nhập', dataIndex: 'ID', key: 'ID', width: 270 },
     { title: 'Thời gian tác động', dataIndex: 'time', key: 'time', width: 245 },
     { title: 'IP thực hiện', dataIndex: 'IP', key: 'IP', width: 220 },
-    { title: 'Thao tác thực hiện', dataIndex: 'action', key: 'action', width: 376 }
+    { title: 'Thao tác thực hiện', dataIndex: 'action', key: 'action', width: 377 }
 ];

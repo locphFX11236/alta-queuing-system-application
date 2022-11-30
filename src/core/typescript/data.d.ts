@@ -57,7 +57,7 @@ export type AccountType = {
     status: boolean,
 };
 
-type dataUser = {
+export type dataUser = {
     id: string,
     fullName: string,
     phoneNumber: string,
@@ -75,12 +75,6 @@ export type RoleType = {
     description: string,
     functions:  Array<string>,
 };
-
-// export type FetchData = {
-//     equipDatas: EquipType[],
-//     servDatas: ServiceType[],
-//     numCouDatas: NuCoType[],
-// }
 
 export type DataType = unknown | AccountType | RoleType | NuCoType |ServiceType | EquipType;
 export type Datas = DataType[] | any;
